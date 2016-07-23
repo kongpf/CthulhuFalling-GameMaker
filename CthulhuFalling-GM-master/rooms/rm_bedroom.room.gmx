@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>scr_text("Uh... cosa e' stato?", 0.2, obj_player.x, obj_player.y);
+  <code>// Add some text boxest at the beginning
+scr_text("Uh... cosa e' stato?", 0.2, obj_player.x, obj_player.y);
 scr_text("Per fortuna era solo un brutto sogno...", 0.2, obj_player.x, obj_player.y);
 scr_text("Meglio andare a bere un bicchiere d'acqua", 0.2, obj_player.x, obj_player.y);</code>
   <enableViews>0</enableViews>
