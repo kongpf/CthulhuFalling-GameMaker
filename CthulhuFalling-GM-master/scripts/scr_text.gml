@@ -1,10 +1,11 @@
-//scr_text("Text",speed,x,y);
+//scr_text("Text",speed,x,y,speaker);
 
 if (not instance_exists(obj_textManager)) {
    instance_create(x, y, obj_textManager);
 }
 
 txt = instance_create(argument2,argument3,obj_text);
+speaker = argument4;
 
 with (txt) {
     padding = 16;
@@ -25,7 +26,7 @@ with (txt) {
     boxheight = text_height + (padding*2);
 }
 
-// add instance to the beginning of the list into text manager instance
+// add instance and speaker to the beginning of the list into text manager instance
 if (instance_exists(obj_textManager)) {
    current_list = obj_textManager.instances;
    new_list = ds_list_create();
@@ -38,6 +39,17 @@ if (instance_exists(obj_textManager)) {
    
    // Update list with new item on the bottom
    obj_textManager.instances = new_list;
+   
+   current_speakers = obj_textManager.speakers;
+   new_speakers = ds_list_create();
+   
+   ds_list_add(new_speakers, speaker);
+   
+   for (i = 0; i < ds_list_size(current_speakers); i++) {
+       ds_list_add(new_speakers, ds_list_find_value(current_speakers, i));
+   }
+   
+   obj_textManager.speakers = new_speakers;
    
 } else {
   show_message("No instance of obj_textManager found in the game");

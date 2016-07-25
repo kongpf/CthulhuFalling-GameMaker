@@ -29,8 +29,14 @@
 // List containing all instances of obj_text
 instances = ds_list_create();
 
+// List containing all speaking objects
+speakers = ds_list_create();
+
 // Current instance
 var current_instance = noone;
+
+// Current speaker
+var current_speaker = noone;
 </string>
           </argument>
         </arguments>
@@ -85,12 +91,17 @@ for (i = 0; i &lt; ds_list_size(instances); i++) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Check enter
+            <string>/// Check alt key to go on
 go_on = keyboard_check_pressed(vk_alt);
 
 if (go_on) {
    // Delete top instance
+   with ds_list_find_value(instances, ds_list_size(instances) - 1) instance_destroy();
    ds_list_delete(instances, ds_list_size(instances) - 1);
+   
+   // Delete top speaker
+   ds_list_delete(speakers, ds_list_size(speakers) - 1);
+   
    show_debug_message("Instance deleted. list size: " + string(ds_list_size(instances)));
 }
 </string>
@@ -141,14 +152,13 @@ if (ds_list_size(instances) == 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Retrieve current instance if room
+            <string>/// Retrieve current instance and speaker if room
 current_instance = ds_list_find_value(instances, ds_list_size(instances) - 1);
+current_speaker = ds_list_find_value(speakers, ds_list_size(speakers) - 1);
 </string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -165,7 +175,12 @@ current_instance = ds_list_find_value(instances, ds_list_size(instances) - 1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>/// Follow speaker
+if (current_instance != noone and current_speaker != noone and ds_list_size(instances) &gt; 0) {
+   current_instance.x = current_speaker.x;
+   current_instance.y = current_speaker.y;
+} 
+</string>
           </argument>
         </arguments>
       </action>
