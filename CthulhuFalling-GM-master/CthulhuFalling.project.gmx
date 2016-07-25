@@ -263,6 +263,7 @@
         </sprites>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_switch</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -724,6 +725,8 @@
       <object>objects\obj_lightController</object>
       <object>objects\obj_redTorch</object>
       <object>objects\obj_fire</object>
+      <object>objects\obj_chandelier</object>
+      <object>objects\obj_switch</object>
     </objects>
     <objects name="Glare demo">
       <object>objects\obj_glare_controller</object>

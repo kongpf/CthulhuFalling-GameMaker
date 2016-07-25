@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_environmentItem</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="3" enumb="0">
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x, y, obj_player) room_goto(rm_livingroom);
+            <string>if place_meeting(x, y, obj_player) and keyboard_check_pressed(vk_enter) room_goto(rm_livingroom);
 </string>
           </argument>
         </arguments>

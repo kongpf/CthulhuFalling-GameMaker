@@ -178,7 +178,7 @@ current_speaker = ds_list_find_value(speakers, ds_list_size(speakers) - 1);
             <string>/// Follow speaker
 if (current_instance != noone and current_speaker != noone and ds_list_size(instances) &gt; 0) {
    current_instance.x = current_speaker.x;
-   current_instance.y = current_speaker.y;
+   current_instance.y = current_speaker.y - current_instance.boxheight - 5;
 } 
 </string>
           </argument>
