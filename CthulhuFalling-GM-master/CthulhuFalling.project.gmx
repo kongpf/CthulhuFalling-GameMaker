@@ -265,6 +265,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_streetLight</sprite>
+    <sprite>sprites\spr_grandmaIntro</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -580,6 +581,7 @@
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>
       <script>scripts\scr_add_sentence.gml</script>
+      <script>scripts\scr_stop_current_dialog.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -717,6 +719,7 @@
       <object>objects\obj_poeIntro</object>
       <object>objects\obj_crosshair</object>
       <object>objects\obj_camera</object>
+      <object>objects\obj_grandmaIntro</object>
     </objects>
     <objects name="Scores">
       <object>objects\obj_scoreManager</object>

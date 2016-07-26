@@ -1,4 +1,4 @@
-//scr_text("Text",speed,x,y,speaker);
+///scr_text(text, speed, x, y, speaker);
 
 if (not instance_exists(obj_textManager)) {
    instance_create(x, y, obj_textManager);
