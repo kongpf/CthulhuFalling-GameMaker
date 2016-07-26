@@ -32,11 +32,17 @@ instances = ds_list_create();
 // List containing all speaking objects
 speakers = ds_list_create();
 
+// List containing all scripts to execute after every sentence
+scripts = ds_list_create();
+
 // Current instance
 var current_instance = noone;
 
 // Current speaker
 var current_speaker = noone;
+
+// Current script
+var current_script = noone;
 </string>
           </argument>
         </arguments>
@@ -102,6 +108,10 @@ if (go_on) {
    // Delete top speaker
    ds_list_delete(speakers, ds_list_size(speakers) - 1);
    
+   // Execute current script
+   if (current_script != noone)
+      script_execute(current_script);
+   
    show_debug_message("Instance deleted. list size: " + string(ds_list_size(instances)));
 }
 </string>
@@ -152,9 +162,10 @@ if (ds_list_size(instances) == 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Retrieve current instance and speaker if room
+            <string>/// Retrieve current instance, speaker and script
 current_instance = ds_list_find_value(instances, ds_list_size(instances) - 1);
 current_speaker = ds_list_find_value(speakers, ds_list_size(speakers) - 1);
+current_script = ds_list_find_value(scripts, ds_list_size(scripts) - 1);
 </string>
           </argument>
         </arguments>

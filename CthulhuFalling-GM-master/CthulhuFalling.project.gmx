@@ -45,6 +45,7 @@
       </sprites>
       <sprites name="Common">
         <sprite>sprites\spr_dirt</sprite>
+        <sprite>sprites\spr_streetLight</sprite>
         <sprite>sprites\spr_ladder</sprite>
         <sprite>sprites\spr_wall</sprite>
         <sprite>sprites\spr_door</sprite>
@@ -64,11 +65,19 @@
         <sprites name="Idle">
           <sprite>sprites\spr_playerIdle</sprite>
           <sprite>sprites\spr_playerRunRight</sprite>
+          <sprite>sprites\spr_meleeRight</sprite>
+          <sprite>sprites\spr_meleeLeft</sprite>
           <sprite>sprites\spr_playerRunLeft</sprite>
           <sprite>sprites\spr_playerJump</sprite>
         </sprites>
+        <sprites name="Melee">
+          <sprite>sprites\spr_playerMelee</sprite>
+        </sprites>
       </sprites>
       <sprite>sprites\spr_poeRight</sprite>
+      <sprites name="Grandma">
+        <sprite>sprites\spr_grandmaIntro</sprite>
+      </sprites>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\spr_pencil</sprite>
@@ -264,8 +273,7 @@
         </sprites>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_streetLight</sprite>
-    <sprite>sprites\spr_grandmaIntro</sprite>
+    <sprite>sprites\spr_invisibleMelee</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -577,6 +585,7 @@
       <script>scripts\collision_line_first.gml</script>
       <script>scripts\stop_bonus.gml</script>
       <script>scripts\camera_movement.gml</script>
+      <script>scripts\scr_poe_disappear.gml</script>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>
@@ -710,6 +719,9 @@
         <objects name="Shotgun">
           <object>objects\obj_shotgun</object>
         </objects>
+      </objects>
+      <objects name="Melee Weapons">
+        <object>objects\obj_invisibleMelee</object>
       </objects>
     </objects>
     <objects name="Characters">
