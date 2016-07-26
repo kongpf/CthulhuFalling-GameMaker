@@ -264,6 +264,7 @@
         </sprites>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_streetLight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -282,6 +283,7 @@
       <background>background\background</background>
     </backgrounds>
     <background>background\bg_blueToneTiles</background>
+    <background>background\background12</background>
   </backgrounds>
   <paths name="paths">
     <paths name="Big Cthulhu">
@@ -690,6 +692,7 @@
         <object>objects\obj_doorLivingroomBedroom</object>
         <object>objects\obj_moon</object>
         <object>objects\obj_firePlace</object>
+        <object>objects\obj_doorLivingroomStreets</object>
       </objects>
     </objects>
     <objects name="Weapons">
@@ -714,19 +717,20 @@
       <object>objects\obj_poeIntro</object>
       <object>objects\obj_crosshair</object>
       <object>objects\obj_camera</object>
-      <object>objects\object186</object>
     </objects>
     <objects name="Scores">
       <object>objects\obj_scoreManager</object>
     </objects>
     <objects name="Effects">
       <object>objects\obj_screenShake</object>
+      <object>objects\obj_rain</object>
     </objects>
     <objects name="Lighting">
       <object>objects\obj_lightController</object>
       <object>objects\obj_redTorch</object>
       <object>objects\obj_fire</object>
       <object>objects\obj_chandelier</object>
+      <object>objects\obj_streetLight</object>
     </objects>
     <objects name="Glare demo">
       <object>objects\obj_glare_controller</object>
@@ -958,6 +962,9 @@
       <room>rooms\room_glr_isometric</room>
     </rooms>
     <room>rooms\demo_1</room>
+    <rooms name="Streets of Providence">
+      <room>rooms\rm_streets</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

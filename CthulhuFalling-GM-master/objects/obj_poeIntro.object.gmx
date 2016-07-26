@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dialog_started = false;
+            <string>/// Variables
+dialog_started = false;
+dialog_finished = false;
 </string>
           </argument>
         </arguments>
@@ -50,8 +52,6 @@
             <kind>1</kind>
             <string>/// Start first dialog with Poe
 if (place_meeting(x, y, obj_player) and not dialog_started) {
-   dialog_started = true;
-
    scr_text("Ch-chi sei tu? Cosa ci fai in casa mia a quest'ora?", 0.4, x, y, obj_player);
    scr_text("Sono Edgar, non mi riconosci?", 0.4, x, y, obj_poeIntro);
    scr_text("...non conosco nessun Edgar mi spiace...", 0.4, x, y, obj_player);
@@ -76,6 +76,9 @@ if (place_meeting(x, y, obj_player) and not dialog_started) {
    scr_text("Esci e vai a distruggerlo! Sai benissimo dove si trova!", 0.4, x, y, obj_poeIntro);
    scr_text("Non sarei mai capace di una cosa simile... e poi non saprei nemmeno da dove partire...", 0.4, x, y, obj_player);
    scr_text("Beh, la scelta e' tua...", x, y, 0.4, obj_poeIntro);
+   
+   // Set flag
+   dialog_started = true;
 }
 </string>
           </argument>

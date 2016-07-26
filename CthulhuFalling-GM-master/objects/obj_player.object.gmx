@@ -34,7 +34,7 @@ movespeed = 2.5;
 hp = 100;
 facing = 1;
 active = true;
-current_weapon = obj_pistol;
+current_weapon = noone;
 current_item = noone;
 </string>
           </argument>
