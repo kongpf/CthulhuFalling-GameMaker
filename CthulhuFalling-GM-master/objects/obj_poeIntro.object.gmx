@@ -59,56 +59,6 @@ active = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Start first dialog with Poe
-if (place_meeting(x, y, obj_player) and not dialog_started) {
-   scr_text("Ch-chi sei tu? Cosa ci fai in casa mia a quest'ora?", 0.4, x, y, obj_player, noone);
-   scr_text("Sono Edgar, non mi riconosci?", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("...non conosco nessun Edgar mi spiace...", 0.4, x, y, obj_player, noone);
-   scr_text("...", 0.4, x, y, obj_player, noone);
-   scr_text("Aspetta... no, non e' possibile...", 0.4, x, y, obj_player, noone);
-   scr_text("...no, tu non puoi essere Poe...", 0.4, x, y, obj_player, noone);
-   scr_text("Certo che sono Poe!", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("Ma tu dovresti essere morto da un bel pezzo!", 0.4, x, y, obj_player, noone);
-   scr_text("Io SONO morto da un bel pezzo!", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("Solo che tu puoi vedermi perche' stai sognando", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("Ora tutto si spiega...", 0.4, x, y, obj_player, noone);
-   scr_text("Ok, ora mi sveglio e la finiamo con questa farsa", 0.4, x, y, obj_player, noone);
-   scr_text("Sveglia Howard, su, SVEGLIA!", 0.4, x, y, obj_player, noone);
-   scr_text("Niente da fare Howard, sei intrappolato nel sogno!", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("Come sarebbe a dire? Fatemi uscire da qui!", 0.4, x, y, obj_player, noone);
-   scr_text("Urlare non serve a nulla, c'e' solo un modo per uscirne", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("Devi uccidere Cthulhu", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("Ma cosa... non posso! E' una mia invenzione! Non esiste nel mondo reale!", 0.4, x, y, obj_player, noone);
-   scr_text("Ma in questo tuo sogno esiste eccome...", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("Cosa diavolo mi sta succedendo...", 0.4, x, y, obj_player, noone);
-   scr_text("Non puoi stare qui a lamentarti se vuoi uscirne", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("Esci e vai a distruggerlo! Sai benissimo dove si trova!", 0.4, x, y, obj_poeIntro, noone);
-   scr_text("Non sarei mai capace di una cosa simile... e poi non saprei nemmeno da dove partire...", 0.4, x, y, obj_player, noone);
-   scr_text("Beh, la scelta e' tua...", x, y, 0.4, obj_poeIntro, asset_get_index("scr_poe_disappear"));
-   
-   // Set flag
-   dialog_started = true;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>/// Physics
 // Horizontal collision
 if (place_meeting(x + hsp, y, obj_environmentItem)) {

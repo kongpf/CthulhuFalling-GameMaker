@@ -32,44 +32,6 @@ dialog_started = false;
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Check if player intersects a circle and then speak
-if (collision_circle(obj_grandmaIntro.x, obj_grandmaIntro.y, 40, obj_player, false, true) != noone) {
-   if (not dialog_started) {
-      dialog_started = true;
-      
-      scr_text("Ugh...", 0.4, x, y, obj_grandmaIntro, noone);
-      scr_text("Ma cosa...", 0.4, x, y, obj_player, noone);
-      scr_text("NONNA!", 0.4, x, y, obj_player, noone);
-      scr_text("Oh mio dio cosa sta succedendo", 0.4, x, y, obj_player, noone);
-      scr_text("Howard, piccolo mio...", 0.4, x, y, obj_grandmaIntro, noone);
-      scr_text("Una terribile creatura mi ha aggredito", 0.4, x, y, obj_grandmaIntro, noone);
-      scr_text("Dov'e' andata? Nessuno puo' farti questo!", 0.4, x, y, obj_player, noone);
-      scr_text("E' scappata di la, non so se farai in tempo a raggiungerla", 0.4, x, y, obj_grandmaIntro, noone);
-      scr_text("Non le permettero' di rimanere in vita", 0.4, x, y, obj_player, noone);
-   }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

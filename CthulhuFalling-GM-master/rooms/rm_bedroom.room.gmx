@@ -10,10 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>// Add some text boxest at the beginning
-scr_text("Uh... cosa e' stato?", 0.2, obj_player.x, obj_player.y, obj_player, noone);
-scr_text("Per fortuna era solo un brutto sogno...", 0.4, obj_player.x, obj_player.y, obj_player, noone);
-scr_text("Meglio andare a bere un bicchiere d'acqua", 0.4, obj_player.x, obj_player.y, obj_player, noone);</code>
+  <code></code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
