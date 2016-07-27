@@ -25,9 +25,32 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Set alarm
-alarm[0] = 2;
-damage = 5;
+            <string>/// Set alarm and damage
+alarm[0] = 5;
+damage = 50;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Calculate position referenced to the player
+player_offset_x = x - obj_player.x;
+player_offset_y = y - obj_player.y;
 </string>
           </argument>
         </arguments>
@@ -86,6 +109,29 @@ if (place_meeting(x, y, obj_enemy)) {
    target_enemy = instance_place(x, y, obj_enemy);
    target_enemy.hp -= damage;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Update position
+x = obj_player.x + player_offset_x;
+y = obj_player.y + player_offset_y;
 </string>
           </argument>
         </arguments>

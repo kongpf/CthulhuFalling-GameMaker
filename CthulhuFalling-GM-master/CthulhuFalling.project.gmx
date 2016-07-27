@@ -914,6 +914,7 @@
     </objects>
     <objects name="Story Steps">
       <object>objects\obj_dialog1Level1</object>
+      <object>objects\obj_storyEventsManager</object>
     </objects>
     <objects name="Transitions">
       <object>objects\obj_introLevel3</object>

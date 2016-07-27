@@ -28,6 +28,15 @@
             <string>/// Variables
 dialog_started = false;
 dialog_finished = false;
+
+grav = 0.4;
+hsp = 0;
+vsp = 0;
+jumpspeed = 7;
+movespeed = 2.5;
+hp = 100;
+facing = 1;
+active = true;
 </string>
           </argument>
         </arguments>
@@ -80,6 +89,44 @@ if (place_meeting(x, y, obj_player) and not dialog_started) {
    // Set flag
    dialog_started = true;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Physics
+// Horizontal collision
+if (place_meeting(x + hsp, y, obj_environmentItem)) {
+    while (!place_meeting(x + sign(hsp), y, obj_environmentItem)) {
+        x += sign(hsp);
+    }
+    hsp = 0;
+}
+x += hsp;
+
+// Vertical collision
+if (place_meeting(x, y + vsp, obj_environmentItem)) {
+    while (!place_meeting(x, y + sign(vsp), obj_environmentItem)) {
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
 </string>
           </argument>
         </arguments>
