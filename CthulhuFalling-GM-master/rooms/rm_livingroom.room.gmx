@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1024</width>
   <height>768</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>8</vsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -94,7 +94,7 @@ obj_player.y = 416;</code>
     <instance objName="obj_floor" x="256" y="416" name="inst_F0B0C668" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="256" y="448" name="inst_A74FBA85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_firePlace" x="608" y="384" name="inst_50B27AE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fire" x="608" y="448" name="inst_54DC24CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fire" x="608" y="424" name="inst_54DC24CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_doorLivingroomBedroom" x="288" y="416" name="inst_EB3E8A72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_poeIntro" x="512" y="416" name="inst_A1624C3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_doorLivingroomStreets" x="672" y="416" name="inst_F12AB44E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

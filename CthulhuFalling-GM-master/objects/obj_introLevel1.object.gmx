@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>title = "Cthulhu Falling";
-quote = "A game by OneLasTry Studios";
+            <string>title = "Camera da Letto di Louis";
+quote = "03:42 AM";
 
 alpha_title = 0;
 alpha_quote = 0;

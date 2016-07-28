@@ -48,6 +48,7 @@ first_dialog_started = false;
           <argument>
             <kind>1</kind>
             <string>/// Level: Streets of Providence
+first_street_dialog_started = false;
 poe_appeared = false;
 grandma_dialog_started = false;
 </string>
@@ -100,9 +101,9 @@ if (room == rm_bedroom) {
       first_dialog_started = true;
    
       // Add some text boxes at the beginning
-      scr_text("Uh... cosa e' stato?", 0.2, obj_player.x, obj_player.y, obj_player, noone);
-      scr_text("Per fortuna era solo#un brutto sogno...", 0.4, obj_player.x, obj_player.y, obj_player, noone);
-      scr_text("Meglio andare a bere#un bicchiere d'acqua", 0.4, obj_player.x, obj_player.y, obj_player, noone);
+      scr_text("Uh? Cosa è successo? Satana? Sei tu?", 0.4, obj_player.x, obj_player.y, obj_player, noone);
+      scr_text("Meeeow", 0.4, x, y, obj_cat, noone);
+      scr_text("Uff, meno male. Credo di aver fatto#un bruttissimo sogno…#Vieni, bestia, che ti do da mangiare.", 0.4, obj_player.x, obj_player.y, obj_player, noone);
    }
 }
 </string>
@@ -131,30 +132,21 @@ if (room == rm_livingroom) {
       if (not poe_dialog_started) {
          poe_dialog_started = true;
          
-         scr_text("Ch-chi sei tu? Cosa ci fai in#casa mia a quest'ora?", 0.4, x, y, obj_player, noone);
-         scr_text("Sono Edgar, non#mi riconosci?", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("...non conosco nessun#Edgar mi spiace...", 0.4, x, y, obj_player, noone);
-         scr_text("...", 0.4, x, y, obj_player, noone);
-         scr_text("Aspetta... no, non#e' possibile...", 0.4, x, y, obj_player, noone);
-         scr_text("...no, tu non puoi#essere Poe...", 0.4, x, y, obj_player, noone);
-         scr_text("Certo che sono Poe!", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Ma tu dovresti essere#morto da un bel pezzo!", 0.4, x, y, obj_player, noone);
-         scr_text("Io SONO morto da#un bel pezzo!", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Solo che tu puoi vedermi#perche' stai sognando", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Ora tutto si spiega...", 0.4, x, y, obj_player, noone);
-         scr_text("Ok, ora mi sveglio e#la finiamo con questa farsa", 0.4, x, y, obj_player, noone);
-         scr_text("Sveglia Howard, su, SVEGLIA!", 0.4, x, y, obj_player, noone);
-         scr_text("Niente da fare Howard, sei#intrappolato nel sogno!", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Come sarebbe a dire?#Fatemi uscire da qui!", 0.4, x, y, obj_player, noone);
-         scr_text("Urlare non serve a nulla, c'e'#solo un modo per uscirne", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Devi uccidere Cthulhu", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Ma cosa... non posso! E' una mia#invenzione! Non esiste#nel mondo reale!", 0.4, x, y, obj_player, noone);
-         scr_text("Ma in questo tuo#sogno esiste eccome...", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Cosa diavolo mi sta succedendo...", 0.4, x, y, obj_player, noone);
-         scr_text("Non puoi stare qui a lamentarti#se vuoi uscirne", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Esci e vai a distruggerlo! Sai#benissimo dove si trova!", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Non sarei mai capace di una cosa#simile... e poi non saprei#nemmeno da dove partire...", 0.4, x, y, obj_player, noone);
-         scr_text("Beh, la scelta e' tua...", x, y, 0.4, obj_poeIntro, scr_poe_disappear);
+         scr_text("Chi… chi sei tu? Come sei#entrato in casa mia?", 0.4, x, y, obj_player, noone);
+         scr_text("A giudicare dalla tua libreria, mi#stupisco tu non mi riconosca. Sono Howard.", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("L’unico Howard che conosco è un Erasmus e tu#non ci somi- no aspetta. Non è possibile.#Tu non puoi essere Lovecraft.", 0.4, x, y, obj_player, noone);
+         scr_text("Certo che sono Lovecraft!", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Ma dovresti essere morto da un pezzo!", 0.4, x, y, obj_player, noone);
+         scr_text("Io sono morto da un bel pezzo, ma#tu riesci a vedermi perché stai#sognando. Prima che tu lo#chieda, non potrai svegliar-", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("No, che figata! Sei proprio tu?#Ma tu in persona? E chi si vuole svegliare.", 0.4, x, y, obj_player, noone);
+         scr_text("Sì ma stavo dicendo…", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Me lo fai un autografo?", 0.4, x, y, obj_player, noone);
+         scr_text("Fammi parla-", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Mi spoileri cosa vede il tizio alla fine di#Le montagne della follia? Dai dai, non#lo dico a nessuno!", 0.4, x, y, obj_player, noone);
+         scr_text("Dicevo, non ti potrai svegliare finché#non avrai ucciso Cthulhu.", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("E chi si vuole svegliare? Figata!", 0.4, x, y, obj_player, noone);
+         scr_text("…Oh, Signore. Allora vai, tanto sai dove si trova.", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("47°9'S126°43'W Oceano Pacifico del Sud!", 0.4, x, y, obj_player, noone);
       }
    }
 }
@@ -180,19 +172,11 @@ if (room == rm_livingroom) {
             <kind>1</kind>
             <string>/// Level: Streets of Providence
 if (room == rm_streets) {
-   if (collision_circle(obj_grandmaIntro.x, obj_grandmaIntro.y, 40, obj_player, false, true) != noone) {
+   if (collision_circle(obj_grandmaStanding.x, obj_grandmaStanding.y, 40, obj_player, false, true) != noone) {
        if (not grandma_dialog_started) {
           grandma_dialog_started = true;
           
-          scr_text("Ugh...", 0.4, x, y, obj_grandmaIntro, noone);
-          scr_text("Ma cosa...", 0.4, x, y, obj_player, noone);
-          scr_text("NONNA!", 0.4, x, y, obj_player, noone);
-          scr_text("Oh mio dio cosa sta succedendo", 0.4, x, y, obj_player, noone);
-          scr_text("Howard, piccolo mio...", 0.4, x, y, obj_grandmaIntro, noone);
-          scr_text("Una terribile creatura#mi ha aggredito", 0.4, x, y, obj_grandmaIntro, noone);
-          scr_text("Dov'e' andata?#Nessuno puo' farti questo!", 0.4, x, y, obj_player, noone);
-          scr_text("E' scappata di la, non#so se farai in tempo a raggiungerla", 0.4, x, y, obj_grandmaIntro, noone);
-          scr_text("Non le permettero' di#rimanere in vita", 0.4, x, y, obj_player, noone);
+          scr_text("Nonna! Che ci fai nel#mio sogno su Lovecraft?", 0.4, x, y, obj_player, noone);
        }
     }
 
@@ -214,6 +198,12 @@ if (room == rm_streets) {
       scr_text("Era tutto un modo per#metterti alla prova", 0.4, x, y, obj_poeIntro, noone);
       scr_text("Era solo un frutto della#tua immaginazione", 0.4, x, y, obj_poeIntro, noone);
       scr_text("Brutto bastardo che non sei altro...", 0.4, x, y, obj_player, noone);
+   }
+   
+   if (not first_street_dialog_started) {
+      first_street_dialog_started = true;
+      
+      scr_text("Brrr, che freddo che fa.#Allora, questo è un sogno, per arrivare#all’Oceano Pacifico dovrei…", 0.4, x, y, obj_player, noone);
    }
 }
 </string>

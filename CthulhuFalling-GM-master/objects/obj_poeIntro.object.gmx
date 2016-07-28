@@ -60,6 +60,9 @@ active = true;
           <argument>
             <kind>1</kind>
             <string>/// Physics
+// Apply gravity
+if (vsp &lt; 10) vsp += grav;
+
 // Horizontal collision
 if (place_meeting(x + hsp, y, obj_environmentItem)) {
     while (!place_meeting(x + sign(hsp), y, obj_environmentItem)) {

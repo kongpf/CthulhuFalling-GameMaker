@@ -15,12 +15,7 @@ obj_player.x = 32;
 obj_player.y = 64;
 
 // Rain
-instance_create(0, 0, obj_rain);
-
-// Some words
-scr_text("Brr, che freddo qui fuori...", 0.4, x, y, obj_player, noone);
-scr_text("E ora che dovrei fare?", 0.4, x, y, obj_player, noone);
-scr_text("Mi sembra tutta una pazzia...", 0.4, x, y, obj_player, noone);</code>
+instance_create(0, 0, obj_rain);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -131,13 +126,13 @@ scr_text("Mi sembra tutta una pazzia...", 0.4, x, y, obj_player, noone);</code>
     <instance objName="obj_streetLight" x="320" y="32" name="inst_3A142DF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="448" y="32" name="inst_152F2630" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="576" y="32" name="inst_02ED51FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_grandmaIntro" x="960" y="96" name="inst_A03BC24B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="960" y="32" name="inst_AFCC8F1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="1280" y="32" name="inst_EA7D912A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="1408" y="32" name="inst_800681AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="1536" y="32" name="inst_3102007C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="1664" y="32" name="inst_0B029854" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="1504" y="64" name="inst_A51D7BA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_grandmaStanding" x="576" y="64" name="inst_BE68A3EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_groundTiles1" x="64" y="32" w="64" h="64" xo="330" yo="202" id="10003452" name="inst_782525C9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
