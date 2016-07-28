@@ -78,6 +78,7 @@
       <sprites name="Grandma">
         <sprite>sprites\spr_grandmaIntro</sprite>
       </sprites>
+      <sprite>sprites\spr_customPoe</sprite>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\spr_pencil</sprite>
