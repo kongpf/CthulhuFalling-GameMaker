@@ -112,7 +112,7 @@ if (go_on) {
    if (current_script != noone)
       script_execute(current_script);
    
-   show_debug_message("Instance deleted. list size: " + string(ds_list_size(instances)));
+   //show_debug_message("Instance deleted. list size: " + string(ds_list_size(instances)));
 }
 </string>
           </argument>

@@ -693,6 +693,7 @@
         <object>objects\obj_wall</object>
         <object>objects\obj_door12</object>
         <object>objects\obj_ladder</object>
+        <object>objects\obj_interactionAllowed</object>
       </objects>
       <objects name="Howard House">
         <object>objects\obj_floor</object>

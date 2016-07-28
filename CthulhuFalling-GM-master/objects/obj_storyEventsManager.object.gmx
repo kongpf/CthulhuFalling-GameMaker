@@ -101,8 +101,8 @@ if (room == rm_bedroom) {
    
       // Add some text boxes at the beginning
       scr_text("Uh... cosa e' stato?", 0.2, obj_player.x, obj_player.y, obj_player, noone);
-      scr_text("Per fortuna era solo un brutto sogno...", 0.4, obj_player.x, obj_player.y, obj_player, noone);
-      scr_text("Meglio andare a bere un bicchiere d'acqua", 0.4, obj_player.x, obj_player.y, obj_player, noone);
+      scr_text("Per fortuna era solo#un brutto sogno...", 0.4, obj_player.x, obj_player.y, obj_player, noone);
+      scr_text("Meglio andare a bere#un bicchiere d'acqua", 0.4, obj_player.x, obj_player.y, obj_player, noone);
    }
 }
 </string>
@@ -131,29 +131,29 @@ if (room == rm_livingroom) {
       if (not poe_dialog_started) {
          poe_dialog_started = true;
          
-         scr_text("Ch-chi sei tu? Cosa ci fai in casa mia a quest'ora?", 0.4, x, y, obj_player, noone);
-         scr_text("Sono Edgar, non mi riconosci?", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("...non conosco nessun Edgar mi spiace...", 0.4, x, y, obj_player, noone);
+         scr_text("Ch-chi sei tu? Cosa ci fai in#casa mia a quest'ora?", 0.4, x, y, obj_player, noone);
+         scr_text("Sono Edgar, non#mi riconosci?", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("...non conosco nessun#Edgar mi spiace...", 0.4, x, y, obj_player, noone);
          scr_text("...", 0.4, x, y, obj_player, noone);
-         scr_text("Aspetta... no, non e' possibile...", 0.4, x, y, obj_player, noone);
-         scr_text("...no, tu non puoi essere Poe...", 0.4, x, y, obj_player, noone);
+         scr_text("Aspetta... no, non#e' possibile...", 0.4, x, y, obj_player, noone);
+         scr_text("...no, tu non puoi#essere Poe...", 0.4, x, y, obj_player, noone);
          scr_text("Certo che sono Poe!", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Ma tu dovresti essere morto da un bel pezzo!", 0.4, x, y, obj_player, noone);
-         scr_text("Io SONO morto da un bel pezzo!", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Solo che tu puoi vedermi perche' stai sognando", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Ma tu dovresti essere#morto da un bel pezzo!", 0.4, x, y, obj_player, noone);
+         scr_text("Io SONO morto da#un bel pezzo!", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Solo che tu puoi vedermi#perche' stai sognando", 0.4, x, y, obj_poeIntro, noone);
          scr_text("Ora tutto si spiega...", 0.4, x, y, obj_player, noone);
-         scr_text("Ok, ora mi sveglio e la finiamo con questa farsa", 0.4, x, y, obj_player, noone);
+         scr_text("Ok, ora mi sveglio e#la finiamo con questa farsa", 0.4, x, y, obj_player, noone);
          scr_text("Sveglia Howard, su, SVEGLIA!", 0.4, x, y, obj_player, noone);
-         scr_text("Niente da fare Howard, sei intrappolato nel sogno!", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Come sarebbe a dire? Fatemi uscire da qui!", 0.4, x, y, obj_player, noone);
-         scr_text("Urlare non serve a nulla, c'e' solo un modo per uscirne", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Niente da fare Howard, sei#intrappolato nel sogno!", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Come sarebbe a dire?#Fatemi uscire da qui!", 0.4, x, y, obj_player, noone);
+         scr_text("Urlare non serve a nulla, c'e'#solo un modo per uscirne", 0.4, x, y, obj_poeIntro, noone);
          scr_text("Devi uccidere Cthulhu", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Ma cosa... non posso! E' una mia invenzione! Non esiste nel mondo reale!", 0.4, x, y, obj_player, noone);
-         scr_text("Ma in questo tuo sogno esiste eccome...", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Ma cosa... non posso! E' una mia#invenzione! Non esiste#nel mondo reale!", 0.4, x, y, obj_player, noone);
+         scr_text("Ma in questo tuo#sogno esiste eccome...", 0.4, x, y, obj_poeIntro, noone);
          scr_text("Cosa diavolo mi sta succedendo...", 0.4, x, y, obj_player, noone);
-         scr_text("Non puoi stare qui a lamentarti se vuoi uscirne", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Esci e vai a distruggerlo! Sai benissimo dove si trova!", 0.4, x, y, obj_poeIntro, noone);
-         scr_text("Non sarei mai capace di una cosa simile... e poi non saprei nemmeno da dove partire...", 0.4, x, y, obj_player, noone);
+         scr_text("Non puoi stare qui a lamentarti#se vuoi uscirne", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Esci e vai a distruggerlo! Sai#benissimo dove si trova!", 0.4, x, y, obj_poeIntro, noone);
+         scr_text("Non sarei mai capace di una cosa#simile... e poi non saprei#nemmeno da dove partire...", 0.4, x, y, obj_player, noone);
          scr_text("Beh, la scelta e' tua...", x, y, 0.4, obj_poeIntro, scr_poe_disappear);
       }
    }
@@ -189,10 +189,10 @@ if (room == rm_streets) {
           scr_text("NONNA!", 0.4, x, y, obj_player, noone);
           scr_text("Oh mio dio cosa sta succedendo", 0.4, x, y, obj_player, noone);
           scr_text("Howard, piccolo mio...", 0.4, x, y, obj_grandmaIntro, noone);
-          scr_text("Una terribile creatura mi ha aggredito", 0.4, x, y, obj_grandmaIntro, noone);
-          scr_text("Dov'e' andata? Nessuno puo' farti questo!", 0.4, x, y, obj_player, noone);
-          scr_text("E' scappata di la, non so se farai in tempo a raggiungerla", 0.4, x, y, obj_grandmaIntro, noone);
-          scr_text("Non le permettero' di rimanere in vita", 0.4, x, y, obj_player, noone);
+          scr_text("Una terribile creatura#mi ha aggredito", 0.4, x, y, obj_grandmaIntro, noone);
+          scr_text("Dov'e' andata?#Nessuno puo' farti questo!", 0.4, x, y, obj_player, noone);
+          scr_text("E' scappata di la, non#so se farai in tempo a raggiungerla", 0.4, x, y, obj_grandmaIntro, noone);
+          scr_text("Non le permettero' di#rimanere in vita", 0.4, x, y, obj_player, noone);
        }
     }
 
@@ -207,12 +207,12 @@ if (room == rm_streets) {
       scr_text("V-visto cosa? Quella bestia?", 0.4, x, y, obj_player, noone);
       scr_text("Si, l'hai uccisa!", 0.4, x, y, obj_poeIntro, noone);
       scr_text("S-si, insomma...", 0.4, x, y, obj_player, noone);
-      scr_text("Non esitare, sei stato grande!#Vedi che ci riesci se vuoi?", 0.4, x, y, obj_poeIntro, noone);
+      scr_text("Non esitare, sei stato#grande! Vedi che ci riesci se vuoi?", 0.4, x, y, obj_poeIntro, noone);
       scr_text("Devo salvare la nonna!", 0.4, x, y, obj_player, noone);
-      scr_text("Oh tranquillo lei non esiste in realta'", 0.4, x, y, obj_poeIntro, noone);
+      scr_text("Oh tranquillo lei non#esiste in realta'", 0.4, x, y, obj_poeIntro, noone);
       scr_text("Come sarebbe a dire...?", 0.4, x, y, obj_player, noone);
-      scr_text("Era tutto un modo per metterti alla prova", 0.4, x, y, obj_poeIntro, noone);
-      scr_text("Era solo un frutto della tua immaginazione", 0.4, x, y, obj_poeIntro, noone);
+      scr_text("Era tutto un modo per#metterti alla prova", 0.4, x, y, obj_poeIntro, noone);
+      scr_text("Era solo un frutto della#tua immaginazione", 0.4, x, y, obj_poeIntro, noone);
       scr_text("Brutto bastardo che non sei altro...", 0.4, x, y, obj_player, noone);
    }
 }
