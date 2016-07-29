@@ -97,7 +97,7 @@ for (i = 0; i &lt; ds_list_size(instances); i++) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Check alt key to go on
+            <string>/// Check any key to go on
 go_on = keyboard_check_pressed(vk_alt);
 
 if (go_on) {
@@ -109,8 +109,13 @@ if (go_on) {
    ds_list_delete(speakers, ds_list_size(speakers) - 1);
    
    // Execute current script
-   if (current_script != noone)
+   if (current_script != noone) {
+      show_debug_message("current_script: " + string(current_script));
       script_execute(current_script);
+   }
+   
+   // Delete top script
+   ds_list_delete(scripts, ds_list_size(scripts) - 1);
    
    //show_debug_message("Instance deleted. list size: " + string(ds_list_size(instances)));
 }

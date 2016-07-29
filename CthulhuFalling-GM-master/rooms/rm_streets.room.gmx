@@ -131,7 +131,6 @@ instance_create(0, 0, obj_rain);</code>
     <instance objName="obj_streetLight" x="1408" y="32" name="inst_800681AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="1536" y="32" name="inst_3102007C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="1664" y="32" name="inst_0B029854" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_slime" x="1504" y="64" name="inst_A51D7BA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grandmaStanding" x="576" y="64" name="inst_BE68A3EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

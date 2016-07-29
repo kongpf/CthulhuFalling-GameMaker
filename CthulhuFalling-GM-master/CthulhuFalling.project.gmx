@@ -80,6 +80,7 @@
       </sprites>
       <sprite>sprites\spr_customPoe</sprite>
       <sprite>sprites\spr_cat</sprite>
+      <sprite>sprites\spr_grandmaStanding</sprite>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\spr_pencil</sprite>
@@ -93,6 +94,7 @@
       </sprites>
       <sprite>sprites\spr_inventoryItemBorder</sprite>
       <sprite>sprites\spr_inventorySelectedItemBorder</sprite>
+      <sprite>sprites\spr_invisibleMelee</sprite>
     </sprites>
     <sprites name="Glare demo">
       <sprites name="Top Down Shooter">
@@ -275,8 +277,6 @@
         </sprites>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_invisibleMelee</sprite>
-    <sprite>sprites\spr_grandmaStanding</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -589,6 +589,8 @@
       <script>scripts\stop_bonus.gml</script>
       <script>scripts\camera_movement.gml</script>
       <script>scripts\scr_poe_disappear.gml</script>
+      <script>scripts\scr_grandma_transform.gml</script>
+      <script>scripts\scr_goto_splash.gml</script>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>
@@ -926,6 +928,9 @@
       <object>objects\obj_introLevel3</object>
       <object>objects\obj_introLevel1</object>
       <object>objects\obj_introLevel2</object>
+      <object>objects\obj_splashScreen</object>
+      <object>objects\obj_fadeToWhite</object>
+      <object>objects\obj_fadeFromWhite</object>
     </objects>
     <objects name="Particle Systems">
       <object>objects\obj_psBulletImpact</object>
@@ -967,6 +972,7 @@
       <room>rooms\rm_introLevel3</room>
       <room>rooms\rm_introLevel1</room>
       <room>rooms\rm_dead2</room>
+      <room>rooms\rm_splashScreen</room>
     </rooms>
     <rooms name="Bosses">
       <room>rooms\rm_bossCthulhu</room>
