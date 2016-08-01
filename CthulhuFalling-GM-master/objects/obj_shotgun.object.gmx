@@ -84,6 +84,7 @@ if (single_shot) {
       instance_create(x, y, obj_bullet);
 } else {
    if (key_shoot) {
+      audio_play_sound(snd_shootgunShoot, 10, false);
       repeat(5) {
           instance_create(x + shoot_x, y + shoot_y, obj_shotgunBullet);
       }

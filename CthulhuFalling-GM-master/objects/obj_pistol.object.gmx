@@ -106,13 +106,16 @@ shoot_x = lengthdir_x(16, point_direction(x, y, mouse_x, mouse_y));
 shoot_y = lengthdir_y(16, point_direction(x, y, mouse_x, mouse_y));
 
 if (single_shot) {
-   if (key_shoot)
+   if (key_shoot) {
       instance_create(x + shoot_x, y + shoot_y, obj_bullet);
+      audio_play_sound(snd_pistolShoot, 10, false);
+   }
    if (key_shoot_auto) {
       fire_count++;
    
       if (fire_count == fire_rate) {
          instance_create(x + shoot_x, y + shoot_y, obj_bullet);
+         audio_play_sound(snd_pistolShoot, 10, false);
          fire_count = 0;
       }
    }

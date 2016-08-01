@@ -8,7 +8,10 @@
     <extension index="1">extensions\Mine Tileset</extension>
     <extension index="2">extensions\Speech Bubble</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_pistolShoot</sound>
+    <sound>sound\snd_shootgunShoot</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Main menu">
       <sprite>sprites\spr_newgame</sprite>
@@ -97,6 +100,7 @@
       <sprite>sprites\spr_inventorySelectedItemBorder</sprite>
       <sprite>sprites\spr_invisibleMelee</sprite>
       <sprite>sprites\spr_shotgunPick</sprite>
+      <sprite>sprites\spr_shootFire</sprite>
     </sprites>
     <sprites name="Glare demo">
       <sprites name="Top Down Shooter">
@@ -719,16 +723,16 @@
       <object>objects\obj_dangerousObject</object>
       <object>objects\obj_inventory</object>
       <objects name="Firing Weapons">
-        <object>objects\obj_shotgunBullet</object>
         <object>objects\obj_shootWeapon</object>
-        <object>objects\obj_bullet</object>
         <objects name="Pistol">
           <object>objects\obj_pistol</object>
           <object>objects\obj_pistolPick</object>
+          <object>objects\obj_bullet</object>
         </objects>
         <objects name="Shotgun">
           <object>objects\obj_shotgun</object>
           <object>objects\obj_shotgunPick</object>
+          <object>objects\obj_shotgunBullet</object>
         </objects>
       </objects>
       <objects name="Melee Weapons">
