@@ -91,10 +91,12 @@
       <sprites name="Pistol">
         <sprite>sprites\spr_pistol</sprite>
         <sprite>sprites\spr_pistolLeft</sprite>
+        <sprite>sprites\spr_pistolPick</sprite>
       </sprites>
       <sprite>sprites\spr_inventoryItemBorder</sprite>
       <sprite>sprites\spr_inventorySelectedItemBorder</sprite>
       <sprite>sprites\spr_invisibleMelee</sprite>
+      <sprite>sprites\spr_shotgunPick</sprite>
     </sprites>
     <sprites name="Glare demo">
       <sprites name="Top Down Shooter">
@@ -721,8 +723,10 @@
         <object>objects\obj_bullet</object>
         <objects name="Pistol">
           <object>objects\obj_pistol</object>
+          <object>objects\obj_pistolPick</object>
         </objects>
         <objects name="Shotgun">
+          <object>objects\obj_shotgunPick</object>
           <object>objects\obj_shotgun</object>
         </objects>
       </objects>
@@ -992,6 +996,9 @@
     <room>rooms\demo_1</room>
     <rooms name="Streets of Providence">
       <room>rooms\rm_streets</room>
+    </rooms>
+    <rooms name="Sewer">
+      <room>rooms\rm_sewer1</room>
     </rooms>
   </rooms>
   <help>

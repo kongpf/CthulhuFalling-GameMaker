@@ -11,5 +11,9 @@ switch (choice) {
             break;
        }
        
+       case "[DEV] Under Providence": {
+            room_goto(rm_sewer1);
+       }
+       
        default: break;
 }

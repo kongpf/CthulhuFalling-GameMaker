@@ -35,7 +35,9 @@ hp = 100;
 facing = 1;
 active = true;
 current_weapon = noone;
+new_weapon = noone; // Used when the player picks up a new weapon
 current_item = noone;
+new_item = noone; // Used when the player picks up a new item
 </string>
           </argument>
         </arguments>
@@ -79,6 +81,8 @@ current_item = noone;
             <string>/// Spawn current weapons
 if (current_weapon != noone) {
    instance_create(x  - 16, y + 16, current_weapon);
+   if (not instance_exists(obj_crosshair))
+      instance_create(x - 32, y + 32, obj_crosshair);
 }
 
 if (current_item != noone) {
@@ -307,9 +311,58 @@ camera_movement();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Set invisible in splash screen room
+            <string>/// Set invisible in splash screen room (REMOVE)
 if (room == rm_splashScreen) {
    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Check new weapon and item
+if (new_weapon != noone) {
+   // This means that the player picked up something
+   
+   if (current_weapon != noone) {
+      if (instance_exists(current_weapon)) {
+         // Put current weapon to the ground with its pick object
+         instance_create(x, y, current_weapon.pick_weapon);
+      }
+   }
+   
+   // Remove current weapon instance if exists
+   with current_weapon instance_destroy();
+   
+   // Add and spawn new weapon
+   current_weapon = new_weapon;
+   new_weapon = noone;
+   instance_create(x + 16, y - 16, current_weapon);
+   
+   if (object_get_parent(current_weapon) != obj_shootWeapon) {
+      if (instance_exists(obj_crosshair)) with (obj_crosshair) instance_destroy();
+   } else {
+      if (not instance_exists(obj_crosshair)) {
+         instance_create(x + 32, y - 32, obj_crosshair);
+      }
+   }
+   
+   // TODO: Add case if weapon is melee weapon
 }
 </string>
           </argument>

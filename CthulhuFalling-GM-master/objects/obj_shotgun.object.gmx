@@ -31,6 +31,9 @@ bullet = obj_bullet;
 full_auto = false;
 // Set weapon in single shot mode (e.g. pistol) or multiple shot (e.g. shotgun)
 single_shot = false;
+// Name
+name = "Spas 12";
+pick_weapon = obj_shotgunPick;
 </string>
           </argument>
         </arguments>
