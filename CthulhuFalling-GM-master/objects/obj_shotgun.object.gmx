@@ -74,6 +74,9 @@ pick_weapon = obj_shotgunPick;
 key_shoot_auto = mouse_check_button(mb_left);
 key_shoot = mouse_check_button_pressed(mb_left);
 
+shoot_x = lengthdir_x(16, point_direction(x, y, mouse_x, mouse_y));
+shoot_y = lengthdir_y(16, point_direction(x, y, mouse_x, mouse_y));
+
 if (single_shot) {
    if (key_shoot)
       instance_create(x, y, obj_bullet);
@@ -82,7 +85,7 @@ if (single_shot) {
 } else {
    if (key_shoot) {
       repeat(5) {
-          instance_create(x + sprite_width, y + 5, obj_shotgunBullet);
+          instance_create(x + shoot_x, y + shoot_y, obj_shotgunBullet);
       }
    }
 }

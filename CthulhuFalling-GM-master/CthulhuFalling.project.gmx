@@ -598,6 +598,7 @@
       <script>scripts\scr_text.gml</script>
       <script>scripts\scr_add_sentence.gml</script>
       <script>scripts\scr_stop_current_dialog.gml</script>
+      <script>scripts\scr_hint.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -726,8 +727,8 @@
           <object>objects\obj_pistolPick</object>
         </objects>
         <objects name="Shotgun">
-          <object>objects\obj_shotgunPick</object>
           <object>objects\obj_shotgun</object>
+          <object>objects\obj_shotgunPick</object>
         </objects>
       </objects>
       <objects name="Melee Weapons">

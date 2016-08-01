@@ -31,11 +31,12 @@ dir = obj_player.facing;
 damage = 50;
 
 // Rotate sprite towards mouse click point
-image_angle = point_direction(x, y, mouse_x, mouse_y);
-
 move_towards_point(mouse_x , mouse_y, 18); 
 
-direction = (direction + random_range(-23, 23)) % 360;
+direction = (direction + random_range(-9, 9)) % 360;
+
+image_angle = direction;
+//image_angle = point_direction(x, y, mouse_x, mouse_y);
 </string>
           </argument>
         </arguments>

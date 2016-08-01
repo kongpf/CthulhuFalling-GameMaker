@@ -102,14 +102,17 @@ else image_yscale = 1;
 key_shoot_auto = mouse_check_button(mb_left);
 key_shoot = mouse_check_button_pressed(mb_left);
 
+shoot_x = lengthdir_x(16, point_direction(x, y, mouse_x, mouse_y));
+shoot_y = lengthdir_y(16, point_direction(x, y, mouse_x, mouse_y));
+
 if (single_shot) {
    if (key_shoot)
-      instance_create(x, y, obj_bullet);
+      instance_create(x + shoot_x, y + shoot_y, obj_bullet);
    if (key_shoot_auto) {
       fire_count++;
    
       if (fire_count == fire_rate) {
-         instance_create(x, y, obj_bullet);
+         instance_create(x + shoot_x, y + shoot_y, obj_bullet);
          fire_count = 0;
       }
    }
