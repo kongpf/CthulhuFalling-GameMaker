@@ -267,7 +267,7 @@ image_speed = 0.2;
             <kind>1</kind>
             <string>/// Check lives
 if (lives &lt;= 0) {
-   room_goto(rm_dead2);
+   room_goto(rm_dead);
 }
 </string>
           </argument>
@@ -396,6 +396,30 @@ if (new_weapon != noone) {
           <argument>
             <kind>5</kind>
             <sprite>spr_life</sprite>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw current weapon (if any)
+if (current_weapon != noone) {
+   draw_text(50, 50, current_weapon.name);
+}
+</string>
           </argument>
         </arguments>
       </action>

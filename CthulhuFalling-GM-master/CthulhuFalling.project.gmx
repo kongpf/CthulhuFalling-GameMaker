@@ -284,6 +284,7 @@
         </sprites>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_sign</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -303,6 +304,7 @@
     </backgrounds>
     <background>background\bg_blueToneTiles</background>
     <background>background\background12</background>
+    <background>background\background14</background>
   </backgrounds>
   <paths name="paths">
     <paths name="Big Cthulhu">
@@ -701,12 +703,13 @@
         <object>objects\obj_levelEnd</object>
         <object>objects\obj_climbItem</object>
         <object>objects\obj_jumpItemDestroyable</object>
+        <object>objects\obj_interactionAllowed</object>
         <object>objects\obj_dirt</object>
         <object>objects\obj_dirtDestructible</object>
         <object>objects\obj_wall</object>
         <object>objects\obj_door12</object>
         <object>objects\obj_ladder</object>
-        <object>objects\obj_interactionAllowed</object>
+        <object>objects\obj_armorySign</object>
       </objects>
       <objects name="Howard House">
         <object>objects\obj_floor</object>
@@ -718,6 +721,9 @@
         <object>objects\obj_moon</object>
         <object>objects\obj_firePlace</object>
         <object>objects\obj_doorLivingroomStreets</object>
+      </objects>
+      <objects name="Streets of Providence">
+        <object>objects\obj_doorStreetsArmory</object>
       </objects>
     </objects>
     <objects name="Weapons">
@@ -1002,6 +1008,8 @@
     <room>rooms\demo_1</room>
     <rooms name="Streets of Providence">
       <room>rooms\rm_streets</room>
+      <room>rooms\rm_outsideArmory</room>
+      <room>rooms\rm_armory</room>
     </rooms>
     <rooms name="Sewer">
       <room>rooms\rm_sewer1</room>

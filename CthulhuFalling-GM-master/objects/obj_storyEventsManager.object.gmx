@@ -77,6 +77,50 @@ poe_dialog_started = false;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Level: Outside Armroy
+rm_outsideArmory_first_dialog = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Level: Armory
+rm_armory_first_dialog = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -204,6 +248,62 @@ if (room == rm_streets) {
       first_street_dialog_started = true;
       
       scr_text("Brrr, che freddo che fa.#Allora, questo è un sogno, per arrivare#all'Oceano Pacifico dovrei…", 0.4, x, y, obj_player, noone);
+   }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Level: Outside Armory
+if (room == rm_outsideArmory) {
+   if (not rm_outsideArmory_first_dialog) {
+      rm_outsideArmory_first_dialog = true;
+      
+      scr_text("Per prima cosa devo trovare#un'arma, vediamo cosa#c'è qui in giro!", 0.4, x, y, obj_player, noone);
+   }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Level: Armory
+if (room == rm_armory) {
+   if (not rm_armory_first_dialog) {
+      rm_armory_first_dialog = true;
+      
+      scr_text("Sono in un'armeria e c'è solo una misera#pistola? Ma che storia è questa?#Mi fido già molto poco di 'sti#sviluppatori", 0.4, x, y, obj_player, noone);
    }
 }
 </string>
