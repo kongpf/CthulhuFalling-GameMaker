@@ -338,6 +338,7 @@ if (room == rm_splashScreen) {
             <string>/// Check new weapon and item
 if (new_weapon != noone) {
    // This means that the player picked up something
+   audio_play_sound(snd_reload, 10, false);
    
    if (current_weapon != noone) {
       if (instance_exists(current_weapon)) {

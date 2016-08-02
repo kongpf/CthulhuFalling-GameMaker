@@ -11,6 +11,7 @@
   <sounds name="sound">
     <sound>sound\snd_pistolShoot</sound>
     <sound>sound\snd_shootgunShoot</sound>
+    <sound>sound\snd_reload</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Main menu">

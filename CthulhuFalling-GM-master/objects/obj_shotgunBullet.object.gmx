@@ -33,7 +33,7 @@ damage = 50;
 // Rotate sprite towards mouse click point
 move_towards_point(mouse_x , mouse_y, 18); 
 
-direction = (direction + random_range(-9, 9)) % 360;
+direction = (direction + random_range(-7, 7)) % 360;
 
 image_angle = direction;
 //image_angle = point_direction(x, y, mouse_x, mouse_y);
