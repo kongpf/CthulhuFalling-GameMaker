@@ -724,6 +724,7 @@
       </objects>
       <objects name="Streets of Providence">
         <object>objects\obj_doorStreetsArmory</object>
+        <object>objects\obj_doorArmoryStreets</object>
       </objects>
     </objects>
     <objects name="Weapons">
