@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>///Set variables
 hint = "hint";
+
+// Take screenshot and deactivate all instances
+sprite_index = sprite_create_from_surface(application_surface, view_xview[0], view_yview[0], 0, 0, true, true, view_xview[0], view_yview[0]);
+instance_deactivate_all(true);
 </string>
           </argument>
         </arguments>
@@ -111,6 +115,7 @@ draw_text(view_wview[0] / 2, view_hview[0] / 2, "[SUGGERIMENTO]#---#" + hint + "
           <argument>
             <kind>1</kind>
             <string>///Destroy hint
+instance_activate_all();
 instance_destroy();
 </string>
           </argument>
