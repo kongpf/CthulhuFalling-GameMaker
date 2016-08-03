@@ -710,6 +710,7 @@
         <object>objects\obj_door12</object>
         <object>objects\obj_ladder</object>
         <object>objects\obj_armorySign</object>
+        <object>objects\obj_sewerSign</object>
       </objects>
       <objects name="Howard House">
         <object>objects\obj_floor</object>
@@ -725,6 +726,7 @@
       <objects name="Streets of Providence">
         <object>objects\obj_doorStreetsArmory</object>
         <object>objects\obj_doorArmoryStreets</object>
+        <object>objects\obj_doorStreetsSewer</object>
       </objects>
     </objects>
     <objects name="Weapons">
@@ -962,6 +964,8 @@
     <objects name="Dialogs">
       <object>objects\obj_text</object>
       <object>objects\obj_textManager</object>
+      <object>objects\obj_hintManager</object>
+      <object>objects\obj_hint</object>
     </objects>
   </objects>
   <timelines name="timelines">

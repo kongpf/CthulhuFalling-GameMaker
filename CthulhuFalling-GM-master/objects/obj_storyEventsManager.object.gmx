@@ -95,6 +95,8 @@ poe_dialog_started = false;
             <kind>1</kind>
             <string>///Level: Outside Armroy
 rm_outsideArmory_first_dialog = false;
+rm_outsideArmory_second_dialog = false;
+rm_outsideArmory_third_dialog = false;
 </string>
           </argument>
         </arguments>
@@ -117,6 +119,7 @@ rm_outsideArmory_first_dialog = false;
             <kind>1</kind>
             <string>///Level: Armory
 rm_armory_first_dialog = false;
+rm_armory_shoot_hint = false;
 </string>
           </argument>
         </arguments>
@@ -277,6 +280,20 @@ if (room == rm_outsideArmory) {
       
       scr_text("Per prima cosa devo trovare#un'arma, vediamo cosa#c'è qui in giro!", 0.4, x, y, obj_player, noone);
    }
+   
+   if (collision_circle(1440, 64, 64, obj_player, false, true) != noone and not rm_outsideArmory_second_dialog) {
+      rm_outsideArmory_second_dialog = true;
+      
+      scr_text("E adesso che faccio? Bah#proviamo a guardare cosa c'è là in fondo", 0.4, x, y, obj_player, noone);
+   }
+   
+   if (collision_circle(obj_sewerSign.x, obj_sewerSign.y, 16, obj_player, false, true) != noone and not rm_outsideArmory_third_dialog) {
+      rm_outsideArmory_third_dialog = true;
+      
+      scr_text("Caspita, che botta...", 0.4, x, y, obj_player, noone);
+      scr_text("Mmh, fogne...#di solito non si mette bene quando si finisce#nelle fogne...", 0.4, x, y, obj_player, noone);
+      scr_text("Ma a quanto pare è l'unica scelta#quindi andiamo!", 0.4, x, y, obj_player, noone);
+   }
 }
 </string>
           </argument>
@@ -304,6 +321,12 @@ if (room == rm_armory) {
       rm_armory_first_dialog = true;
       
       scr_text("Sono in un'armeria e c'è solo una misera#pistola? Ma che storia è questa?#Mi fido già molto poco di 'sti#sviluppatori", 0.4, x, y, obj_player, noone);
+   }
+   
+   if (instance_number(obj_pistolPick) == 0 and not rm_armory_shoot_hint) {
+      rm_armory_shoot_hint = true;
+      
+      scr_hint("Mira spostando il mouse.#Spara con il tasto sinistro.");
    }
 }
 </string>
