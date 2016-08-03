@@ -150,7 +150,7 @@ if (room == rm_bedroom) {
       // Add some text boxes at the beginning
       scr_text("Uh? Cosa è successo? Satana? Sei tu?", 0.4, obj_player.x, obj_player.y, obj_player, noone);
       scr_text("Meeeow", 0.4, x, y, obj_cat, noone);
-      scr_text("Uff, meno male. Credo di aver fatto#un bruttissimo sogno…#Vieni, bestia, che ti do da mangiare.", 0.4, obj_player.x, obj_player.y, obj_player, noone);
+      scr_text("Uff, meno male. Credo di aver fatto#un bruttissimo sogno…#Vieni, bestia, che ti do da mangiare.", 0.4, obj_player.x, obj_player.y, obj_player, asset_get_index("scr_commands_hint"));
    }
 }
 </string>
@@ -229,7 +229,7 @@ if (room == rm_streets) {
           grandma_dialog_started = true;
           
           scr_text("Nonna! Che ci fai nel#mio sogno su Lovecraft?", 0.4, x, y, obj_player, asset_get_index("scr_grandma_transform"));
-          scr_text("Lo sapevo... prendi questo!", 0.4, x, y, obj_player, noone);
+          scr_text("Lo sapevo... prendi questo!", 0.4, x, y, obj_player, asset_get_index("scr_melee_hint"));
        }
     }
 

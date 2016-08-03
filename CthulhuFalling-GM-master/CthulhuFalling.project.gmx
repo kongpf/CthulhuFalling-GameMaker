@@ -600,6 +600,8 @@
       <script>scripts\scr_poe_disappear.gml</script>
       <script>scripts\scr_grandma_transform.gml</script>
       <script>scripts\scr_goto_splash.gml</script>
+      <script>scripts\scr_melee_hint.gml</script>
+      <script>scripts\scr_commands_hint.gml</script>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>
