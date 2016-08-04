@@ -8,6 +8,59 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Variables
+// Enemy used as a target
+var target, life;
+yoffset = 1;
+
+// Set alarm for destroy
+alarm[0] = 20;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Destroy
+instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,20 +78,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Damage player
-if (place_meeting(x, y, obj_player)) {
-   instance_create(x, y, obj_screenShake);
-   
-   with (obj_player) {
-        lives--;
-   }
-   
-   instance_destroy();
-}
+            <string>///Move upwards and follow enemy
+y -= yoffset;
+x = target.x;
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -55,12 +103,8 @@ if (place_meeting(x, y, obj_player)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Spawn indicator while damaged
-if (place_meeting(x, y, obj_dangerousObject)) {
-   var ind = instance_create(x, y, obj_enemyDamageIndicator);
-   ind.target = self;
-   ind.life = hp;
-}
+            <string>///Draw current hp and disappear
+draw_text(x, y, life);
 </string>
           </argument>
         </arguments>

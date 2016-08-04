@@ -9,9 +9,15 @@
     <extension index="2">extensions\Speech Bubble</extension>
   </NewExtensions>
   <sounds name="sound">
-    <sound>sound\snd_pistolShoot</sound>
-    <sound>sound\snd_shootgunShoot</sound>
-    <sound>sound\snd_reload</sound>
+    <sounds name="Weapons">
+      <sound>sound\snd_shootgunShoot</sound>
+      <sound>sound\snd_pistolShoot</sound>
+      <sound>sound\snd_reload</sound>
+    </sounds>
+    <sounds name="Ambient">
+      <sound>sound\snd_footstepsConcrete</sound>
+      <sound>sound\snd_ping</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Main menu">
@@ -686,6 +692,7 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemyManager</object>
       <object>objects\obj_instaKillTouch</object>
+      <object>objects\obj_enemyDamageIndicator</object>
       <object>objects\obj_cthulhu</object>
       <object>objects\obj_bigCthulhu</object>
       <object>objects\obj_cthulhuRed</object>

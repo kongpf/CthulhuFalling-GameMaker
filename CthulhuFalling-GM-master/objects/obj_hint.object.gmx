@@ -31,6 +31,9 @@ hint = "hint";
 // Take screenshot and deactivate all instances
 sprite_index = sprite_create_from_surface(application_surface, view_xview[0], view_yview[0], 0, 0, true, true, view_xview[0], view_yview[0]);
 instance_deactivate_all(true);
+
+// Play sound
+audio_play_sound(snd_ping, 10, false);
 </string>
           </argument>
         </arguments>
