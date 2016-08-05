@@ -417,7 +417,7 @@ if (new_weapon != noone) {
             <kind>1</kind>
             <string>///Draw current weapon (if any)
 if (current_weapon != noone) {
-   draw_text(50, 50, current_weapon.name);
+   draw_text(50, 50, current_weapon.name + " [" + string(current_weapon.bullets) + "]");
 }
 </string>
           </argument>

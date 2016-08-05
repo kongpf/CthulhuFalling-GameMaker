@@ -13,6 +13,7 @@
       <sound>sound\snd_shootgunShoot</sound>
       <sound>sound\snd_pistolShoot</sound>
       <sound>sound\snd_reload</sound>
+      <sound>sound\snd_dryFire</sound>
     </sounds>
     <sounds name="Ambient">
       <sound>sound\snd_footstepsConcrete</sound>
@@ -44,6 +45,7 @@
       <sprite>sprites\spr_bigCthulhu</sprite>
       <sprite>sprites\spr_bossDungeon</sprite>
       <sprite>sprites\spr_slime2</sprite>
+      <sprite>sprites\spr_rat</sprite>
     </sprites>
     <sprites name="Environment">
       <sprites name="Level 1">
@@ -291,6 +293,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_sign</sprite>
+    <sprite>sprites\spr_bulletPick</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -699,6 +702,7 @@
       <object>objects\obj_cthulhuHive</object>
       <object>objects\obj_cthuluRedHive</object>
       <object>objects\obj_slime</object>
+      <object>objects\obj_rat</object>
       <object>objects\obj_bossDungeon1</object>
       <object>objects\obj_greenWaterTop</object>
       <object>objects\obj_greenWater</object>
@@ -743,6 +747,7 @@
       <object>objects\obj_inventory</object>
       <objects name="Firing Weapons">
         <object>objects\obj_shootWeapon</object>
+        <object>objects\obj_bulletPick</object>
         <objects name="Pistol">
           <object>objects\obj_pistol</object>
           <object>objects\obj_pistolPick</object>

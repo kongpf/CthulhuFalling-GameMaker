@@ -34,6 +34,9 @@ single_shot = false;
 // Name
 name = "Spas 12";
 pick_weapon = obj_shotgunPick;
+// Bullets
+max_bullets = 10;
+bullets = 5;
 </string>
           </argument>
         </arguments>
@@ -77,18 +80,36 @@ key_shoot = mouse_check_button_pressed(mb_left);
 shoot_x = lengthdir_x(16, point_direction(x, y, mouse_x, mouse_y));
 shoot_y = lengthdir_y(16, point_direction(x, y, mouse_x, mouse_y));
 
-if (single_shot) {
-   if (key_shoot)
-      instance_create(x, y, obj_bullet);
-   if (key_shoot_auto)
-      instance_create(x, y, obj_bullet);
+if (bullets &gt; 0) {
+   if (single_shot) {
+       if (key_shoot) {
+          instance_create(x, y, obj_bullet);
+          bullets--;
+       }
+       if (key_shoot_auto) {
+          instance_create(x, y, obj_bullet);
+          bullets--;
+       }
+    } else {
+       if (key_shoot) {
+          audio_play_sound(snd_shootgunShoot, 10, false);
+          repeat(5) {
+              instance_create(x + shoot_x, y + shoot_y, obj_shotgunBullet);
+          }
+          bullets--;
+       }
+    }
 } else {
-   if (key_shoot) {
-      audio_play_sound(snd_shootgunShoot, 10, false);
-      repeat(5) {
-          instance_create(x + shoot_x, y + shoot_y, obj_shotgunBullet);
-      }
-   }
+  if (single_shot) {
+       if (key_shoot)
+          audio_play_sound(snd_dryFire, 10, false);
+       if (key_shoot_auto)
+          audio_play_sound(snd_dryFire, 10, false);
+    } else {
+       if (key_shoot) {
+          audio_play_sound(snd_dryFire, 10, false);
+       }
+    }
 }
 </string>
           </argument>
