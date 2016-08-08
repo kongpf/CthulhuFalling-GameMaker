@@ -38,6 +38,7 @@ current_weapon = noone;
 new_weapon = noone; // Used when the player picks up a new weapon
 current_item = noone;
 new_item = noone; // Used when the player picks up a new item
+walking = false;
 </string>
           </argument>
         </arguments>
@@ -150,7 +151,7 @@ hsp = move * movespeed;
 if (key_exit) game_end();
 
 if (active) {
-   // Shooting
+   // Sound
     if (key_right) {
        facing = 1;
     } 
@@ -168,10 +169,24 @@ if (active) {
         
         if (-key_left) {
            sprite_index = spr_playerRunLeft;
+           
+           if (not key_jump) {
+              walking = true;
+           } else {
+              walking = false;
+           }
         } else if (key_right) {
            sprite_index = spr_playerRunRight;
+           
+           if (not key_jump) {
+              walking = true;
+           } else {
+              walking = false;
+           }
         } else {
            sprite_index = spr_playerIdle;
+           
+           walking = false;
         }
     } else {
       sprite_index = spr_playerJump;
@@ -267,7 +282,7 @@ image_speed = 0.2;
             <kind>1</kind>
             <string>/// Check lives
 if (lives &lt;= 0) {
-   room_goto(rm_dead);
+   room_goto(rm_dead2);
 }
 </string>
           </argument>

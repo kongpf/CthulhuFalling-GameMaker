@@ -62,6 +62,10 @@ glr_mesh_set_depth(mesh, 0);
             <kind>1</kind>
             <string>if (place_meeting(x, y, obj_dangerousObject)) {
    effect_create_above(ef_explosion, x, y, 1, c_maroon);
+   
+   with (instance_place(x, y, obj_dangerousObject)) {
+        instance_destroy();
+   }
    instance_destroy();
 }
 </string>

@@ -57,6 +57,7 @@
       </sprites>
       <sprites name="Common">
         <sprite>sprites\spr_dirt</sprite>
+        <sprite>sprites\spr_sign</sprite>
         <sprite>sprites\spr_streetLight</sprite>
         <sprite>sprites\spr_ladder</sprite>
         <sprite>sprites\spr_wall</sprite>
@@ -97,6 +98,7 @@
     <sprites name="Weapons">
       <sprite>sprites\spr_pencil</sprite>
       <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_bulletPick</sprite>
       <sprite>sprites\spr_bullet2</sprite>
       <sprite>sprites\spr_shotgun</sprite>
       <sprite>sprites\spr_crosshair</sprite>
@@ -292,8 +294,6 @@
         </sprites>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_sign</sprite>
-    <sprite>sprites\spr_bulletPick</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
