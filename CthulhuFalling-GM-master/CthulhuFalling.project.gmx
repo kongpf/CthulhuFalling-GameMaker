@@ -696,6 +696,7 @@
       <object>objects\obj_enemyManager</object>
       <object>objects\obj_instaKillTouch</object>
       <object>objects\obj_enemyDamageIndicator</object>
+      <object>objects\obj_explosionParticle</object>
       <object>objects\obj_cthulhu</object>
       <object>objects\obj_bigCthulhu</object>
       <object>objects\obj_cthulhuRed</object>

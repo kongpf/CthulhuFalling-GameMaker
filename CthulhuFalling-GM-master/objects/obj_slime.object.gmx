@@ -58,6 +58,11 @@ vsp = 0;
 hp = 500;
 pixels_walk = 0;
 pixels_walk_max = 100;
+
+// Sprite explosion
+ww = sprite_get_width(sprite_index);
+hh = sprite_get_height(sprite_index);
+chunk = 4;
 </string>
           </argument>
         </arguments>
@@ -216,6 +221,17 @@ event_inherited();
             <string>/// Check life
 if (hp &lt;= 0) {
 effect_create_above(ef_smoke, x, y, 1, c_green); 
+   // Make explosion
+   for (i = 0; i &lt; ww; i += chunk) {
+       for (j = 0; j &lt; hh; j += chunk) {
+           particle = instance_create(x + i, y + j, obj_explosionParticle);
+           particle.spr = sprite_index;
+           particle.size = chunk;
+           particle.xx = i;
+           particle.yy = j;
+       }
+   }
+
    instance_destroy();
 }
 </string>

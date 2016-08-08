@@ -10,8 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>var spawn_x = 64; //960;
-var spawn_y = 1984; //0;
+  <code>var spawn_x = 960;
+var spawn_y = 0;
 
 if (not instance_exists(obj_player)) {
    instance_create(spawn_x, spawn_y, obj_player);
