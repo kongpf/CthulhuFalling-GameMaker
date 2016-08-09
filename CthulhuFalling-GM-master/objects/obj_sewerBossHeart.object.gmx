@@ -26,7 +26,59 @@
           <argument>
             <kind>1</kind>
             <string>///Variables
-hp = 2000;
+max_hp = 2000;
+hp = max_hp;
+start = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Spawn enemies
+repeat (3) instance_create(x, y, obj_sewerBossRedGoo);
+alarm[1] = 700;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Spawn enemies
+repeat (3) instance_create(x, y, obj_sewerBossGreenGoo);
+alarm[0] = 300;
 </string>
           </argument>
         </arguments>
@@ -85,6 +137,69 @@ if (place_meeting(x, y, obj_dangerousObject)) {
    var d_obj = instance_place(x, y, obj_dangerousObject);
    hp -= d_obj.damage;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Attack logic
+if (collision_circle(x, y, 128, obj_player, false, true) and not start) {
+   start = true;
+   alarm[0] = 300;
+   alarm[1] = 700;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw healthbar
+if (start)
+draw_healthbar(
+               10, 
+               view_hview[0] - 32, 
+               view_wview[0] - 10, 
+               view_hview[0] - 32,
+               (hp / max_hp) * 100,
+               c_black,
+               c_red,
+               c_red,
+               3,
+               true,
+               false
+);
 </string>
           </argument>
         </arguments>
