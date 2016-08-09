@@ -49,6 +49,7 @@
       <sprite>sprites\spr_sewerBoss</sprite>
       <sprite>sprites\spr_sewerBossRedGoo</sprite>
       <sprite>sprites\spr_sewerBossGreenGoo</sprite>
+      <sprite>sprites\spr_sewerBossHeart</sprite>
     </sprites>
     <sprites name="Environment">
       <sprites name="Level 1">
@@ -713,6 +714,7 @@
       <object>objects\obj_sewerBoss</object>
       <object>objects\obj_sewerBossGreenGoo</object>
       <object>objects\obj_sewerBossRedGoo</object>
+      <object>objects\obj_sewerBossHeart</object>
     </objects>
     <objects name="Environment">
       <objects name="Level 1">
@@ -794,6 +796,7 @@
       <object>objects\obj_fire</object>
       <object>objects\obj_chandelier</object>
       <object>objects\obj_streetLight</object>
+      <object>objects\obj_sewerBossLight</object>
     </objects>
     <objects name="Glare demo">
       <object>objects\obj_glare_controller</object>

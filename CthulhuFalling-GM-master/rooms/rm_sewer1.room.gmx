@@ -664,30 +664,29 @@ if (not instance_exists(obj_player)) {
     <instance objName="obj_streetLight" x="416" y="1408" name="inst_806EBBF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="256" y="1472" name="inst_F631CC1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="64" y="1568" name="inst_26A454D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="544" y="1888" name="inst_D54A77E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="512" y="1856" name="inst_9EE096B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="512" y="1824" name="inst_60ED090F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="544" y="1856" name="inst_A0B1A350" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="576" y="1888" name="inst_D7620C47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="512" y="1888" name="inst_F30EE3D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="640" y="1888" name="inst_665D6F21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="672" y="1856" name="inst_E6F2C7CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="704" y="1824" name="inst_CFF69092" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="704" y="1856" name="inst_048ADC99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="672" y="1856" name="inst_2863FACF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="672" y="1856" name="inst_E605AB69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="672" y="1888" name="inst_FB298058" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="672" y="1888" name="inst_33C3E9D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="704" y="1888" name="inst_08178479" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="512" y="1952" name="inst_2391CB78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="544" y="1984" name="inst_554B507E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="576" y="1984" name="inst_83AB369E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="608" y="1984" name="inst_EDE58A21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="640" y="1984" name="inst_66C960B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="704" y="1952" name="inst_210D317D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_redTorch" x="672" y="1984" name="inst_5BC41D33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBoss" x="320" y="1952" name="inst_8D7BD204" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shotgunPick" x="64" y="1984" name="inst_79C9556F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="512" y="1824" name="inst_B5EA518E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="512" y="1824" name="inst_AA199EB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="512" y="1856" name="inst_6A215367" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="512" y="1888" name="inst_FDDCBBD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="544" y="1888" name="inst_58C9984A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="576" y="1888" name="inst_795EE2C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="544" y="1856" name="inst_8CAA16FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="640" y="1888" name="inst_3B77C0B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="672" y="1856" name="inst_343E633D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="704" y="1824" name="inst_C0C0C97D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="704" y="1856" name="inst_8A30068B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="672" y="1888" name="inst_F89B8EBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="704" y="1888" name="inst_882BE500" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="512" y="1952" name="inst_F88BEFAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="544" y="1984" name="inst_874A69B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="576" y="1984" name="inst_B4AEC6F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="608" y="1984" name="inst_6418092C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="640" y="1984" name="inst_4D120A40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="640" y="1984" name="inst_1BBDF5A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="672" y="1984" name="inst_3C930F12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="704" y="1952" name="inst_4090CFC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossHeart" x="608" y="1856" name="inst_F89E46C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
