@@ -10,8 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>var spawn_x = 960;
-var spawn_y = 0;
+  <code>var spawn_x = 0;
+var spawn_y = 1792;
 
 if (not instance_exists(obj_player)) {
    instance_create(spawn_x, spawn_y, obj_player);
@@ -686,6 +686,8 @@ if (not instance_exists(obj_player)) {
     <instance objName="obj_redTorch" x="640" y="1984" name="inst_66C960B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_redTorch" x="704" y="1952" name="inst_210D317D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_redTorch" x="672" y="1984" name="inst_5BC41D33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBoss" x="320" y="1952" name="inst_8D7BD204" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_shotgunPick" x="64" y="1984" name="inst_79C9556F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

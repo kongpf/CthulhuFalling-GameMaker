@@ -46,6 +46,9 @@
       <sprite>sprites\spr_bossDungeon</sprite>
       <sprite>sprites\spr_slime2</sprite>
       <sprite>sprites\spr_rat</sprite>
+      <sprite>sprites\spr_sewerBoss</sprite>
+      <sprite>sprites\spr_sewerBossRedGoo</sprite>
+      <sprite>sprites\spr_sewerBossGreenGoo</sprite>
     </sprites>
     <sprites name="Environment">
       <sprites name="Level 1">
@@ -707,6 +710,9 @@
       <object>objects\obj_bossDungeon1</object>
       <object>objects\obj_greenWaterTop</object>
       <object>objects\obj_greenWater</object>
+      <object>objects\obj_sewerBoss</object>
+      <object>objects\obj_sewerBossGreenGoo</object>
+      <object>objects\obj_sewerBossRedGoo</object>
     </objects>
     <objects name="Environment">
       <objects name="Level 1">
