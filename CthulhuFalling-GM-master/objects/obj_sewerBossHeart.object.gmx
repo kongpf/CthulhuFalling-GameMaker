@@ -3,7 +3,7 @@
   <spriteName>spr_sewerBossHeart</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>50</depth>
   <persistent>0</persistent>
   <parentName>obj_enemy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,6 +28,7 @@
             <string>///Variables
 max_hp = 2000;
 hp = max_hp;
+hp_percent = 100;
 start = false;
 </string>
           </argument>
@@ -108,7 +109,7 @@ if (hp &lt;= 0) {
         instance_destroy();
    }
    
-   //TODO: screen shake
+   instance_create(x, y, obj_screenShake);
    effect_create_above(ef_smoke, x, y, 2, c_green);
    instance_destroy();
 }
@@ -136,6 +137,8 @@ if (hp &lt;= 0) {
 if (place_meeting(x, y, obj_dangerousObject)) {
    var d_obj = instance_place(x, y, obj_dangerousObject);
    hp -= d_obj.damage;
+   
+   show_message("HP: " + string(hp_percent) + "%");
 }
 </string>
           </argument>
@@ -167,6 +170,28 @@ if (collision_circle(x, y, 128, obj_player, false, true) and not start) {
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Update hp percentage
+hp_percent = (hp / max_hp) * 100;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="64">
       <action>
@@ -186,13 +211,14 @@ if (collision_circle(x, y, 128, obj_player, false, true) and not start) {
           <argument>
             <kind>1</kind>
             <string>///Draw healthbar
+
 if (start)
 draw_healthbar(
                10, 
                view_hview[0] - 32, 
                view_wview[0] - 10, 
                view_hview[0] - 32,
-               (hp / max_hp) * 100,
+               hp_percent,
                c_black,
                c_red,
                c_red,

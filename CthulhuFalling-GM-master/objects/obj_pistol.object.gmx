@@ -40,8 +40,8 @@ name = "9mm";
 // Related pick object
 pick_weapon = obj_pistolPick;
 // Bullets
-max_bullets = 200;
-bullets = 100;
+max_bullets = 1000;
+bullets = 1000;
 </string>
           </argument>
         </arguments>

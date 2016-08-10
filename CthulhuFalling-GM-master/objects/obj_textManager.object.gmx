@@ -193,8 +193,10 @@ current_script = ds_list_find_value(scripts, ds_list_size(scripts) - 1);
             <kind>1</kind>
             <string>/// Follow speaker
 if (current_instance != noone and current_speaker != noone and ds_list_size(instances) &gt; 0) {
-   current_instance.x = current_speaker.x;
-   current_instance.y = current_speaker.y - current_instance.boxheight - 5;
+   if (instance_exists(current_instance)) {
+      current_instance.x = current_speaker.x;
+      current_instance.y = current_speaker.y - current_instance.boxheight - 5;
+   }
 } 
 </string>
           </argument>

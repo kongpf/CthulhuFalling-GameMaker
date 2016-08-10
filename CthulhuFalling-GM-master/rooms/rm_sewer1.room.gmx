@@ -664,7 +664,6 @@ if (not instance_exists(obj_player)) {
     <instance objName="obj_streetLight" x="416" y="1408" name="inst_806EBBF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="256" y="1472" name="inst_F631CC1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="64" y="1568" name="inst_26A454D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_shotgunPick" x="64" y="1984" name="inst_79C9556F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerBossLight" x="512" y="1824" name="inst_B5EA518E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerBossLight" x="512" y="1824" name="inst_AA199EB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerBossLight" x="512" y="1856" name="inst_6A215367" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -687,6 +686,7 @@ if (not instance_exists(obj_player)) {
     <instance objName="obj_sewerBossLight" x="672" y="1984" name="inst_3C930F12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerBossLight" x="704" y="1952" name="inst_4090CFC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerBossHeart" x="608" y="1856" name="inst_F89E46C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pistolPick" x="96" y="1984" name="inst_68BC5F93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
