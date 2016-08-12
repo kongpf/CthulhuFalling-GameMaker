@@ -30,7 +30,8 @@ grav = 0.4;
 hsp = 0;
 vsp = 0;
 jumpspeed = 7;
-movespeed = 1.7;
+movespeed = 1.6;
+movefactor = 0.2;
 hp = 100;
 facing = 1;
 active = true;
@@ -184,75 +185,73 @@ hsp = move * movespeed;
 
 if (key_exit) game_end();
 
-if (active) {
-   // Sound
-    if (key_right) {
-       facing = 1;
-    } 
+// Sound
+if (key_right) {
+   facing = 1;
+} 
+
+if (-key_left) {
+  facing = -1;
+}
+
+// Apply gravity
+if (vsp &lt; 10) vsp += grav;
+
+// Check jump
+if (place_meeting(x, y + 1, obj_environmentItem)) {
+    vsp = key_jump * -jumpspeed;
     
     if (-key_left) {
-      facing = -1;
-    }
-    
-    // Apply gravity
-    if (vsp &lt; 10) vsp += grav;
-    
-    // Check jump
-    if (place_meeting(x, y + 1, obj_environmentItem)) {
-        vsp = key_jump * -jumpspeed;
-        
-        if (-key_left) {
-           sprite_index = spr_playerRunLeft;
-           
-           if (not key_jump) {
-              walking = true;
-           } else {
-              walking = false;
-           }
-        } else if (key_right) {
-           sprite_index = spr_playerRunRight;
-           
-           if (not key_jump) {
-              walking = true;
-           } else {
-              walking = false;
-           }
-        } else {
-           sprite_index = spr_playerIdle;
-           
-           walking = false;
-        }
+       sprite_index = spr_playerRunLeft;
+       
+       if (not key_jump) {
+          walking = true;
+       } else {
+          walking = false;
+       }
+    } else if (key_right) {
+       sprite_index = spr_playerRunRight;
+       
+       if (not key_jump) {
+          walking = true;
+       } else {
+          walking = false;
+       }
     } else {
-      sprite_index = spr_playerJump;
-    }
-    
-    if ((vsp &lt; 0) and (!key_jump_held)) vsp = max(vsp, 0);
-    
-    // Check climb items
-    if (place_meeting(x, y, obj_climbItem)) {
-        vsp = key_jump * -jumpspeed;
-    
-        if (key_climb_up) {
-           vsp = -movespeed;
-        }
+       sprite_index = spr_playerIdle;
        
-        if (key_climb_down) {
-           vsp = movespeed;
-        }
+       walking = false;
     }
-    
-    // Melee
-    if (key_melee) {
-       if (facing == 1) {
-          sprite_index = spr_meleeRight;
-          instance_create(x + sprite_width, y, obj_invisibleMelee);
-       }
-       
-       if (facing == -1) {
-          sprite_index = spr_meleeLeft;
-          instance_create(x - sprite_width, y, obj_invisibleMelee);
-       }
+} else {
+  sprite_index = spr_playerJump;
+}
+
+if ((vsp &lt; 0) and (!key_jump_held)) vsp = max(vsp, 0);
+
+// Check climb items
+if (place_meeting(x, y, obj_climbItem)) {
+    vsp = key_jump * -jumpspeed;
+
+    if (key_climb_up) {
+       vsp = -movespeed;
     }
+   
+    if (key_climb_down) {
+       vsp = movespeed;
+    }
+}
+
+// Melee
+if (key_melee) {
+   if (facing == 1) {
+      sprite_index = spr_meleeRight;
+      instance_create(x + sprite_width, y, obj_invisibleMelee);
+   }
+   
+   if (facing == -1) {
+      sprite_index = spr_meleeLeft;
+      instance_create(x - sprite_width, y, obj_invisibleMelee);
+   }
 }
 
 // Horizontal collision

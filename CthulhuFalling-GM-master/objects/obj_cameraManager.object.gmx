@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>///Variables
 follow = obj_player;
+time_counter = 0;
+count = false;
+max_time = 350;
 </string>
           </argument>
         </arguments>
@@ -78,6 +81,9 @@ if (instance_exists(obj_ghostEnvironmentItem)) {
        if (follow == obj_player) {
            follow = obj_lovecraftPlay;
            
+           // Start counting down to disappear
+           count = true;
+           
            // Spawn lovecraft and pass control to him
            instance_create(obj_player.x, obj_player.y, obj_lovecraftPlay);
            obj_player.active = false;
@@ -103,6 +109,79 @@ if (instance_exists(obj_ghostEnvironmentItem)) {
   if (keyboard_check_pressed(vk_tab))
      scr_text("Non è il momento giusto", 0.4, follow.x, follow.y, follow, noone);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Count
+if (count) {
+   time_counter++;
+   
+   if (time_counter == max_time) {
+      if (instance_exists(obj_lovecraftPlay)) {
+         with obj_lovecraftPlay instance_destroy();
+         count = false;
+         time_counter = 0;
+         follow = obj_player;
+         with (obj_ghostEnvironmentItem) visible = false;
+         with (obj_ghostClimbItem) visible = false;
+         obj_player.active = true;
+      }
+   }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw bar for time
+if (count)
+draw_healthbar(
+    view_wview[0] - 30,
+    view_hview[0] - 20,
+    view_wview[0] - 20,
+    view_hview[0] - (view_hview[0] - 20),
+    ((max_time - time_counter) / max_time) * 100,
+    c_white,
+    c_purple,
+    c_blue,
+    3,
+    false,
+    false
+);
 </string>
           </argument>
         </arguments>
