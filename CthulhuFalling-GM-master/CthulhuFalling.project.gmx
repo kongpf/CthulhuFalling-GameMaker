@@ -64,6 +64,7 @@
         <sprite>sprites\spr_sign</sprite>
         <sprite>sprites\spr_streetLight</sprite>
         <sprite>sprites\spr_ladder</sprite>
+        <sprite>sprites\spr_ghostLadder</sprite>
         <sprite>sprites\spr_wall</sprite>
         <sprite>sprites\spr_door</sprite>
       </sprites>
@@ -78,7 +79,6 @@
     </sprites>
     <sprites name="Characters">
       <sprites name="Player">
-        <sprite>sprites\spr_player</sprite>
         <sprites name="Idle">
           <sprite>sprites\spr_playerIdle</sprite>
           <sprite>sprites\spr_playerRunRight</sprite>
@@ -615,6 +615,7 @@
       <script>scripts\scr_goto_splash.gml</script>
       <script>scripts\scr_melee_hint.gml</script>
       <script>scripts\scr_commands_hint.gml</script>
+      <script>scripts\camera_movement_target.gml</script>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>
@@ -694,6 +695,7 @@
       <object>objects\obj_currentBonusDisplay</object>
       <object>objects\obj_bonusLife</object>
       <object>objects\obj_bonusDestroyAll</object>
+      <object>objects\obj_life</object>
     </objects>
     <objects name="Enemy">
       <object>objects\obj_enemy</object>
@@ -722,8 +724,10 @@
       </objects>
       <objects name="Common">
         <object>objects\obj_environmentItem</object>
+        <object>objects\obj_ghostEnvironmentItem</object>
         <object>objects\obj_levelEnd</object>
         <object>objects\obj_climbItem</object>
+        <object>objects\obj_ghostClimbItem</object>
         <object>objects\obj_jumpItemDestroyable</object>
         <object>objects\obj_interactionAllowed</object>
         <object>objects\obj_dirt</object>
@@ -731,8 +735,10 @@
         <object>objects\obj_wall</object>
         <object>objects\obj_door12</object>
         <object>objects\obj_ladder</object>
+        <object>objects\obj_ghostLadder</object>
         <object>objects\obj_armorySign</object>
         <object>objects\obj_sewerSign</object>
+        <object>objects\obj_ghostDirt</object>
       </objects>
       <objects name="Howard House">
         <object>objects\obj_floor</object>
@@ -774,6 +780,7 @@
     </objects>
     <objects name="Characters">
       <object>objects\obj_player</object>
+      <object>objects\obj_lovecraftPlay</object>
       <object>objects\obj_mouseController</object>
       <object>objects\obj_cat</object>
       <object>objects\obj_poe</object>
@@ -990,6 +997,9 @@
       <object>objects\obj_textManager</object>
       <object>objects\obj_hintManager</object>
       <object>objects\obj_hint</object>
+    </objects>
+    <objects name="Camera">
+      <object>objects\obj_cameraManager</object>
     </objects>
   </objects>
   <timelines name="timelines">

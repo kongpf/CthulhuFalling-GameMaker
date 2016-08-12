@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_lightController" x="0" y="0" name="inst_0AA45F2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cameraManager" x="64" y="0" name="inst_5ACE2A37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="288" y="480" name="inst_926A1B49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="320" y="480" name="inst_D47C355C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="352" y="480" name="inst_7EC87249" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
