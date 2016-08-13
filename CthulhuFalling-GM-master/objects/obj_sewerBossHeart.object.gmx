@@ -138,7 +138,7 @@ if (place_meeting(x, y, obj_dangerousObject)) {
    var d_obj = instance_place(x, y, obj_dangerousObject);
    hp -= d_obj.damage;
    
-   show_message("HP: " + string(hp_percent) + "%");
+   //show_message("HP: " + string(hp_percent) + "%");
 }
 </string>
           </argument>
@@ -222,7 +222,7 @@ draw_healthbar(
                c_black,
                c_red,
                c_red,
-               3,
+               0,
                true,
                false
 );

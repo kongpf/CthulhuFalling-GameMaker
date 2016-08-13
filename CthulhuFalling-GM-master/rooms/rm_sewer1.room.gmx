@@ -27,7 +27,10 @@ if (not instance_exists(obj_cameraManager)) {
 
 if (not instance_exists(obj_lightController)) {
    instance_create(x, y, obj_lightController);
-}</code>
+}
+
+// Set day time
+obj_lightController.hour = 3;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

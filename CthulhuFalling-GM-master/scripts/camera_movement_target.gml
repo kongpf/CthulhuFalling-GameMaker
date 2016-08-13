@@ -1,5 +1,5 @@
 ///camera_movement_target(object)
-var const = 0.2;
+var const = 0.5;
 var object = argument0;
 var obj_x = object.x;
 var obj_y = object.y;

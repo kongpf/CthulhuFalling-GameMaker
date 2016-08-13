@@ -55,7 +55,7 @@ fast_movespeed = 2;
 grav = 0.2;
 hsp = 0;
 vsp = 0;
-hp = 500;
+hp = 150;
 pixels_walk = 0;
 pixels_walk_max = 100;
 
