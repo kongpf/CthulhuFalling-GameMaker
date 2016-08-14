@@ -42,6 +42,8 @@ pick_weapon = obj_pistolPick;
 // Bullets
 max_bullets = 1000;
 bullets = 1000;
+
+sloppy = 10;
 </string>
           </argument>
         </arguments>
@@ -105,8 +107,19 @@ else image_yscale = 1;
 key_shoot_auto = mouse_check_button(mb_left);
 key_shoot = mouse_check_button_pressed(mb_left);
 
-shoot_x = lengthdir_x(16, point_direction(x, y, mouse_x, mouse_y));
-shoot_y = lengthdir_y(16, point_direction(x, y, mouse_x, mouse_y));
+var dir_x;
+var dir_y;
+
+if (instance_exists(obj_crosshair)) {
+   dir_x = obj_crosshair.x + obj_crosshair.sprite_width / 2;
+   dir_y = obj_crosshair.y + obj_crosshair.sprite_height / 2;
+} else {
+   dir_x = mouse_x;
+   dir_y = mouse_y;
+} 
+
+shoot_x = lengthdir_x(16, point_direction(x, y, dir_x, dir_y));
+shoot_y = lengthdir_y(16, point_direction(x, y, dir_x, dir_y));
 
 if (bullets &gt; 0) {
    if (single_shot) {

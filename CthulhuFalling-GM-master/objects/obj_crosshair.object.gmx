@@ -28,6 +28,7 @@
             <string>// effects
 dec_value = 0;
 dec_factor = 0;
+sloppy = 10;
 
 // Set depth
 if (instance_exists(obj_lightController))
@@ -103,11 +104,11 @@ move_towards_point(mouse_x, mouse_y, 0);
 
 dist = distance_to_point(mouse_x, mouse_y);
 
-x_to = obj_player.x + lengthdir_x(min(350, dist), direction);
-y_to = obj_player.y + lengthdir_y(min(350, dist), direction);
+x_to = obj_player.x + lengthdir_x(min(1000, dist), direction);
+y_to = obj_player.y + lengthdir_y(min(1000, dist), direction);
 
-x += (x_to - x) / 20;
-y += (y_to - y) / 20;
+x += (x_to - x) / sloppy;
+y += (y_to - y) / sloppy;
 
 //view_xview[0] = x - (view_wview[0] / 2);
 //view_yview[0] = y - (view_hview[0] / 2);

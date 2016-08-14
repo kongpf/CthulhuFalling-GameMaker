@@ -116,6 +116,10 @@
       <sprite>sprites\spr_invisibleMelee</sprite>
       <sprite>sprites\spr_shotgunPick</sprite>
       <sprite>sprites\spr_shootFire</sprite>
+      <sprite>sprites\spr_uzi</sprite>
+      <sprite>sprites\spr_uziPick</sprite>
+      <sprite>sprites\spr_fragGrenade</sprite>
+      <sprite>sprites\spr_fragGrenadePick</sprite>
     </sprites>
     <sprites name="Glare demo">
       <sprites name="Top Down Shooter">
@@ -623,6 +627,9 @@
       <script>scripts\scr_stop_current_dialog.gml</script>
       <script>scripts\scr_hint.gml</script>
     </scripts>
+    <scripts name="Physics">
+      <script>scripts\projectile_motion.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shaders name="Glare">
@@ -762,6 +769,7 @@
       <object>objects\obj_inventory</object>
       <objects name="Firing Weapons">
         <object>objects\obj_shootWeapon</object>
+        <object>objects\obj_launchWeapon</object>
         <object>objects\obj_bulletPick</object>
         <objects name="Pistol">
           <object>objects\obj_pistol</object>
@@ -773,9 +781,21 @@
           <object>objects\obj_shotgunPick</object>
           <object>objects\obj_shotgunBullet</object>
         </objects>
+        <objects name="Uzi">
+          <object>objects\obj_uzi</object>
+          <object>objects\obj_uziPick</object>
+          <object>objects\obj_uziBullet</object>
+        </objects>
       </objects>
       <objects name="Melee Weapons">
         <object>objects\obj_invisibleMelee</object>
+      </objects>
+      <object>objects\obj_crosshair</object>
+      <objects name="Launch Weapons">
+        <objects name="Frag Grenade">
+          <object>objects\obj_fragGrenadePick</object>
+          <object>objects\obj_fragGrenade</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Characters">
@@ -785,7 +805,6 @@
       <object>objects\obj_cat</object>
       <object>objects\obj_poe</object>
       <object>objects\obj_poeIntro</object>
-      <object>objects\obj_crosshair</object>
       <object>objects\obj_camera</object>
       <object>objects\obj_grandmaIntro</object>
       <object>objects\obj_grandmaStanding</object>
