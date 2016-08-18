@@ -14,6 +14,7 @@
       <sound>sound\snd_pistolShoot</sound>
       <sound>sound\snd_reload</sound>
       <sound>sound\snd_dryFire</sound>
+      <sound>sound\snd_fragExplosion</sound>
     </sounds>
     <sounds name="Ambient">
       <sound>sound\snd_footstepsConcrete</sound>
@@ -121,6 +122,7 @@
       <sprite>sprites\spr_fragPathPoint</sprite>
       <sprite>sprites\spr_fragGrenade</sprite>
       <sprite>sprites\spr_fragGrenadePick</sprite>
+      <sprite>sprites\spr_fragExplosion</sprite>
     </sprites>
     <sprites name="Glare demo">
       <sprites name="Top Down Shooter">
@@ -621,6 +623,7 @@
       <script>scripts\scr_melee_hint.gml</script>
       <script>scripts\scr_commands_hint.gml</script>
       <script>scripts\camera_movement_target.gml</script>
+      <script>scripts\collision_rectangle_list.gml</script>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>
@@ -797,6 +800,7 @@
           <object>objects\obj_fragGrenadePick</object>
           <object>objects\obj_fragGrenade</object>
           <object>objects\obj_fragPathPoint</object>
+          <object>objects\obj_fragExplosion</object>
         </objects>
       </objects>
     </objects>

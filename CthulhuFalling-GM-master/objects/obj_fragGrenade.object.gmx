@@ -154,8 +154,31 @@ if (not shoot) {
             <kind>1</kind>
             <string>///Explosion
 if (place_meeting(x, y, obj_environmentItem)) {
+   // Smoke (TODO: particles)
    effect_create_above(ef_explosion, x, y, 5, c_orange);
+   
+   // Shake screen
    instance_create(x, y, obj_screenShake);
+   
+   // Sound
+   audio_play_sound(snd_fragExplosion, 10, false);
+   
+   // Do damage
+   var damaged = ds_list_create();
+   
+   damaged = collision_rectangle_list(x - 64, y - 64, x + 64, y + 64, obj_enemy, false, true);
+   
+   if (damaged != noone) {
+      for (i = 0; i &lt; ds_list_size(damaged); i++) {
+          if (instance_exists(damaged[| i])) {
+             with (damaged[| i]) {
+                  instance_destroy();
+             }
+          }
+      }
+   }
+   
+   // Destroy instance
    instance_destroy();
 }
 </string>
@@ -201,8 +224,6 @@ var spawn = true;
 
 for (var i = 0; i &lt; 32; i++) {
     var X = i * 32;
-    
-    if (i == 0) show_debug_message("First path position: " + string(x - X) + ", grenade x: " + string(x));
     
     if (f_angle &gt; 90 or f_angle &gt; 180) {
        X = -X;
