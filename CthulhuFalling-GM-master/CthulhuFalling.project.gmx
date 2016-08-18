@@ -624,6 +624,7 @@
       <script>scripts\scr_commands_hint.gml</script>
       <script>scripts\camera_movement_target.gml</script>
       <script>scripts\collision_rectangle_list.gml</script>
+      <script>scripts\collision_circle_list.gml</script>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>

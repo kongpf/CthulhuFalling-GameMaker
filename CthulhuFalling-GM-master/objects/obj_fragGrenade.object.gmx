@@ -166,7 +166,7 @@ if (place_meeting(x, y, obj_environmentItem)) {
    // Do damage
    var damaged = ds_list_create();
    
-   damaged = collision_rectangle_list(x - 64, y - 64, x + 64, y + 64, obj_enemy, false, true);
+   damaged = collision_circle_list(x, y, 16, obj_enemy, false, true);
    
    if (damaged != noone) {
       for (i = 0; i &lt; ds_list_size(damaged); i++) {
