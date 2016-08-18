@@ -772,6 +772,7 @@
     <objects name="Weapons">
       <object>objects\obj_dangerousObject</object>
       <object>objects\obj_inventory</object>
+      <object>objects\obj_crosshair</object>
       <objects name="Firing Weapons">
         <object>objects\obj_shootWeapon</object>
         <object>objects\obj_bulletPick</object>
@@ -794,7 +795,6 @@
       <objects name="Melee Weapons">
         <object>objects\obj_invisibleMelee</object>
       </objects>
-      <object>objects\obj_crosshair</object>
       <objects name="Launch Weapons">
         <object>objects\obj_launchWeapon</object>
         <objects name="Frag Grenade">

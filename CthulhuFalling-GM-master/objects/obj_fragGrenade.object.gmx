@@ -31,33 +31,13 @@ name = "Frag Grenade";
 // Related pick object
 pick_weapon = obj_fragGrenadePick;
 bullets = 1;
-
 sloppy = 5;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>f_speed = 12;
+f_speed = 12;
 f_angle = 45;
 gra = .75;
 shoot = false;
 scale = 2;
+draw_gap = 16;
 </string>
           </argument>
         </arguments>
@@ -166,7 +146,7 @@ if (place_meeting(x, y, obj_environmentItem)) {
    // Do damage
    var damaged = ds_list_create();
    
-   damaged = collision_circle_list(x, y, 16, obj_enemy, false, true);
+   damaged = collision_circle_list(x, y, 32, obj_enemy, false, true);
    
    if (damaged != noone) {
       for (i = 0; i &lt; ds_list_size(damaged); i++) {
@@ -222,8 +202,8 @@ var target_x = obj_player.x;
 var target_y = obj_player.y;
 var spawn = true;
 
-for (var i = 0; i &lt; 32; i++) {
-    var X = i * 32;
+for (var i = 0; i &lt; draw_gap; i++) {
+    var X = i * draw_gap;
     
     if (f_angle &gt; 90 or f_angle &gt; 180) {
        X = -X;
