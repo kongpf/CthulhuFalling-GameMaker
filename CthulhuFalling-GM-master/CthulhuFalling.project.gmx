@@ -118,6 +118,7 @@
       <sprite>sprites\spr_shootFire</sprite>
       <sprite>sprites\spr_uzi</sprite>
       <sprite>sprites\spr_uziPick</sprite>
+      <sprite>sprites\spr_fragPathPoint</sprite>
       <sprite>sprites\spr_fragGrenade</sprite>
       <sprite>sprites\spr_fragGrenadePick</sprite>
     </sprites>
@@ -769,7 +770,6 @@
       <object>objects\obj_inventory</object>
       <objects name="Firing Weapons">
         <object>objects\obj_shootWeapon</object>
-        <object>objects\obj_launchWeapon</object>
         <object>objects\obj_bulletPick</object>
         <objects name="Pistol">
           <object>objects\obj_pistol</object>
@@ -792,9 +792,11 @@
       </objects>
       <object>objects\obj_crosshair</object>
       <objects name="Launch Weapons">
+        <object>objects\obj_launchWeapon</object>
         <objects name="Frag Grenade">
           <object>objects\obj_fragGrenadePick</object>
           <object>objects\obj_fragGrenade</object>
+          <object>objects\obj_fragPathPoint</object>
         </objects>
       </objects>
     </objects>

@@ -53,10 +53,11 @@ sloppy = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>f_speed = 6;
+            <string>f_speed = 12;
 f_angle = 45;
 gra = .75;
 shoot = false;
+scale = 2;
 </string>
           </argument>
         </arguments>
@@ -116,6 +117,14 @@ if (keyboard_check(vk_down)) {
    f_angle--;
 }
 
+if (mouse_wheel_up()) {
+   f_angle += 5;
+}
+
+if (mouse_wheel_down()) {
+   f_angle -= 5;
+}
+
 if (not shoot) {
    if (keyboard_check_pressed(ord('F'))) {
       direction = f_angle;
@@ -154,7 +163,21 @@ if (place_meeting(x, y, obj_environmentItem)) {
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>500</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring>draw_self();</codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -171,12 +194,24 @@ if (place_meeting(x, y, obj_environmentItem)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for (var i = 0; i &lt; 32; i++) {
+            <string>///Draw path
+var target_x = obj_player.x;
+var target_y = obj_player.y;
+var spawn = true;
+
+for (var i = 0; i &lt; 32; i++) {
     var X = i * 32;
-    var Y = projectile_motion(X, f_speed, f_angle, 0, 0, gra);
     
-    draw_set_color(c_orange);
-    draw_point(x + X, y - Y);
+    if (i == 0) show_debug_message("First path position: " + string(x - X) + ", grenade x: " + string(x));
+    
+    if (f_angle &gt; 90 or f_angle &gt; 180) {
+       X = -X;
+    }
+    
+    var Y = projectile_motion(X, f_speed, f_angle, 0, 0, gra);
+
+    if (i != 0)
+       draw_sprite_ext(spr_fragPathPoint, 0, target_x + X, target_y - Y, (scale / (i + 1)), (scale / (i + 1)), 0, c_white, 1);
 }
 </string>
           </argument>
