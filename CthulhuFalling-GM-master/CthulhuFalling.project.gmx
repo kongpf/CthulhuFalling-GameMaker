@@ -736,6 +736,7 @@
       </objects>
       <objects name="Common">
         <object>objects\obj_environmentItem</object>
+        <object>objects\obj_destructibleEnvironmentItem</object>
         <object>objects\obj_ghostEnvironmentItem</object>
         <object>objects\obj_levelEnd</object>
         <object>objects\obj_climbItem</object>

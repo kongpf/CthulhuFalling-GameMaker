@@ -133,7 +133,7 @@ if (not shoot) {
           <argument>
             <kind>1</kind>
             <string>///Explosion
-if (place_meeting(x, y, obj_environmentItem)) {
+if (place_meeting(x, y, obj_environmentItem) or place_meeting(x, y, obj_dirtDestructible)) {
    // Smoke (TODO: particles)
    effect_create_above(ef_explosion, x, y, 5, c_orange);
    
@@ -146,6 +146,13 @@ if (place_meeting(x, y, obj_environmentItem)) {
    // Do damage
    var damaged = ds_list_create();
    
+   // Damage player if in range
+   if (collision_circle(x, y, 32, obj_player, false, true) != noone) {
+      // Decrease lives by 2
+      lives -= 2;
+   }
+   
+   // Get a list of colliding enemies
    damaged = collision_circle_list(x, y, 32, obj_enemy, false, true);
    
    if (damaged != noone) {
@@ -155,6 +162,22 @@ if (place_meeting(x, y, obj_environmentItem)) {
                   instance_destroy();
              }
           }
+      }
+   }
+   
+   // If destructible, than destroy
+   if (place_meeting(x, y, obj_dirtDestructible)) {
+      // Get a list of colliding destructible objects
+      destroy = collision_circle_list(x, y, 32, obj_dirtDestructible, false, true);
+      
+      if (destroy != noone) {
+         for (i = 0; i &lt; ds_list_size(destroy); i++) {
+             if (instance_exists(destroy[| i])) {
+                with (destroy[| i]) {
+                     instance_destroy();
+                }
+             }
+         }
       }
    }
    
