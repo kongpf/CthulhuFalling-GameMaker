@@ -433,11 +433,30 @@ if (room == rm_splashScreen) {
             <string>///Pick up new bag item
 if (place_meeting(x, y, obj_bagItem) and keyboard_check_pressed(vk_enter)) {
       that_instance = instance_place(x, y, obj_bagItem);
-
-      new_bag_item = that_instance.real_weapon;
+      var first_free = -1;
       
-      if (instance_exists(obj_bag)) {
-         obj_bag.bag[obj_bag.bag_slot] = that_instance.object_index;
+      /*if (instance_exists(obj_bag)) {
+          obj_bag.bag[obj_bag.bag_slot] = that_instance.object_index;
+          new_bag_item = that_instance.real_weapon;
+      }*/
+      
+      for (i = 0; i &lt; obj_bag.bag_size; i++) {
+          if (obj_bag.bag[i] == noone and first_free == -1) {
+             first_free = i;
+          }
+      }
+      
+      if (first_free != -1) {
+         // Put object in first free slot and DO NOT use it if you're already using something
+         obj_bag.bag[first_free] = that_instance.object_index;
+         
+         if (current_bag_item == noone) {
+            new_bag_item = that_instance.real_weapon;
+         }
+      } else {
+        // No free slots, substitute with one in use and drop last one
+        obj_bag.bag[obj_bag.bag_slot] = that_instance.object_index;
+        new_bag_item = that_instance.real_weapon;
       }
       
       // Destroy current instance
@@ -470,14 +489,8 @@ if (new_bag_item != noone) {
    
    if (current_bag_item != noone) {
       if (instance_exists(current_bag_item)) {
-         if (obj_bag.bag_slot == obj_bag.bag_slot_last) {
-            // Put current weapon to the ground with its pick object
-            instance_create(x, y, current_bag_item.pick_weapon);
-         } else {
-           // Do nothing, just reset this flag for next time
-           respawn_bag_item = true;
-           obj_bag.bag_slot_last = obj_bag.bag_slot;
-         }
+          // Put current weapon to the ground with its pick object
+          instance_create(x, y, current_bag_item.pick_weapon);
       }
    }
    
@@ -533,9 +546,11 @@ if (mouse_wheel_up()) {
    }
    
    // Set weapon
-   if (instance_exists(obj_player) and obj_bag.bag[obj_bag.bag_slot] != noone) {
-      respawn_bag_item = false;
-      new_bag_item_switch = obj_bag.bag[obj_bag.bag_slot].real_weapon;
+   if (instance_exists(obj_player)) {
+      if (obj_bag.bag[obj_bag.bag_slot] != noone) {
+         respawn_bag_item = false;
+         new_bag_item_switch = obj_bag.bag[obj_bag.bag_slot].real_weapon;
+      }
    }
 }
 
@@ -547,9 +562,11 @@ if (mouse_wheel_down()) {
    }
    
    // Set weapon
-   if (instance_exists(obj_player) and obj_bag.bag[obj_bag.bag_slot] != noone) {
-      respawn_bag_item = false;
-      new_bag_item_switch = obj_bag.bag[obj_bag.bag_slot].real_weapon;
+   if (instance_exists(obj_player)) {
+      if (obj_bag.bag[obj_bag.bag_slot] != noone) {
+         respawn_bag_item = false;
+         new_bag_item_switch = obj_bag.bag[obj_bag.bag_slot].real_weapon;
+      }
    }
 }
 </string>
@@ -578,19 +595,6 @@ if (new_bag_item_switch != noone) {
    // This means that the player picked up something
    audio_play_sound(snd_reload, 10, false);
    
-   /*if (current_bag_item != noone) {
-      if (instance_exists(current_bag_item)) {
-         if (obj_bag.bag_slot == obj_bag.bag_slot_last) {
-            // Put current weapon to the ground with its pick object
-            instance_create(x, y, current_bag_item.pick_weapon);
-         } else {
-           // Do nothing, just reset this flag for next time
-           respawn_bag_item = true;
-           obj_bag.bag_slot_last = obj_bag.bag_slot;
-         }
-      }
-   }*/
-   
    // Remove current weapon instance if exists
    with current_bag_item instance_destroy();
    
@@ -610,121 +614,6 @@ if (new_bag_item_switch != noone) {
    // Set crosshair sloppy (from weapon)
    if (instance_exists(obj_crosshair) and object_get_parent(current_bag_item) == obj_shootWeapon) {
       obj_crosshair.sloppy = current_bag_item.sloppy;
-   }
-   
-   // TODO: Add case if weapon is melee weapon
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Check new weapon
-if (new_weapon != noone) {
-   // This means that the player picked up something
-   audio_play_sound(snd_reload, 10, false);
-   
-   if (current_weapon != noone) {
-      if (instance_exists(current_weapon)) {
-         if (respawn_weapon == true) {
-            // Put current weapon to the ground with its pick object
-            instance_create(x, y, current_weapon.pick_weapon);
-         } else {
-           // Do nothing, just reset this flag for next time
-           respawn_weapon = true;
-         }
-      }
-   }
-   
-   // Remove current weapon instance if exists
-   with current_weapon instance_destroy();
-   
-   // Add and spawn new weapon
-   current_weapon = new_weapon;
-   new_weapon = noone;
-   instance_create(x + 16, y - 16, current_weapon);
-   
-   if (object_get_parent(current_weapon) != obj_shootWeapon) {
-      if (instance_exists(obj_crosshair)) with (obj_crosshair) instance_destroy();
-   } else {
-      if (not instance_exists(obj_crosshair)) {
-         instance_create(x + 32, y - 32, obj_crosshair);
-      }
-   }
-   
-   // Set crosshair sloppy (from weapon)
-   if (instance_exists(obj_crosshair) and object_get_parent(current_weapon) == obj_shootWeapon) {
-      obj_crosshair.sloppy = current_weapon.sloppy;
-   }
-   
-   // TODO: Add case if weapon is melee weapon
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Check new launch weapon
-if (new_launch_weapon != noone) {
-   // This means that the player picked up something
-   audio_play_sound(snd_reload, 10, false);
-   
-   if (current_launch_weapon != noone) {
-      if (instance_exists(current_launch_weapon)) {
-         // Put current weapon to the ground with its pick object
-         instance_create(x, y, current_launch_weapon.pick_weapon);
-      }
-   }
-   
-   // Remove current weapon instance if exists
-   with current_launch_weapon instance_destroy();
-   
-   // Add and spawn new weapon
-   current_launch_weapon = new_launch_weapon;
-   new_launch_weapon = noone;
-   instance_create(x + 16, y - 16, current_weapon);
-   
-   if (object_get_parent(current_launch_weapon) != obj_shootWeapon) {
-      if (instance_exists(obj_crosshair)) with (obj_crosshair) instance_destroy();
-   } else {
-      if (not instance_exists(obj_crosshair)) {
-         instance_create(x + 32, y - 32, obj_crosshair);
-      }
-   }
-   
-   // Set crosshair sloppy (from weapon)
-   if (instance_exists(obj_crosshair) and object_get_parent(current_launch_weapon) == obj_shootWeapon) {
-      obj_crosshair.sloppy = current_launch_weapon.sloppy;
    }
    
    // TODO: Add case if weapon is melee weapon

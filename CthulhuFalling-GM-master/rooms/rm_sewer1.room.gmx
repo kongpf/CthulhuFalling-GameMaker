@@ -745,6 +745,7 @@ obj_lightController.hour = 3;</code>
     <instance objName="obj_dirt" x="800" y="192" name="inst_CCCAFB6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="832" y="192" name="inst_66835931" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bag" x="96" y="0" name="inst_982A4850" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_shotgunPick" x="608" y="288" name="inst_261ACA1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
