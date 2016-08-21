@@ -110,6 +110,11 @@ if (not shoot) {
       direction = f_angle;
       speed = f_speed;
       shoot = true;
+      
+      // Remove it from inventory
+      if (instance_exists(obj_bag)) {
+         obj_bag.bag[obj_bag.bag_slot] = noone;
+      }
    }
 }
 </string>
