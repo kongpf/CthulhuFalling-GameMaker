@@ -36,29 +36,11 @@ bag_slot_last = 0;
 // Graphics
 square_h = 32;
 square_margin = 15;
+
+// Set depth to avoid lights affection on self
+if (instance_exists(obj_lightController))
+   depth = obj_lightController.depth - 1;
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
@@ -81,6 +63,8 @@ square_margin = 15;
           <argument>
             <kind>1</kind>
             <string>///Draw inventory
+var last_x;
+
 for (i = 0; i &lt; bag_size; i++) {
     var square_color;
     
@@ -96,7 +80,12 @@ for (i = 0; i &lt; bag_size; i++) {
     draw_rectangle(x1, y1, x2, y2, true);
     
     if (bag[i] != noone) draw_sprite(object_get_sprite(bag[i]), 0, x1, y2);
+    
+    if (i == (bag_size - 1)) last_x = x2;
 }
+
+// Draw current item name
+if (bag[bag_slot] != noone) draw_text(x2, view_yview[0] + view_hview[0] - square_margin, bag[bag_slot].real_weapon.name + "[" + string(bag[bag_slot].real_weapon.bullets) + "]");
 </string>
           </argument>
         </arguments>

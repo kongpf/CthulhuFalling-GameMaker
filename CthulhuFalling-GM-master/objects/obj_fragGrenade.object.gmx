@@ -110,11 +110,6 @@ if (not shoot) {
       direction = f_angle;
       speed = f_speed;
       shoot = true;
-      
-      // Remove it from inventory
-      if (instance_exists(obj_bag)) {
-         obj_bag.bag[obj_bag.bag_slot] = noone;
-      }
    }
 }
 </string>
@@ -139,6 +134,11 @@ if (not shoot) {
             <kind>1</kind>
             <string>///Explosion
 if (place_meeting(x, y, obj_environmentItem) or place_meeting(x, y, obj_dirtDestructible)) {
+   // Remove it from inventory
+   if (instance_exists(obj_bag)) {
+      obj_bag.bag[obj_bag.bag_slot] = noone;
+   }
+
    // Smoke (TODO: particles)
    effect_create_above(ef_explosion, x, y, 5, c_orange);
    

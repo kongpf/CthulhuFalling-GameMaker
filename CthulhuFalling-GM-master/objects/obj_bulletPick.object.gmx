@@ -82,9 +82,15 @@ y = yy + shift; //vertical wave motion
           <argument>
             <kind>1</kind>
             <string>///Pick up when player collides
-if (place_meeting(x, y, obj_player) and obj_player.current_weapon != noone) {
-   // Add 10 more bullets to player weapon
-   obj_player.current_weapon.bullets += 10;
+if (place_meeting(x, y, obj_player)) {
+   // Add 10 more bullets to player weapons (Temporary)
+   for (i = 0; i &lt; obj_bag.bag_size; i++) {
+       if (obj_bag.bag[i] != noone) {
+          if (object_get_parent(obj_bag.bag[i]) == obj_shootWeapon) {
+             obj_bag.bag[i].bullets += 10;
+          }
+       }
+   }
    
    instance_destroy();
 }
