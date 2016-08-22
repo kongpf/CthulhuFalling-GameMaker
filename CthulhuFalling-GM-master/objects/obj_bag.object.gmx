@@ -83,9 +83,6 @@ for (i = 0; i &lt; bag_size; i++) {
     
     if (i == (bag_size - 1)) last_x = x2;
 }
-
-// Draw current item name
-if (bag[bag_slot] != noone) draw_text(x2, view_yview[0] + view_hview[0] - square_margin, bag[bag_slot].real_weapon.name + "[" + string(bag[bag_slot].real_weapon.bullets) + "]");
 </string>
           </argument>
         </arguments>

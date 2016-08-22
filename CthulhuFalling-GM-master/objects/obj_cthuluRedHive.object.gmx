@@ -128,9 +128,6 @@ if (hp &lt;= 0) {
             <string>/// Spawn red cthulhu  
 if spawn {
     instance_create(x, y, obj_cthulhuRed);
-    show_debug_message("Spawn red!");
-} else {
-    show_debug_message("Not spawn red");
 }
 </string>
           </argument>

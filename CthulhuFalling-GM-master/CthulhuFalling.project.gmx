@@ -7,6 +7,7 @@
     <extension index="0">extensions\Glare Engine - 2D illumination</extension>
     <extension index="1">extensions\Mine Tileset</extension>
     <extension index="2">extensions\Speech Bubble</extension>
+    <extension index="3">extensions\Gamemaker Chiptune RPG Music</extension>
   </NewExtensions>
   <sounds name="sound">
     <sounds name="Weapons">
@@ -20,6 +21,22 @@
       <sound>sound\snd_footstepsConcrete</sound>
       <sound>sound\snd_ping</sound>
     </sounds>
+    <sound>sound\mus_town01</sound>
+    <sound>sound\mus_town02</sound>
+    <sound>sound\mus_forest01</sound>
+    <sound>sound\mus_forest02</sound>
+    <sound>sound\mus_dungeon01</sound>
+    <sound>sound\mus_dungeon02</sound>
+    <sound>sound\mus_shop01</sound>
+    <sound>sound\mus_shop02</sound>
+    <sound>sound\mus_battle</sound>
+    <sound>sound\mus_boss</sound>
+    <sound>sound\mus_titlescreen</sound>
+    <sound>sound\mus_jingle01</sound>
+    <sound>sound\mus_jingle02</sound>
+    <sound>sound\mus_jingle03</sound>
+    <sound>sound\snd_levelup</sound>
+    <sound>sound\snd_item</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Main menu">

@@ -30,7 +30,11 @@ if (not instance_exists(obj_lightController)) {
 }
 
 // Set day time
-obj_lightController.hour = 3;</code>
+obj_lightController.hour = 3;
+
+// Play level music
+audio_stop_all();
+audio_play_sound(mus_dungeon01, 10, true);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

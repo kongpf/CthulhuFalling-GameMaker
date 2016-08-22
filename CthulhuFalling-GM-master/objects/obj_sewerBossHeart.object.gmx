@@ -165,6 +165,9 @@ if (collision_circle(x, y, 128, obj_player, false, true) and not start) {
    start = true;
    alarm[0] = 100;
    alarm[1] = 250;
+   
+   audio_stop_all();
+   audio_play_sound(mus_boss, 10, true);
 }
 </string>
           </argument>

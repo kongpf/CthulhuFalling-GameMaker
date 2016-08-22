@@ -704,8 +704,12 @@ if (instance_exists(obj_cameraManager)) {
           <argument>
             <kind>1</kind>
             <string>///Draw current weapon (if any)
-if (current_weapon != noone and instance_exists(current_weapon)) {
-   draw_text(50, 50, current_weapon.name + " [" + string(current_weapon.bullets) + "]");
+if (current_bag_item != noone and instance_exists(current_bag_item)) {
+   if (object_get_parent(current_bag_item) == obj_shootWeapon) {
+      draw_text(50, 50, current_bag_item.name + " [" + string(current_bag_item.bullets) + "]");
+   } else {
+      draw_text(50, 50, current_bag_item.name);
+   }
 }
 </string>
           </argument>
