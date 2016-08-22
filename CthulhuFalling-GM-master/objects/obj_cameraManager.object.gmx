@@ -30,6 +30,7 @@ follow = obj_player;
 time_counter = 0;
 count = false;
 max_time = 550;
+can_spawn = false;
 </string>
           </argument>
         </arguments>
@@ -110,7 +111,7 @@ if (instance_exists(follow))
           <argument>
             <kind>1</kind>
             <string>///Change character on key press
-if (instance_exists(obj_ghostEnvironmentItem)) {
+if (can_spawn) {
    if (keyboard_check_pressed(vk_tab)) {
        if (follow == obj_player) {
            follow = obj_lovecraftPlay;

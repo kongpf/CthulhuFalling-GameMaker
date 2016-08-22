@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Variables
-max_hp = 2000;
+max_hp = 10000;
 hp = max_hp;
 hp_percent = 100;
 start = false;
@@ -54,7 +54,7 @@ start = false;
             <kind>1</kind>
             <string>///Spawn enemies
 repeat (3) instance_create(x, y, obj_sewerBossRedGoo);
-alarm[1] = 700;
+alarm[1] = 250;
 </string>
           </argument>
         </arguments>
@@ -79,7 +79,7 @@ alarm[1] = 700;
             <kind>1</kind>
             <string>///Spawn enemies
 repeat (3) instance_create(x, y, obj_sewerBossGreenGoo);
-alarm[0] = 300;
+alarm[0] = 100;
 </string>
           </argument>
         </arguments>
@@ -163,8 +163,8 @@ if (place_meeting(x, y, obj_dangerousObject)) {
             <string>///Attack logic
 if (collision_circle(x, y, 128, obj_player, false, true) and not start) {
    start = true;
-   alarm[0] = 300;
-   alarm[1] = 700;
+   alarm[0] = 100;
+   alarm[1] = 250;
 }
 </string>
           </argument>

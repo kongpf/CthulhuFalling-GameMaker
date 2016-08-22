@@ -627,6 +627,9 @@
       <script>scripts\collision_rectangle_list.gml</script>
       <script>scripts\collision_circle_list.gml</script>
       <script>scripts\scr_set_new_weapon.gml</script>
+      <scripts name="Collisions">
+        <script>scripts\scr_view_contains_object.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>
