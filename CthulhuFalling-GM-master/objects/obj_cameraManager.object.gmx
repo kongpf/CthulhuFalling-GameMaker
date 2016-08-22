@@ -29,7 +29,7 @@
 follow = obj_player;
 time_counter = 0;
 count = false;
-max_time = 350;
+max_time = 550;
 </string>
           </argument>
         </arguments>
@@ -127,6 +127,10 @@ if (instance_exists(obj_ghostEnvironmentItem)) {
            with (obj_ghostClimbItem) visible = true;
        } else {
            follow = obj_player;
+           
+           // Stop counting and reset stuff
+           count = false;
+           time_counter = 0;
            
            // Delete lovecraft instance and get control back to player
            if (instance_exists(obj_lovecraftPlay)) {
