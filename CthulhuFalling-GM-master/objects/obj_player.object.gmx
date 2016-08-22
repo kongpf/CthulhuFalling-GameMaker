@@ -362,7 +362,14 @@ image_speed = 0.2;
             <kind>1</kind>
             <string>/// Check lives
 if (lives &lt;= 0) {
-   room_goto(rm_dead2);
+   effect_create_above(ef_explosion, x, y, 2, c_red);
+   instance_create(x, y, obj_playerDead);
+   with (current_bag_item) instance_destroy();
+   with (obj_bag) instance_destroy();
+   if (instance_exists(obj_crosshair)) {
+      with (obj_crosshair) instance_destroy();
+   }
+   instance_destroy();
 }
 </string>
           </argument>

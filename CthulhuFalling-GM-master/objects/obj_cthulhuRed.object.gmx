@@ -93,7 +93,8 @@ if (hp &lt;= 0) {
             <string>/// Move
 //move_towards_point(obj_player.x, obj_player.y, 1.5);
 image_speed = 0.2;
-mp_potential_step_object(obj_player.x, obj_player.y, 2, obj_environmentItem);
+if (instance_exists(obj_player))
+   mp_potential_step_object(obj_player.x, obj_player.y, 2, obj_environmentItem);
 </string>
           </argument>
         </arguments>

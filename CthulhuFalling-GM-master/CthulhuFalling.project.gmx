@@ -87,6 +87,7 @@
           <sprite>sprites\spr_meleeLeft</sprite>
           <sprite>sprites\spr_playerRunLeft</sprite>
           <sprite>sprites\spr_playerJump</sprite>
+          <sprite>sprites\spr_playerDead</sprite>
         </sprites>
         <sprites name="Melee">
           <sprite>sprites\spr_playerMelee</sprite>
@@ -819,6 +820,7 @@
       <object>objects\obj_camera</object>
       <object>objects\obj_grandmaIntro</object>
       <object>objects\obj_grandmaStanding</object>
+      <object>objects\obj_playerDead</object>
     </objects>
     <objects name="Scores">
       <object>objects\obj_scoreManager</object>
