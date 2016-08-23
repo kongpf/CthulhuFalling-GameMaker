@@ -391,28 +391,6 @@ if (lives &lt;= 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Update camera
-//camera_movement();
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>/// Set invisible in splash screen room (REMOVE)
 if (room == rm_splashScreen) {
    instance_destroy();
@@ -489,6 +467,120 @@ if (place_meeting(x, y, obj_bagItem) and keyboard_check_pressed(vk_enter)) {
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Check mouse wheel
+/*if (mouse_wheel_down()) {
+   if ((obj_bag.bag_slot + 1) &gt;= obj_bag.bag_size) {
+      obj_bag.bag_slot = 0;
+   } else {
+      obj_bag.bag_slot++;
+   }
+   
+   // Set weapon
+   if (instance_exists(obj_player)) {
+      if (obj_bag.bag[obj_bag.bag_slot] != noone) {
+         respawn_bag_item = false;
+         current_slot_content = obj_bag.bag[obj_bag.bag_slot];
+         show_debug_message("Current slot content: " + string(current_slot_content));
+         new_bag_item_switch = current_slot_content.real_weapon;;
+      }
+   }
+}
+
+if (mouse_wheel_up()) {
+   if ((obj_bag.bag_slot) &lt; 1) {
+      obj_bag.bag_slot = obj_bag.bag_size - 1;
+   } else {
+      obj_bag.bag_slot--;
+   }
+   
+   // Set weapon
+   if (instance_exists(obj_player)) {
+      if (obj_bag.bag[obj_bag.bag_slot] != noone) {
+         respawn_bag_item = false;
+         current_slot_content = obj_bag.bag[obj_bag.bag_slot];
+         show_debug_message("Current slot content: " + string(current_slot_content));
+         new_bag_item_switch = current_slot_content.real_weapon;
+      }
+   }
+}*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check manual weapon selection
+var slot;
+
+if (keyboard_check_pressed(ord("1"))) {
+    obj_bag.bag_slot = 0;
+
+   if (obj_bag.bag[obj_bag.bag_slot] != noone) {
+     current_slot_content = obj_bag.bag[0];
+     show_debug_message("Current slot content: " + string(object_get_name(current_slot_content)));
+     inst = instance_create(x, y, current_slot_content);
+     new_bag_item_switch = inst.real_weapon;
+     with (inst) instance_destroy();
+  }
+}
+
+if (keyboard_check_pressed(ord("2"))) {
+   obj_bag.bag_slot = 1;
+
+   if (obj_bag.bag[obj_bag.bag_slot] != noone) {
+     current_slot_content = obj_bag.bag[1];
+     show_debug_message("Current slot content: " + string(object_get_name(current_slot_content)));
+     inst = instance_create(x, y, current_slot_content);
+     new_bag_item_switch = inst.real_weapon;
+     with (inst) instance_destroy();
+  }
+}
+
+if (keyboard_check_pressed(ord("3"))) {
+   obj_bag.bag_slot = 2;
+
+   if (obj_bag.bag[obj_bag.bag_slot] != noone) {
+     current_slot_content = obj_bag.bag[2];
+     show_debug_message("Current slot content: " + string(object_get_name(current_slot_content)));
+     inst = instance_create(x, y, current_slot_content);
+     new_bag_item_switch = inst.real_weapon;
+     with (inst) instance_destroy();
+  }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Check new bag item
 if (new_bag_item != noone) {
    // This means that the player picked up something
@@ -520,61 +612,7 @@ if (new_bag_item != noone) {
    // Set crosshair sloppy (from weapon)
    if (instance_exists(obj_crosshair) and object_get_parent(current_bag_item) == obj_shootWeapon) {
       obj_crosshair.sloppy = current_bag_item.sloppy;
-   }
-   
-   // TODO: Add case if weapon is melee weapon
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Check mouse wheel
-if (mouse_wheel_down()) {
-   if ((obj_bag.bag_slot + 1) &gt;= obj_bag.bag_size) {
-      obj_bag.bag_slot = 0;
-   } else {
-      obj_bag.bag_slot++;
-   }
-   
-   // Set weapon
-   if (instance_exists(obj_player)) {
-      if (obj_bag.bag[obj_bag.bag_slot] != noone) {
-         respawn_bag_item = false;
-         new_bag_item_switch = obj_bag.bag[obj_bag.bag_slot].real_weapon;
-      }
-   }
-}
-
-if (mouse_wheel_up()) {
-   if ((obj_bag.bag_slot) &lt; 1) {
-      obj_bag.bag_slot = obj_bag.bag_size - 1;
-   } else {
-      obj_bag.bag_slot--;
-   }
-   
-   // Set weapon
-   if (instance_exists(obj_player)) {
-      if (obj_bag.bag[obj_bag.bag_slot] != noone) {
-         respawn_bag_item = false;
-         new_bag_item_switch = obj_bag.bag[obj_bag.bag_slot].real_weapon;
-      }
-   }
+   } 
 }
 </string>
           </argument>
@@ -603,7 +641,9 @@ if (new_bag_item_switch != noone) {
    audio_play_sound(snd_reload, 10, false);
    
    // Remove current weapon instance if exists
-   with current_bag_item instance_destroy();
+   if (instance_exists(current_bag_item)) {
+      with current_bag_item instance_destroy();
+   }
    
    // Add and spawn new weapon
    current_bag_item = new_bag_item_switch;
@@ -622,8 +662,6 @@ if (new_bag_item_switch != noone) {
    if (instance_exists(obj_crosshair) and object_get_parent(current_bag_item) == obj_shootWeapon) {
       obj_crosshair.sloppy = current_bag_item.sloppy;
    }
-   
-   // TODO: Add case if weapon is melee weapon
 }
 </string>
           </argument>
