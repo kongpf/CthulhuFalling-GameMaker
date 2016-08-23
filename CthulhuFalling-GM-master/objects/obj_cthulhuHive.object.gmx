@@ -74,7 +74,7 @@ hp = 200;
           <argument>
             <kind>1</kind>
             <string>///Effects
-effect_create_above(ef_smoke, x, y, 1, c_red); 
+effect_create_above(ef_smoke, x, y, 1, c_green); 
 scr_sprite_explode(id, 4);
 </string>
           </argument>

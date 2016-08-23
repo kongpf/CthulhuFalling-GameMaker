@@ -29,6 +29,7 @@
 sprite = spr_glr_light_mask_point;
 light = glr_light_create(sprite, 0, x, y, c_yellow, 0.2);
 glr_light_set_shadow_strength(light, 0.8);
+glr_light_set_static(light, true);
 glr_light_set_layer(light, 0);
 </string>
           </argument>
