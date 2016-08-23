@@ -311,7 +311,6 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_dirt" x="384" y="672" name="inst_049BC2E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="352" y="672" name="inst_D5B099D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="320" y="672" name="inst_A8C6781C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dirt" x="320" y="640" name="inst_BA139BE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="288" y="640" name="inst_4E27F2BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="256" y="640" name="inst_D2C71B83" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="224" y="640" name="inst_1687AB35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -360,8 +359,6 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_dirt" x="384" y="704" name="inst_96022D98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="416" y="704" name="inst_E829A58D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bulletPick" x="192" y="800" name="inst_A31125AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bulletPick" x="224" y="800" name="inst_FF8C32CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bulletPick" x="256" y="800" name="inst_E1285FB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladder" x="0" y="1024" name="inst_1DAE9339" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladder" x="0" y="1056" name="inst_84C72A24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladder" x="0" y="1088" name="inst_781AB70F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -381,7 +378,6 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_cthulhuHive" x="96" y="672" name="inst_33C0741E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="416" y="640" name="inst_56250F3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="512" y="640" name="inst_7B82ABBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pistolPick" x="672" y="288" name="inst_03ED4B48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="384" y="576" name="inst_900E5D08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="512" y="576" name="inst_1664925C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="640" y="576" name="inst_7118EBC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -602,7 +598,6 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_streetLight" x="480" y="1024" name="inst_685C7607" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="832" y="1024" name="inst_C0C4B12E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="672" y="1056" name="inst_3C62E56C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_shotgunPick" x="672" y="1152" name="inst_67CCE1AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="416" y="1344" name="inst_BBF7B9E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="672" y="1344" name="inst_DFE7BF43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="896" y="1344" name="inst_2E40F723" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -668,28 +663,26 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_streetLight" x="256" y="1472" name="inst_F631CC1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_streetLight" x="64" y="1568" name="inst_26A454D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerBossLight" x="512" y="1824" name="inst_B5EA518E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="512" y="1824" name="inst_AA199EB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="512" y="1952" name="inst_AA199EB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerBossLight" x="512" y="1856" name="inst_6A215367" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerBossLight" x="512" y="1888" name="inst_FDDCBBD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="544" y="1888" name="inst_58C9984A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="576" y="1888" name="inst_795EE2C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="544" y="1856" name="inst_8CAA16FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="640" y="1888" name="inst_3B77C0B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="672" y="1856" name="inst_343E633D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="704" y="1824" name="inst_C0C0C97D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="704" y="1856" name="inst_8A30068B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="672" y="1888" name="inst_F89B8EBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="704" y="1888" name="inst_882BE500" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="512" y="1952" name="inst_F88BEFAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="544" y="1984" name="inst_874A69B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="576" y="1984" name="inst_B4AEC6F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="608" y="1984" name="inst_6418092C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="512" y="1920" name="inst_58C9984A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="576" y="1824" name="inst_795EE2C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="544" y="1824" name="inst_8CAA16FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="608" y="1824" name="inst_3B77C0B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="640" y="1824" name="inst_343E633D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="672" y="1856" name="inst_C0C0C97D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="672" y="1888" name="inst_8A30068B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="672" y="1824" name="inst_F89B8EBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="672" y="1920" name="inst_882BE500" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="512" y="1984" name="inst_874A69B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="544" y="1984" name="inst_B4AEC6F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="576" y="1984" name="inst_6418092C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerBossLight" x="640" y="1984" name="inst_4D120A40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="640" y="1984" name="inst_1BBDF5A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="672" y="1984" name="inst_3C930F12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossLight" x="704" y="1952" name="inst_4090CFC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sewerBossHeart" x="608" y="1856" name="inst_F89E46C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pistolPick" x="96" y="1984" name="inst_68BC5F93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="608" y="1984" name="inst_1BBDF5A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="672" y="1952" name="inst_3C930F12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossLight" x="672" y="1984" name="inst_4090CFC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerBossHeart" x="576" y="1888" name="inst_F89E46C6" locked="0" code="" scaleX="1.5" scaleY="1.39999997615814" colour="4294967295" rotation="0"/>
     <instance objName="obj_life" x="928" y="1600" name="inst_469EE090" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_life" x="960" y="1600" name="inst_D2F8EB25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="160" y="320" name="inst_BD499D1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -729,12 +722,9 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_ghostDirt" x="416" y="192" name="inst_4968F097" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="448" y="192" name="inst_A296BFB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="480" y="192" name="inst_A9ED586A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fragGrenadePick" x="800" y="288" name="inst_06F58E4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="864" y="192" name="inst_093F48EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="288" y="288" name="inst_D0B4F8EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="320" y="288" name="inst_CD5CE62D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fragGrenadePick" x="768" y="288" name="inst_7F643C07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fragGrenadePick" x="736" y="288" name="inst_FB9850FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fragGrenadePick" x="224" y="160" name="inst_B8DD2F99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="544" y="192" name="inst_391664EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="576" y="192" name="inst_0A26577C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -747,7 +737,6 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_dirt" x="800" y="192" name="inst_CCCAFB6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="832" y="192" name="inst_66835931" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bag" x="96" y="0" name="inst_982A4850" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_shotgunPick" x="256" y="160" name="inst_261ACA1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="352" y="288" name="inst_046D5833" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="384" y="288" name="inst_9BA0C8CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="384" y="896" name="inst_C1AA9EED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -800,7 +789,6 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_ghostDirt" x="224" y="832" name="inst_5FBD8F86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="288" y="832" name="inst_3BAD3A57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostLadder" x="320" y="832" name="inst_950F48BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_uziPick" x="288" y="800" name="inst_9BC24FDA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladder" x="288" y="1984" name="inst_B706BC5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladder" x="288" y="1952" name="inst_0F3E09B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladder" x="288" y="1920" name="inst_4843BCEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -840,21 +828,20 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_ladder" x="896" y="1728" name="inst_CA908DD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="928" y="1792" name="inst_C079248F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="960" y="1792" name="inst_21FF59F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ghostDirt" x="64" y="1984" name="inst_6E6F8EC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="64" y="2016" name="inst_6E6F8EC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="96" y="1984" name="inst_9D65260F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="160" y="1920" name="inst_9F97DF85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="192" y="1888" name="inst_204C466D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="128" y="1952" name="inst_1AD06958" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="224" y="1856" name="inst_8496D6AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ghostDirt" x="256" y="1824" name="inst_7C0418BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="256" y="1856" name="inst_7C0418BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="288" y="1824" name="inst_B9211B4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="320" y="1824" name="inst_82BF16BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="352" y="1824" name="inst_D85747C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="384" y="1824" name="inst_B579129E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="416" y="1824" name="inst_A3B62C90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="448" y="1824" name="inst_515B7278" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_uziPick" x="288" y="1792" name="inst_DF187F31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ghostDirt" x="800" y="1984" name="inst_C43A1612" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="800" y="2016" name="inst_C43A1612" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="832" y="1952" name="inst_02B5C59E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="864" y="1920" name="inst_C609BEF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="896" y="1888" name="inst_FA076D29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -885,16 +872,49 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_ghostDirt" x="256" y="1472" name="inst_AC5FA65F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="288" y="1472" name="inst_25113AED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ghostDirt" x="320" y="1472" name="inst_231177AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fragGrenadePick" x="96" y="1440" name="inst_CECB6A1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fragGrenadePick" x="128" y="1440" name="inst_CD3DB10A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fragGrenadePick" x="128" y="1440" name="inst_FA6D6594" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fragGrenadePick" x="160" y="1440" name="inst_4D3119DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cthulhuHive" x="416" y="1856" name="inst_8E5A72BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cthulhuHive" x="896" y="1664" name="inst_7AE7235A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cthulhuHive" x="576" y="1664" name="inst_58E0FF37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cthuluRedHive" x="160" y="1792" name="inst_CE2E33D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cthuluRedHive" x="384" y="1664" name="inst_D31121E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cthuluRedHive" x="960" y="1824" name="inst_4DE96F3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="32" y="2016" name="inst_16D20658" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="0" y="2016" name="inst_F75BEFAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="96" y="2016" name="inst_645C4F24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="768" y="2016" name="inst_CF9C3E51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="736" y="2016" name="inst_714B7AFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="704" y="2016" name="inst_C71D34CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="832" y="2016" name="inst_C1EF2C04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="800" y="1984" name="inst_A6EDCDC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="832" y="1984" name="inst_6BA4FF4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="864" y="2016" name="inst_0F4B5E49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="896" y="2016" name="inst_FD700A1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="928" y="2016" name="inst_2E0FA1DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="960" y="2016" name="inst_6C336732" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="128" y="2016" name="inst_239D0928" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="160" y="2016" name="inst_7C4FCD50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="192" y="2016" name="inst_4AF315B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="224" y="2016" name="inst_944C64CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="256" y="2016" name="inst_AE7B9F33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="32" y="1792" name="inst_8E830017" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="64" y="1792" name="inst_94AE73B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="96" y="1792" name="inst_9856652A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="128" y="1760" name="inst_5435CA55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="128" y="1792" name="inst_1F491F07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="160" y="1760" name="inst_BD8461A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="192" y="1760" name="inst_1659F748" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="224" y="1760" name="inst_9BB010CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="224" y="1728" name="inst_4A79C1CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="96" y="640" name="inst_6BFD3944" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="128" y="640" name="inst_59DE04C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="160" y="640" name="inst_BC3D528A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="192" y="640" name="inst_16012752" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="224" y="640" name="inst_C88019DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="256" y="640" name="inst_15EDC1E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="288" y="640" name="inst_B1E1E57B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="64" y="640" name="inst_4506059B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ghostDirt" x="288" y="672" name="inst_268503C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pistolPick" x="256" y="160" name="inst_A8AF2243" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

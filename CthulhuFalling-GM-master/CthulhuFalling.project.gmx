@@ -16,27 +16,31 @@
       <sound>sound\snd_reload</sound>
       <sound>sound\snd_dryFire</sound>
       <sound>sound\snd_fragExplosion</sound>
+      <sound>sound\snd_meow</sound>
     </sounds>
     <sounds name="Ambient">
       <sound>sound\snd_footstepsConcrete</sound>
       <sound>sound\snd_ping</sound>
+      <sound>sound\snd_heart</sound>
     </sounds>
-    <sound>sound\mus_town01</sound>
-    <sound>sound\mus_town02</sound>
-    <sound>sound\mus_forest01</sound>
-    <sound>sound\mus_forest02</sound>
-    <sound>sound\mus_dungeon01</sound>
-    <sound>sound\mus_dungeon02</sound>
-    <sound>sound\mus_shop01</sound>
-    <sound>sound\mus_shop02</sound>
-    <sound>sound\mus_battle</sound>
-    <sound>sound\mus_boss</sound>
-    <sound>sound\mus_titlescreen</sound>
-    <sound>sound\mus_jingle01</sound>
-    <sound>sound\mus_jingle02</sound>
-    <sound>sound\mus_jingle03</sound>
-    <sound>sound\snd_levelup</sound>
-    <sound>sound\snd_item</sound>
+    <sounds name="Chiptune">
+      <sound>sound\mus_dungeon02</sound>
+      <sound>sound\mus_town02</sound>
+      <sound>sound\mus_forest01</sound>
+      <sound>sound\mus_forest02</sound>
+      <sound>sound\mus_dungeon01</sound>
+      <sound>sound\mus_shop01</sound>
+      <sound>sound\mus_jingle02</sound>
+      <sound>sound\mus_boss</sound>
+      <sound>sound\mus_shop02</sound>
+      <sound>sound\mus_battle</sound>
+      <sound>sound\mus_titlescreen</sound>
+      <sound>sound\mus_jingle01</sound>
+      <sound>sound\mus_jingle03</sound>
+      <sound>sound\snd_item</sound>
+      <sound>sound\snd_levelup</sound>
+      <sound>sound\mus_town01</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Main menu">
@@ -68,6 +72,7 @@
       <sprite>sprites\spr_sewerBossRedGoo</sprite>
       <sprite>sprites\spr_sewerBossGreenGoo</sprite>
       <sprite>sprites\spr_sewerBossHeart</sprite>
+      <sprite>sprites\spr_bossHeart</sprite>
     </sprites>
     <sprites name="Environment">
       <sprites name="Level 1">
@@ -141,6 +146,9 @@
       <sprite>sprites\spr_fragGrenade</sprite>
       <sprite>sprites\spr_fragGrenadePick</sprite>
       <sprite>sprites\spr_fragExplosion</sprite>
+      <sprite>sprites\spr_catLauncher</sprite>
+      <sprite>sprites\spr_bulletCat</sprite>
+      <sprite>sprites\spr_catLauncherPick</sprite>
     </sprites>
     <sprites name="Glare demo">
       <sprites name="Top Down Shooter">
@@ -647,6 +655,7 @@
       <scripts name="Collisions">
         <script>scripts\scr_view_contains_object.gml</script>
       </scripts>
+      <script>scripts\scr_sprite_explode.gml</script>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>
@@ -816,6 +825,11 @@
           <object>objects\obj_uziPick</object>
           <object>objects\obj_uziBullet</object>
         </objects>
+        <objects name="Cat Launcher">
+          <object>objects\obj_catLauncher</object>
+          <object>objects\obj_bulletCat</object>
+          <object>objects\obj_catLauncherPick</object>
+        </objects>
       </objects>
       <objects name="Melee Weapons">
         <object>objects\obj_invisibleMelee</object>
@@ -847,6 +861,7 @@
     </objects>
     <objects name="Effects">
       <object>objects\obj_screenShake</object>
+      <object>objects\obj_bigScreenShake</object>
       <object>objects\obj_rain</object>
     </objects>
     <objects name="Lighting">

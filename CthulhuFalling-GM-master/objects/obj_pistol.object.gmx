@@ -36,7 +36,7 @@ fire_rate = 15;
 // Fire count
 fire_count = 0;
 // Name
-name = "9mm";
+name = "Basic Pistol";
 // Related pick object
 pick_weapon = obj_pistolPick;
 // Bullets
