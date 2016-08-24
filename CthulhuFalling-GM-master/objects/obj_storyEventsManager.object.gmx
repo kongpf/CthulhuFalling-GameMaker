@@ -376,10 +376,12 @@ if (room == rm_armory) {
 if (room == rm_sewer1) {
     if (instance_number(obj_sewerBossHeart) == 0 and not rm_sewers_boss_died) {
        rm_sewers_boss_died = true;
-    
+       
+       if (instance_exists(obj_player))
        scr_text("Prendi questo, pezzente!", 0.4, x, y, obj_player, noone);
     }
     
+    if (instance_exists(obj_player))
     if (obj_player.x = 416 and obj_player.y = 288 and not rm_sewers_lovecraft_hint) {
         rm_sewers_lovecraft_hint = true;
         

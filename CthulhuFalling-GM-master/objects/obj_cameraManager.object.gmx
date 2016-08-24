@@ -126,6 +126,11 @@ if (can_spawn) {
            // Make visible all ghost stuff
            with (obj_ghostEnvironmentItem) visible = true;
            with (obj_ghostClimbItem) visible = true;
+           
+           // Blend every other stuff in b&amp;w
+           with (obj_environmentItem) {
+               image_blend = c_gray;
+           }
        } else {
            follow = obj_player;
            
@@ -142,6 +147,11 @@ if (can_spawn) {
            // Make invisible all ghost stuff
            with (obj_ghostEnvironmentItem) visible = false;
            with (obj_ghostClimbItem) visible = false;
+           
+           // Go back to normal blend mode
+           with (obj_environmentItem) {
+               image_blend = c_white;
+           }
        }
     }
 } else {
@@ -180,6 +190,12 @@ if (count) {
          follow = obj_player;
          with (obj_ghostEnvironmentItem) visible = false;
          with (obj_ghostClimbItem) visible = false;
+         
+         // Go back to normal blend mode
+         with (obj_environmentItem) {
+             image_blend = c_white;
+         }
+         
          obj_player.active = true;
       }
    }
