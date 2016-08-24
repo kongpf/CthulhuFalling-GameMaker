@@ -142,6 +142,7 @@ rm_armory_shoot_hint = false;
             <kind>1</kind>
             <string>///Level: Sewers
 rm_sewers_boss_died = false;
+rm_sewers_lovecraft_hint = false;
 </string>
           </argument>
         </arguments>
@@ -372,10 +373,18 @@ if (room == rm_armory) {
           <argument>
             <kind>1</kind>
             <string>///Level: Sewers
-if (instance_number(obj_sewerBossHeart) == 0 and not rm_sewers_boss_died) {
-   rm_sewers_boss_died = true;
-
-   scr_text("Prendi questo, pezzente!", 0.4, x, y, obj_player, noone);
+if (room == rm_sewer1) {
+    if (instance_number(obj_sewerBossHeart) == 0 and not rm_sewers_boss_died) {
+       rm_sewers_boss_died = true;
+    
+       scr_text("Prendi questo, pezzente!", 0.4, x, y, obj_player, noone);
+    }
+    
+    if (obj_player.x = 416 and obj_player.y = 288 and not rm_sewers_lovecraft_hint) {
+        rm_sewers_lovecraft_hint = true;
+        
+        scr_text("E quella? Come diavolo#ci arrivo lassù?", 0.4, x, y, obj_player, scr_lovecraft_hint);
+    }
 }
 </string>
           </argument>

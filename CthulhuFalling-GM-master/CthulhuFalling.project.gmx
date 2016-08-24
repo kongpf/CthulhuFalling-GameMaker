@@ -656,6 +656,7 @@
         <script>scripts\scr_view_contains_object.gml</script>
       </scripts>
       <script>scripts\scr_sprite_explode.gml</script>
+      <script>scripts\scr_lovecraft_hint.gml</script>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>
