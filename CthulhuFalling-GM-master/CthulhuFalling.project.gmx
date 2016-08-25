@@ -331,6 +331,7 @@
         </sprites>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_saveGame</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -1069,6 +1070,7 @@
     <objects name="Camera">
       <object>objects\obj_cameraManager</object>
     </objects>
+    <object>objects\obj_saveGame</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_bigCthulhuAttacks</timeline>
