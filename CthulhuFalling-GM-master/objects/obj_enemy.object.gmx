@@ -8,6 +8,53 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>blend_damage = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Turn blend to white (normal)
+blend_damage = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -55,11 +102,47 @@ if (place_meeting(x, y, obj_player)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Spawn indicator while damaged
+            <string>/// Blend red for half a second while damaged
 if (place_meeting(x, y, obj_dangerousObject)) {
-   var ind = instance_create(x, y, obj_enemyDamageIndicator);
+   /*var ind = instance_create(x, y, obj_enemyDamageIndicator);
    ind.target = self;
-   ind.life = hp;
+   ind.life = hp;*/
+   
+   blend_damage = true;
+   alarm[0] = 3;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw self (and check for blend if damaged)
+if (blend_damage) {
+   draw_set_blend_mode(bm_inv_src_color);
+}
+
+// Always draw
+draw_self();
+
+if (blend_damage) {
+   draw_set_blend_mode(bm_normal);
 }
 </string>
           </argument>

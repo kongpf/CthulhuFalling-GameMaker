@@ -180,15 +180,17 @@ switch (current_state) {
        
        case e_state.chasing: {
             // Set animation speed
-            image_speed = 0.5;
+            if (instance_exists(obj_player)) {
+                image_speed = 0.5;
        
-            // Calculate direction
-            dir = sign(obj_player.x - x);
-            
-            hsp = dir * fast_movespeed;
-            
-            if (distance_to_object(obj_player) &gt; 128) {
-               current_state = e_state.idle;
+                // Calculate direction
+                dir = sign(obj_player.x - x);
+                
+                hsp = dir * fast_movespeed;
+                
+                if (distance_to_object(obj_player) &gt; 128) {
+                   current_state = e_state.idle;
+                }
             }
        } break;
 }
@@ -228,6 +230,22 @@ if (place_meeting(x, y, obj_player)) {
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>
