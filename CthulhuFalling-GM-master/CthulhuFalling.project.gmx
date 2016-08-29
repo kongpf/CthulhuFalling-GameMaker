@@ -17,6 +17,8 @@
       <sound>sound\snd_dryFire</sound>
       <sound>sound\snd_fragExplosion</sound>
       <sound>sound\snd_meow</sound>
+      <sound>sound\snd_woosh</sound>
+      <sound>sound\snd_punch</sound>
     </sounds>
     <sounds name="Ambient">
       <sound>sound\snd_footstepsConcrete</sound>
@@ -149,6 +151,7 @@
       <sprite>sprites\spr_catLauncher</sprite>
       <sprite>sprites\spr_bulletCat</sprite>
       <sprite>sprites\spr_catLauncherPick</sprite>
+      <sprite>sprites\spr_tentacle</sprite>
     </sprites>
     <sprites name="Glare demo">
       <sprites name="Top Down Shooter">
@@ -835,6 +838,7 @@
       </objects>
       <objects name="Melee Weapons">
         <object>objects\obj_invisibleMelee</object>
+        <object>objects\obj_tentacle</object>
       </objects>
       <objects name="Launch Weapons">
         <object>objects\obj_launchWeapon</object>

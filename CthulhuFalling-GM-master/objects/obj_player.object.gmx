@@ -35,6 +35,7 @@ movefactor = 0.2;
 hp = 100;
 facing = 1;
 active = true;
+walljump_enabled = true;
 
 /*
 OLD INVENTORY SYSTEM
@@ -250,8 +251,8 @@ if (place_meeting(x, y + 1, obj_environmentItem)) {
 if ((vsp &lt; 0) and (!key_jump_held)) vsp = max(vsp, 0);
 
 // Wall jump
-if (key_jump and (place_meeting(x + 1, y, obj_environmentItem) or place_meeting(x - 1, y, obj_environmentItem))) {
-   vsp = -jumpspeed;
+if (key_jump and walljump_enabled and (place_meeting(x + 7, y, obj_environmentItem) or place_meeting(x - 7, y, obj_environmentItem))) {
+   vsp = -(jumpspeed * 1.2);
 }
 
 // Check climb items
@@ -286,14 +287,20 @@ if (mouse_wheel_down()) {
 
 // Melee
 if (key_melee) {
-   if (facing == 1) {
+   audio_play_sound(snd_woosh, 10, false);
+
+   if (mouse_x &gt; obj_player.x) {
       sprite_index = spr_meleeRight;
-      instance_create(x + sprite_width, y, obj_invisibleMelee);
+      with (instance_create(x + sprite_width, y + 10, obj_tentacle)) {
+           image_xscale = 1;
+      }
    }
    
-   if (facing == -1) {
+   if (mouse_x &lt;= obj_player.x) {
       sprite_index = spr_meleeLeft;
-      instance_create(x - sprite_width, y, obj_invisibleMelee);
+      with (instance_create(x, y + 10, obj_tentacle)) {
+          image_xscale = -1; 
+      }
    }
 }
 
