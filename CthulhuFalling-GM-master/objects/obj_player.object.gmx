@@ -36,6 +36,7 @@ hp = 100;
 facing = 1;
 active = true;
 walljump_enabled = true;
+can_take_damage = true;
 
 /*
 OLD INVENTORY SYSTEM
@@ -107,6 +108,31 @@ if (current_weapon != noone) {
 if (current_item != noone) {
    instance_create(x + 16, y + 16, current_item);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Reset can take damage
+can_take_damage = true;
+image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -306,10 +332,20 @@ if (key_melee) {
 
 // Horizontal collision
 if (place_meeting(x + hsp, y, obj_environmentItem)) {
-    while (!place_meeting(x + sign(hsp), y, obj_environmentItem)) {
-        x += sign(hsp);
+
+    yplus = 0;
+    while (place_meeting(x + hsp, y - yplus, obj_environmentItem) and yplus &lt;= abs(1 * hsp)) {
+          yplus += 1;
     }
-    hsp = 0;
+
+    if (place_meeting(x + hsp, y - yplus, obj_environmentItem)) {
+        while (!place_meeting(x + sign(hsp), y, obj_environmentItem)) {
+            x += sign(hsp);
+        }
+        hsp = 0;   
+    } else {
+        y -= yplus;
+    }
 }
 x += hsp;
 
@@ -679,6 +715,34 @@ if (new_bag_item_switch != noone) {
    if (instance_exists(obj_crosshair) and object_get_parent(current_bag_item) == obj_shootWeapon) {
       obj_crosshair.sloppy = current_bag_item.sloppy;
    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Take damage from enemies
+if (place_meeting(x, y, obj_enemy) and can_take_damage) {
+   can_take_damage = false;
+   lives--;
+   instance_create(x, y, obj_screenShake);
+   image_blend = c_red;
+   alarm[0] = 60;
 }
 </string>
           </argument>

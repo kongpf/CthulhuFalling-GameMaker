@@ -34,7 +34,7 @@ obj_lightController.hour = 3;
 
 // Play level music
 audio_stop_all();
-audio_play_sound(mus_dungeon01, 10, true);</code>
+audio_play_sound(mus_dungeon02, 10, true);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -954,6 +954,15 @@ audio_play_sound(mus_dungeon01, 10, true);</code>
     <instance objName="obj_dirt" x="0" y="576" name="inst_2397A101" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="0" y="608" name="inst_717EBBB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="960" y="0" name="inst_3CF8E948" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirt45" x="192" y="448" name="inst_5DDBC11E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirt45" x="224" y="480" name="inst_FA2956E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirt45" x="288" y="512" name="inst_6E4665B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirt45" x="32" y="416" name="inst_57BA6AD0" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirt45" x="672" y="672" name="inst_1A28CCC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirt45" x="768" y="704" name="inst_80F5AAE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirt45" x="832" y="736" name="inst_CCC92804" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirt45" x="96" y="800" name="inst_B89A7554" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirt45" x="320" y="640" name="inst_43A8FAB5" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

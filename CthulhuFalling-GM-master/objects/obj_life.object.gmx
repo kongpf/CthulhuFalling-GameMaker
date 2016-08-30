@@ -85,7 +85,7 @@ y = yy + shift; //vertical wave motion
 if (place_meeting(x, y, obj_player)) {
    // Add life to player
    lives++;
-   
+   audio_play_sound(snd_levelup, 10, false);
    instance_destroy();
 }
 </string>

@@ -335,6 +335,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_saveGame</sprite>
+    <sprite>sprites\spr_concrete45</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -788,6 +789,7 @@
         <object>objects\obj_armorySign</object>
         <object>objects\obj_sewerSign</object>
         <object>objects\obj_ghostDirt</object>
+        <object>objects\obj_dirt45</object>
       </objects>
       <objects name="Howard House">
         <object>objects\obj_floor</object>

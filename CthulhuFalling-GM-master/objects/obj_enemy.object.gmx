@@ -49,7 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>///Turn blend to white (normal)
-blend_damage = false;
+image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -72,43 +72,13 @@ blend_damage = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Damage player
-if (place_meeting(x, y, obj_player)) {
-   instance_create(x, y, obj_screenShake);
-   
-   with (obj_player) {
-        lives--;
-   }
-   
-   instance_destroy();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>/// Blend red for half a second while damaged
 if (place_meeting(x, y, obj_dangerousObject)) {
    /*var ind = instance_create(x, y, obj_enemyDamageIndicator);
    ind.target = self;
    ind.life = hp;*/
    
-   blend_damage = true;
+   image_blend = c_red;
    alarm[0] = 3;
 }
 </string>
@@ -119,34 +89,17 @@ if (place_meeting(x, y, obj_dangerousObject)) {
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>500</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
+        <useapplyto>0</useapplyto>
         <exetype>2</exetype>
         <functionname></functionname>
-        <codestring></codestring>
+        <codestring>draw_self();</codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Draw self (and check for blend if damaged)
-if (blend_damage) {
-   draw_set_blend_mode(bm_inv_src_color);
-}
-
-// Always draw
-draw_self();
-
-if (blend_damage) {
-   draw_set_blend_mode(bm_normal);
-}
-</string>
-          </argument>
-        </arguments>
       </action>
     </event>
   </events>
