@@ -275,9 +275,9 @@ hp_percent = (hp / max_hp) * 100;
 if (start)
 draw_healthbar(
                10, 
-               view_hview[0] - 32, 
+               view_hview[0] - 12, 
                view_wview[0] - 10, 
-               view_hview[0] - 32,
+               view_hview[0] - 12,
                hp_percent,
                c_black,
                c_red,

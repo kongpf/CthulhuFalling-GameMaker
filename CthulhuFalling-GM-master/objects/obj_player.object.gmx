@@ -740,6 +740,11 @@ if (new_bag_item_switch != noone) {
 if (place_meeting(x, y, obj_enemy) and can_take_damage) {
    can_take_damage = false;
    lives--;
+   
+   // Jump away
+   event_perform(ev_keypress, vk_space);
+   event_perform(ev_keypress, ord("D"));
+   
    instance_create(x, y, obj_screenShake);
    image_blend = c_red;
    alarm[0] = 60;

@@ -71,10 +71,13 @@
       <sprite>sprites\spr_slime2</sprite>
       <sprite>sprites\spr_rat</sprite>
       <sprite>sprites\spr_sewerBoss</sprite>
+      <sprite>sprites\spr_bat</sprite>
       <sprite>sprites\spr_sewerBossRedGoo</sprite>
       <sprite>sprites\spr_sewerBossGreenGoo</sprite>
       <sprite>sprites\spr_sewerBossHeart</sprite>
       <sprite>sprites\spr_bossHeart</sprite>
+      <sprite>sprites\spr_batSleep</sprite>
+      <sprite>sprites\spr_jumpGreenGoo</sprite>
     </sprites>
     <sprites name="Environment">
       <sprites name="Level 1">
@@ -766,6 +769,8 @@
       <object>objects\obj_sewerBossGreenGoo</object>
       <object>objects\obj_sewerBossRedGoo</object>
       <object>objects\obj_sewerBossHeart</object>
+      <object>objects\obj_bat</object>
+      <object>objects\obj_jumpGreenGoo</object>
     </objects>
     <objects name="Environment">
       <objects name="Level 1">

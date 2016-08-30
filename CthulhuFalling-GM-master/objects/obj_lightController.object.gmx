@@ -29,7 +29,7 @@
 glr_enable_blur(true);
 
 add_time = 15;
-hour = 4;
+hour = 22;
 </string>
           </argument>
         </arguments>
