@@ -52,6 +52,7 @@ chunk = 4;
 hp = 150;
 chase_speed = 2;
 sleep_speed = 1;
+range = 150;
 </string>
           </argument>
         </arguments>
@@ -114,7 +115,8 @@ scr_sprite_explode(id, 4);
           <argument>
             <kind>1</kind>
             <string>///Check state change
-if (collision_circle(x, y, 100, obj_player, false, true) != noone) {
+if (instance_exists(obj_player))
+if (collision_circle(x, y, range, obj_player, false, true) != noone and collision_line(x, y, obj_player.x, obj_player.y, obj_environmentItem, false, true) == noone) {
    // Chase
    state = 1;
 } else {

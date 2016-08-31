@@ -868,6 +868,7 @@
       <object>objects\obj_grandmaIntro</object>
       <object>objects\obj_grandmaStanding</object>
       <object>objects\obj_playerDead</object>
+      <object>objects\obj_controlsManager</object>
     </objects>
     <objects name="Scores">
       <object>objects\obj_scoreManager</object>
