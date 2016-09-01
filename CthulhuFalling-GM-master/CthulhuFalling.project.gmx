@@ -91,6 +91,8 @@
         <sprite>sprites\spr_dirt</sprite>
         <sprite>sprites\spr_sign</sprite>
         <sprite>sprites\spr_streetLight</sprite>
+        <sprite>sprites\spr_concrete45</sprite>
+        <sprite>sprites\spr_concrete45_2</sprite>
         <sprite>sprites\spr_ladder</sprite>
         <sprite>sprites\spr_ghostLadder</sprite>
         <sprite>sprites\spr_wall</sprite>
@@ -338,7 +340,6 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_saveGame</sprite>
-    <sprite>sprites\spr_concrete45</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -771,6 +772,8 @@
       <object>objects\obj_sewerBossHeart</object>
       <object>objects\obj_bat</object>
       <object>objects\obj_jumpGreenGoo</object>
+      <object>objects\obj_sewerBossTentacleSpawn</object>
+      <object>objects\obj_sewerBossTentacle</object>
     </objects>
     <objects name="Environment">
       <objects name="Level 1">
@@ -795,6 +798,7 @@
         <object>objects\obj_sewerSign</object>
         <object>objects\obj_ghostDirt</object>
         <object>objects\obj_dirt45</object>
+        <object>objects\obj_dirt45_2</object>
       </objects>
       <objects name="Howard House">
         <object>objects\obj_floor</object>
@@ -877,6 +881,7 @@
       <object>objects\obj_screenShake</object>
       <object>objects\obj_bigScreenShake</object>
       <object>objects\obj_rain</object>
+      <object>objects\obj_tentaclesScreenShake</object>
     </objects>
     <objects name="Lighting">
       <object>objects\obj_lightController</object>

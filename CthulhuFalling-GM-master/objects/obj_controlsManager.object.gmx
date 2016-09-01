@@ -25,16 +25,49 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_jump = vk_space;
-player_up = ord("W");
-player_down = ord("S");
-player_right = ord("D");
-player_left = ord("A");
-player_shoot = mb_left;
-player_interact = mb_right;
-player_sprint = vk_shift;
-player_melee = ord("Q");
-player_close_dialog = vk_alt;
+            <string>key_player_jump = vk_space;
+key_player_up = ord("W");
+key_player_down = ord("S");
+key_player_right = ord("D");
+key_player_left = ord("A");
+key_player_shoot = mb_left;
+key_player_interact = mb_right;
+key_player_sprint = vk_shift;
+key_player_melee = ord("Q");
+key_player_close_dialog = vk_alt;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check key presses
+player_jump = keyboard_check_pressed(key_player_jump);
+player_up = keyboard_check(key_player_up);
+player_down = keyboard_check(key_player_down);
+player_right = keyboard_check(key_player_right);
+player_left = keyboard_check(key_player_left);
+player_shoot = mouse_check_button_pressed(key_player_shoot);
+player_interact = mouse_check_button_pressed(key_player_interact);
+player_sprint = keyboard_check_pressed(key_player_sprint);
+player_melee = keyboard_check_pressed(key_player_melee);
+player_close_dialog = keyboard_check_pressed(key_player_close_dialog);
 </string>
           </argument>
         </arguments>

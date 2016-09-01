@@ -41,6 +41,7 @@
             <kind>1</kind>
             <string>/// Set variables
 hp = 200;
+can_take_damage = true;
 </string>
           </argument>
         </arguments>

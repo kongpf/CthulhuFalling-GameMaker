@@ -45,9 +45,37 @@ hp = max_hp;
 hp_percent = 100;
 start = false;
 
-alarm0 = 100;
-alarm1 = 250;
-alarm2 = 350;
+alarm0 = round(random_range(100, 170));
+alarm1 = round(random_range(250, 310));
+alarm2 = round(random_range(350, 460));
+alarm3 = round(random_range(800, 900));
+
+can_take_damage = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Spawn tentacles
+instance_create(x, y, obj_tentaclesScreenShake);
+alarm[3] = round(random_range(800, 900));
 </string>
           </argument>
         </arguments>
@@ -72,7 +100,7 @@ alarm2 = 350;
             <kind>1</kind>
             <string>///Spawn enemies
 repeat (2) instance_create(x, y, obj_slime);
-alarm[2] = alarm2;
+alarm[2] = round(random_range(350, 460));
 </string>
           </argument>
         </arguments>
@@ -97,7 +125,7 @@ alarm[2] = alarm2;
             <kind>1</kind>
             <string>///Spawn enemies
 repeat (3) instance_create(x, y, obj_sewerBossRedGoo);
-alarm[1] = alarm1;
+alarm[1] = round(random_range(250, 310));
 </string>
           </argument>
         </arguments>
@@ -122,7 +150,7 @@ alarm[1] = alarm1;
             <kind>1</kind>
             <string>///Spawn enemies
 repeat (3) instance_create(x, y, obj_sewerBossGreenGoo);
-alarm[0] = alarm0;
+alarm[0] = round(random_range(100, 170));
 </string>
           </argument>
         </arguments>
@@ -222,6 +250,9 @@ if (collision_circle(x, y, 128, obj_player, false, true) and not start) {
    
    // Slime
    alarm[2] = alarm2;
+   
+   // Tentacles
+   alarm[3] = alarm3;
    
    audio_stop_all();
    audio_play_sound(mus_boss, 10, true);

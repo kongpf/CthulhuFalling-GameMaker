@@ -41,6 +41,7 @@
             <kind>1</kind>
             <string>///Variables
 hp = 50;
+can_take_damage = true;
 </string>
           </argument>
         </arguments>

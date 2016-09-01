@@ -49,6 +49,7 @@ hsp = 0;
 vsp = 0;
 hp = 2000;
 attack_phase = 0;
+can_take_damage = true;
 </string>
           </argument>
         </arguments>

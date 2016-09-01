@@ -59,6 +59,8 @@ hp = 150;
 pixels_walk = 0;
 pixels_walk_max = 100;
 
+can_take_damage = true;
+
 // Sprite explosion
 ww = sprite_get_width(sprite_index);
 hh = sprite_get_height(sprite_index);

@@ -50,9 +50,12 @@ chunk = 4;
 
 // Life and stuff
 hp = 150;
-chase_speed = 2;
-sleep_speed = 1;
-range = 150;
+chase_speed = round(random_range(2, 4));
+sleep_speed = round(random_range(1, 2));
+range_sleeping = 150;
+range_chasing = 300;
+range = range_sleeping;
+can_take_damage = true;
 </string>
           </argument>
         </arguments>
@@ -119,6 +122,9 @@ if (instance_exists(obj_player))
 if (collision_circle(x, y, range, obj_player, false, true) != noone and collision_line(x, y, obj_player.x, obj_player.y, obj_environmentItem, false, true) == noone) {
    // Chase
    state = 1;
+   can_take_damage = true;
+   
+   range = range_chasing;
 } else {
    // Go back to sleep, buddy
    state = 0;
@@ -179,6 +185,8 @@ if (state == 0) {
       sprite_index = spr_bat;
    } else {
       sprite_index = spr_batSleep;
+      can_take_damage = false;
+      range = range_sleeping
    }
 }
 </string>

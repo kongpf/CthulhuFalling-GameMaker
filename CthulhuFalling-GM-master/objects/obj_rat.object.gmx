@@ -54,6 +54,8 @@ vsp = 0;
 hp = 100;
 pixels_walk = 0;
 pixels_walk_max = 100;
+
+can_take_damage = true;
 </string>
           </argument>
         </arguments>
@@ -94,6 +96,40 @@ scr_sprite_explode(id, 4);
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
         <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>instance_exists(obj_player)</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
@@ -182,19 +218,23 @@ if (place_meeting(x, y + vsp, obj_environmentItem)) {
     vsp = 0;
 }
 y += vsp;
-
-// Enemy collision
-if (place_meeting(x, y, obj_player)) {
-   if (obj_player.y &lt; y - sprite_height / 2) {
-      with (obj_player) {
-           vsp = -jumpspeed;
-      }  
-      instance_destroy();
-   } 
-}
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
