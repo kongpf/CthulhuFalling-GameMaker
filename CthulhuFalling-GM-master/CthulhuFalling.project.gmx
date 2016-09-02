@@ -850,6 +850,7 @@
       <objects name="Melee Weapons">
         <object>objects\obj_invisibleMelee</object>
         <object>objects\obj_tentacle</object>
+        <object>objects\obj_meleeWeapon</object>
       </objects>
       <objects name="Launch Weapons">
         <object>objects\obj_launchWeapon</object>

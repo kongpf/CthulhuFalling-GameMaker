@@ -10,8 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>var spawn_x = 64;
-var spawn_y = 1760;
+  <code>var spawn_x = 960;
+var spawn_y = 32;
 
 if (not instance_exists(obj_player)) {
    instance_create(spawn_x, spawn_y, obj_player);
@@ -30,7 +30,7 @@ if (not instance_exists(obj_lightController)) {
 }
 
 // Set day time
-obj_lightController.hour = 3;
+obj_lightController.hour = 22;
 
 // Play level music
 audio_stop_all();

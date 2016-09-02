@@ -101,7 +101,7 @@ y += vsp;
           <argument>
             <kind>1</kind>
             <string>/// Damage
-if (place_meeting(x, y, obj_invisibleMelee)) {
+if (place_meeting(x, y, obj_meleeWeapon)) {
    effect_create_above(ef_smoke, x, y, 2, c_red);
    instance_destroy();
 }
