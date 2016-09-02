@@ -97,6 +97,7 @@
         <sprite>sprites\spr_ghostLadder</sprite>
         <sprite>sprites\spr_wall</sprite>
         <sprite>sprites\spr_door</sprite>
+        <sprite>sprites\spr_bricks</sprite>
       </sprites>
       <sprites name="Howard House">
         <sprite>sprites\spr_floor</sprite>
