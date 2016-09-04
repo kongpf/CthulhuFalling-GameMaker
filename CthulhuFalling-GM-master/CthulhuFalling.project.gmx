@@ -732,6 +732,7 @@
     <font>fonts\fnt_messagebox</font>
     <font>fonts\fnt_consolas</font>
     <font>fonts\fnt_minecraftia</font>
+    <font>fonts\fnt_title</font>
   </fonts>
   <objects name="objects">
     <objects name="Main menu">
