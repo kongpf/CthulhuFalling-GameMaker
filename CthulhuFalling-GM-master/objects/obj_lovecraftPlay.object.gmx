@@ -142,16 +142,16 @@ key_exit = keyboard_check_pressed(vk_escape);
 key_melee = max(keyboard_check_pressed(ord('E')), keyboard_check_pressed(ord('Q')), 0);
 key_pick = mouse_check_button_pressed(mb_right);
 
-move = key_left + key_right;
+move = obj_controlsManager.lovecraft_left + obj_controlsManager.lovecraft_right;
 hsp = move * movespeed;
 
 if (active) {
    // Sound
-    if (key_right) {
+    if (obj_controlsManager.lovecraft_right) {
        facing = 1;
     } 
     
-    if (-key_left) {
+    if (-obj_controlsManager.lovecraft_left) {
       facing = -1;
     }
     
@@ -160,20 +160,20 @@ if (active) {
     
     // Check jump
     if (place_meeting(x, y + 1, obj_ghostEnvironmentItem)) {
-        vsp = key_jump * -jumpspeed;
+        vsp = obj_controlsManager.lovecraft_jump * -jumpspeed;
         
-        if (-key_left) {
+        if (-obj_controlsManager.lovecraft_left) {
            //sprite_index = spr_playerRunLeft;
            
-           if (not key_jump) {
+           if (not obj_controlsManager.lovecraft_jump) {
               walking = true;
            } else {
               walking = false;
            }
-        } else if (key_right) {
+        } else if (obj_controlsManager.lovecraft_right) {
            //sprite_index = spr_playerRunRight;
            
-           if (not key_jump) {
+           if (not obj_controlsManager.lovecraft_jump) {
               walking = true;
            } else {
               walking = false;
@@ -187,32 +187,19 @@ if (active) {
       //sprite_index = spr_playerJump;
     }
     
-    if ((vsp &lt; 0) and (!key_jump_held)) vsp = max(vsp, 0);
+    if ((vsp &lt; 0) and (!obj_controlsManager.lovecraft_jump_held)) vsp = max(vsp, 0);
     
     // Check climb items
     if (place_meeting(x, y, obj_ghostClimbItem)) {
-        vsp = key_jump * -jumpspeed;
+        vsp = obj_controlsManager.lovecraft_jump * -jumpspeed;
     
-        if (key_climb_up) {
+        if (obj_controlsManager.lovecraft_up) {
            vsp = -movespeed;
         }
        
-        if (key_climb_down) {
+        if (obj_controlsManager.lovecraft_down) {
            vsp = movespeed;
         }
-    }
-    
-    // Melee
-    if (key_melee) {
-       if (facing == 1) {
-          //sprite_index = spr_meleeRight;
-          instance_create(x + sprite_width, y, obj_invisibleMelee);
-       }
-       
-       if (facing == -1) {
-          //sprite_index = spr_meleeLeft;
-          instance_create(x - sprite_width, y, obj_invisibleMelee);
-       }
     }
 }
 

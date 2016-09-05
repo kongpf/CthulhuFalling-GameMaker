@@ -214,7 +214,7 @@ if (y &gt; room_height) {
           <argument>
             <kind>1</kind>
             <string>/// Get player input
-key_right = max(keyboard_check(ord('D')), gamepad_button_check(0, gp_padr), 0);
+/*key_right = max(keyboard_check(ord('D')), gamepad_button_check(0, gp_padr), 0);
 key_left = -max(keyboard_check(ord('A')), gamepad_button_check(0, gp_padl), 0);
 key_jump = max(keyboard_check_pressed(vk_space), gamepad_button_check_pressed(0, gp_face1), 0);
 key_jump_held = max(keyboard_check(vk_space), gamepad_button_check(0, gp_face1), 0);
@@ -223,18 +223,18 @@ key_climb_down = max(keyboard_check(ord('S')), gamepad_button_check(0, gp_padd),
 key_exit = keyboard_check_pressed(vk_escape);
 key_melee = max(keyboard_check_pressed(ord('E')), keyboard_check_pressed(ord('Q')), gamepad_button_check_pressed(0, gp_stickr), 0);
 key_sprint = max(keyboard_check(vk_shift), gamepad_button_check(0, gp_shoulderlb), 0);
-
-move = key_left + key_right;
+*/
+move = obj_controlsManager.player_left + obj_controlsManager.player_right;//key_left + key_right;
 hsp = move * movespeed;
 
-if (key_exit) game_end();
+//if (key_exit) game_end();
 
 // Sound
-if (key_right) {
+if (obj_controlsManager.player_right) {
    facing = 1;
 } 
 
-if (-key_left) {
+if (-obj_controlsManager.player_left) {
   facing = -1;
 }
 
@@ -242,25 +242,25 @@ if (-key_left) {
 if (vsp &lt; 10) vsp += grav;
 
 // Check sprint
-if (key_sprint) movespeed = 4;
+if (obj_controlsManager.player_sprint) movespeed = 4;
 else movespeed = 2;
 
 // Check jump
 if (place_meeting(x, y + 1, obj_environmentItem)) {
-    vsp = key_jump * -jumpspeed;
+    vsp = obj_controlsManager.player_jump * -jumpspeed;
     
-    if (-key_left) {
+    if (-obj_controlsManager.player_left) {
        sprite_index = spr_playerRunLeft;
        
-       if (not key_jump) {
+       if (not obj_controlsManager.player_jump) {
           walking = true;
        } else {
           walking = false;
        }
-    } else if (key_right) {
+    } else if (obj_controlsManager.player_right) {
        sprite_index = spr_playerRunRight;
        
-       if (not key_jump) {
+       if (not obj_controlsManager.player_jump) {
           walking = true;
        } else {
           walking = false;
@@ -274,22 +274,22 @@ if (place_meeting(x, y + 1, obj_environmentItem)) {
   sprite_index = spr_playerJump;
 }
 
-if ((vsp &lt; 0) and (!key_jump_held)) vsp = max(vsp, 0);
+if ((vsp &lt; 0) and (!obj_controlsManager.player_jump_held)) vsp = max(vsp, 0);
 
 // Wall jump
-if (key_jump and walljump_enabled and (place_meeting(x + 7, y, obj_environmentItem) or place_meeting(x - 7, y, obj_environmentItem))) {
+if (obj_controlsManager.player_jump and walljump_enabled and (place_meeting(x + 7, y, obj_environmentItem) or place_meeting(x - 7, y, obj_environmentItem))) {
    vsp = -(jumpspeed * 1.2);
 }
 
 // Check climb items
 if (place_meeting(x, y, obj_climbItem)) {
-    vsp = key_jump * -jumpspeed;
+    vsp = obj_controlsManager.player_jump * -jumpspeed;
 
-    if (key_climb_up) {
+    if (obj_controlsManager.player_up) {
        vsp = -movespeed;
     }
    
-    if (key_climb_down) {
+    if (obj_controlsManager.player_down) {
        vsp = movespeed;
     }
 }
@@ -312,7 +312,7 @@ if (mouse_wheel_down()) {
 }*/
 
 // Melee
-if (key_melee) {
+if (obj_controlsManager.player_melee) {
    audio_play_sound(snd_woosh, 10, false);
 
    if (mouse_x &gt; obj_player.x) {

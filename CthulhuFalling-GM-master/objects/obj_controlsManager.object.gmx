@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key_player_jump = vk_space;
+            <string>///Get controls (from file or from here)
+//Player
+key_player_jump = vk_space;
+key_player_jump_held = vk_space;
 key_player_up = ord("W");
 key_player_down = ord("S");
 key_player_right = ord("D");
@@ -35,6 +38,57 @@ key_player_interact = mb_right;
 key_player_sprint = vk_shift;
 key_player_melee = ord("Q");
 key_player_close_dialog = vk_alt;
+
+//Lovecraft
+key_lovecraft_jump = vk_space;
+key_lovecraft_jump_held = vk_space;
+key_lovecraft_up = ord("W");
+key_lovecraft_down = ord("S");
+key_lovecraft_right = ord("D");
+key_lovecraft_left = ord("A");
+key_lovecraft_interact = mb_right;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Assign controls (to check key presses)
+//Player
+player_jump = keyboard_check_pressed(key_player_jump);
+player_jump_held = keyboard_check(key_player_jump_held);
+player_up = keyboard_check(key_player_up);
+player_down = keyboard_check(key_player_down);
+player_right = keyboard_check(key_player_right);
+player_left = keyboard_check(key_player_left);
+player_shoot = mouse_check_button_pressed(key_player_shoot);
+player_interact = mouse_check_button_pressed(key_player_interact);
+player_sprint = keyboard_check_pressed(key_player_sprint);
+player_melee = keyboard_check_pressed(key_player_melee);
+player_close_dialog = keyboard_check_pressed(key_player_close_dialog);
+
+//Lovecraft
+lovecraft_jump = keyboard_check_pressed(key_lovecraft_jump);
+lovecraft_jump_held = keyboard_check(key_lovecraft_jump_held);
+lovecraft_up = keyboard_check_pressed(key_lovecraft_up);
+lovecraft_down = keyboard_check_pressed(key_lovecraft_down);
+lovecraft_right = keyboard_check_pressed(key_lovecraft_right);
+lovecraft_left = -keyboard_check_pressed(key_lovecraft_left);
+lovecraft_interact = mouse_check_button_pressed(key_lovecraft_interact);
 </string>
           </argument>
         </arguments>
@@ -59,15 +113,24 @@ key_player_close_dialog = vk_alt;
             <kind>1</kind>
             <string>///Check key presses
 player_jump = keyboard_check_pressed(key_player_jump);
+player_jump_held = keyboard_check(key_player_jump_held);
 player_up = keyboard_check(key_player_up);
 player_down = keyboard_check(key_player_down);
 player_right = keyboard_check(key_player_right);
-player_left = keyboard_check(key_player_left);
+player_left = -keyboard_check(key_player_left);
 player_shoot = mouse_check_button_pressed(key_player_shoot);
 player_interact = mouse_check_button_pressed(key_player_interact);
-player_sprint = keyboard_check_pressed(key_player_sprint);
+player_sprint = keyboard_check(key_player_sprint);
 player_melee = keyboard_check_pressed(key_player_melee);
 player_close_dialog = keyboard_check_pressed(key_player_close_dialog);
+
+lovecraft_jump = keyboard_check_pressed(key_lovecraft_jump);
+lovecraft_jump_held = keyboard_check(key_lovecraft_jump_held);
+lovecraft_up = keyboard_check(key_lovecraft_up);
+lovecraft_down = keyboard_check(key_lovecraft_down);
+lovecraft_right = keyboard_check(key_lovecraft_right);
+lovecraft_left = -keyboard_check(key_lovecraft_left);
+lovecraft_interact = mouse_check_button_pressed(key_lovecraft_interact);
 </string>
           </argument>
         </arguments>
