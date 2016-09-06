@@ -361,6 +361,9 @@
     <background>background\bg_blueToneTiles</background>
     <background>background\background12</background>
     <background>background\background14</background>
+    <background>background\bg_obituaryWalls</background>
+    <background>background\bg_obituaryWalls2</background>
+    <background>background\bg_obituary</background>
   </backgrounds>
   <paths name="paths">
     <paths name="Big Cthulhu">
@@ -1142,6 +1145,9 @@
     </rooms>
     <rooms name="Sewer">
       <room>rooms\rm_sewer1</room>
+    </rooms>
+    <rooms name="Mental Hospital">
+      <room>rooms\rm_obituary1</room>
     </rooms>
   </rooms>
   <help>
