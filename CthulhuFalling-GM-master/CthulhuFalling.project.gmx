@@ -341,6 +341,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_saveGame</sprite>
+    <sprite>sprites\spr_jumpToObituary</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -820,6 +821,9 @@
         <object>objects\obj_doorStreetsArmory</object>
         <object>objects\obj_doorArmoryStreets</object>
         <object>objects\obj_doorStreetsSewer</object>
+      </objects>
+      <objects name="Sewer">
+        <object>objects\obj_jumpToObituary</object>
       </objects>
     </objects>
     <objects name="Weapons">
