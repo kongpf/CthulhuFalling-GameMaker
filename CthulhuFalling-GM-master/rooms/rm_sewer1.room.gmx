@@ -1030,6 +1030,7 @@ audio_play_sound(mus_dungeon02, 10, true);</code>
     <instance objName="obj_dirt" x="160" y="0" name="inst_B997E181" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="192" y="0" name="inst_0CDEC8EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="224" y="0" name="inst_4F76B8C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_doorSewerObituary" x="960" y="1984" name="inst_B9E001CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_groundTiles1" x="512" y="160" w="32" h="32" xo="165" yo="101" id="10003666" name="inst_8C02CA5D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

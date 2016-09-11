@@ -3,11 +3,286 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="16" name="datafiles">
+    <datafile>
+      <name>A Touch of Crayon.col</name>
+      <exists>-1</exists>
+      <size>622</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>A Touch of Crayon.col</filename>
+    </datafile>
+    <datafile>
+      <name>Anatomy of Gray.col</name>
+      <exists>-1</exists>
+      <size>610</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Anatomy of Gray.col</filename>
+    </datafile>
+    <datafile>
+      <name>Django.col</name>
+      <exists>-1</exists>
+      <size>619</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Django.col</filename>
+    </datafile>
+    <datafile>
+      <name>Eighties.col</name>
+      <exists>-1</exists>
+      <size>624</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Eighties.col</filename>
+    </datafile>
+    <datafile>
+      <name>Emacs.col</name>
+      <exists>-1</exists>
+      <size>605</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Emacs.col</filename>
+    </datafile>
+    <datafile>
+      <name>Fade to Gray.col</name>
+      <exists>-1</exists>
+      <size>622</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Fade to Gray.col</filename>
+    </datafile>
+    <datafile>
+      <name>GM 8.col</name>
+      <exists>-1</exists>
+      <size>600</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>GM 8.col</filename>
+    </datafile>
+    <datafile>
+      <name>GM Studio.col</name>
+      <exists>-1</exists>
+      <size>619</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>GM Studio.col</filename>
+    </datafile>
+    <datafile>
+      <name>Matrix.col</name>
+      <exists>-1</exists>
+      <size>576</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Matrix.col</filename>
+    </datafile>
+    <datafile>
+      <name>Monokai Color.col</name>
+      <exists>-1</exists>
+      <size>620</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Monokai Color.col</filename>
+    </datafile>
+    <datafile>
+      <name>Neon.col</name>
+      <exists>-1</exists>
+      <size>596</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Neon.col</filename>
+    </datafile>
+    <datafile>
+      <name>RDark.col</name>
+      <exists>-1</exists>
+      <size>619</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>RDark.col</filename>
+    </datafile>
+    <datafile>
+      <name>Safari.col</name>
+      <exists>-1</exists>
+      <size>620</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Safari.col</filename>
+    </datafile>
+    <datafile>
+      <name>Moonlight.col</name>
+      <exists>-1</exists>
+      <size>627</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Moonlight.col</filename>
+    </datafile>
+    <datafile>
+      <name>Aqua.col</name>
+      <exists>-1</exists>
+      <size>629</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Aqua.col</filename>
+    </datafile>
+    <datafile>
+      <name>Magma.col</name>
+      <exists>-1</exists>
+      <size>597</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Magma.col</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions>
     <extension index="0">extensions\Glare Engine - 2D illumination</extension>
     <extension index="1">extensions\Mine Tileset</extension>
     <extension index="2">extensions\Speech Bubble</extension>
     <extension index="3">extensions\Gamemaker Chiptune RPG Music</extension>
+    <extension index="4">extensions\Color Coding Files</extension>
   </NewExtensions>
   <sounds name="sound">
     <sounds name="Weapons">
@@ -342,6 +617,8 @@
     </sprites>
     <sprite>sprites\spr_saveGame</sprite>
     <sprite>sprites\spr_jumpToObituary</sprite>
+    <sprite>sprites\spr_hallDesk</sprite>
+    <sprite>sprites\spr_zombie</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -780,6 +1057,7 @@
       <object>objects\obj_jumpGreenGoo</object>
       <object>objects\obj_sewerBossTentacleSpawn</object>
       <object>objects\obj_sewerBossTentacle</object>
+      <object>objects\obj_zombie</object>
     </objects>
     <objects name="Environment">
       <objects name="Level 1">
@@ -824,6 +1102,11 @@
       </objects>
       <objects name="Sewer">
         <object>objects\obj_jumpToObituary</object>
+      </objects>
+      <objects name="Mental Hospital">
+        <object>objects\obj_doorObituaryMentalHospital</object>
+        <object>objects\obj_doorSewerObituary</object>
+        <object>objects\obj_hallDesk</object>
       </objects>
     </objects>
     <objects name="Weapons">
@@ -900,6 +1183,8 @@
       <object>objects\obj_chandelier</object>
       <object>objects\obj_streetLight</object>
       <object>objects\obj_sewerBossLight</object>
+      <object>objects\obj_obituaryLight</object>
+      <object>objects\obj_deskLamp</object>
     </objects>
     <objects name="Glare demo">
       <object>objects\obj_glare_controller</object>
@@ -1152,6 +1437,7 @@
     </rooms>
     <rooms name="Mental Hospital">
       <room>rooms\rm_obituary1</room>
+      <room>rooms\rm_HospitalHall</room>
     </rooms>
   </rooms>
   <help>
