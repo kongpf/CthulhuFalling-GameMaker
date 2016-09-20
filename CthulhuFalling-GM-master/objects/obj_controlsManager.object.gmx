@@ -38,6 +38,7 @@ key_player_interact = mb_right;
 key_player_sprint = vk_shift;
 key_player_melee = ord("Q");
 key_player_close_dialog = vk_alt;
+key_player_item_slot = ord("4");
 
 //Lovecraft
 key_lovecraft_jump = vk_space;
@@ -80,6 +81,7 @@ player_interact = mouse_check_button_pressed(key_player_interact);
 player_sprint = keyboard_check_pressed(key_player_sprint);
 player_melee = keyboard_check_pressed(key_player_melee);
 player_close_dialog = keyboard_check_pressed(key_player_close_dialog);
+player_item_slot = keyboard_check_pressed(key_player_item_slot);
 
 //Lovecraft
 lovecraft_jump = keyboard_check_pressed(key_lovecraft_jump);
@@ -123,6 +125,7 @@ player_interact = mouse_check_button_pressed(key_player_interact);
 player_sprint = keyboard_check(key_player_sprint);
 player_melee = keyboard_check_pressed(key_player_melee);
 player_close_dialog = keyboard_check_pressed(key_player_close_dialog);
+player_item_slot = keyboard_check_pressed(key_player_item_slot);
 
 lovecraft_jump = keyboard_check_pressed(key_lovecraft_jump);
 lovecraft_jump_held = keyboard_check(key_lovecraft_jump_held);

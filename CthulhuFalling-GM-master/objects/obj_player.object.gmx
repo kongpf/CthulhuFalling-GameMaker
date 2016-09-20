@@ -37,6 +37,7 @@ facing = 1;
 active = true;
 walljump_enabled = true;
 can_take_damage = true;
+started_walking = false;
 
 /*
 OLD INVENTORY SYSTEM
@@ -107,6 +108,36 @@ if (current_weapon != noone) {
 
 if (current_item != noone) {
    instance_create(x + 16, y + 16, current_item);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Play sound
+audio_play_sound(snd_footstepsConcrete, 10, false);
+
+if (walking) {
+   alarm[1] = 60;
+} else {
+   started_walking = false;
 }
 </string>
           </argument>
@@ -213,23 +244,11 @@ if (y &gt; room_height) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Get player input
-/*key_right = max(keyboard_check(ord('D')), gamepad_button_check(0, gp_padr), 0);
-key_left = -max(keyboard_check(ord('A')), gamepad_button_check(0, gp_padl), 0);
-key_jump = max(keyboard_check_pressed(vk_space), gamepad_button_check_pressed(0, gp_face1), 0);
-key_jump_held = max(keyboard_check(vk_space), gamepad_button_check(0, gp_face1), 0);
-key_climb_up = max(keyboard_check(ord('W')), gamepad_button_check(0, gp_padu), 0);
-key_climb_down = max(keyboard_check(ord('S')), gamepad_button_check(0, gp_padd), 0);
-key_exit = keyboard_check_pressed(vk_escape);
-key_melee = max(keyboard_check_pressed(ord('E')), keyboard_check_pressed(ord('Q')), gamepad_button_check_pressed(0, gp_stickr), 0);
-key_sprint = max(keyboard_check(vk_shift), gamepad_button_check(0, gp_shoulderlb), 0);
-*/
+            <string>// Logic
 move = obj_controlsManager.player_left + obj_controlsManager.player_right;//key_left + key_right;
 hsp = move * movespeed;
 
-//if (key_exit) game_end();
-
-// Sound
+// Facing
 if (obj_controlsManager.player_right) {
    facing = 1;
 } 
@@ -357,6 +376,18 @@ if (place_meeting(x, y + vsp, obj_environmentItem)) {
     vsp = 0;
 }
 y += vsp;
+
+// Play footsteps
+if (walking and place_meeting(x, y, obj_environmentItem) and not started_walking) {
+   // Reset trigger
+   started_walking = true;
+   
+   // Play sound
+   audio_play_sound(snd_footstepsConcrete, 10, false);
+   
+   // Start alarm 1
+   alarm[1] = 60;   
+}
 </string>
           </argument>
         </arguments>

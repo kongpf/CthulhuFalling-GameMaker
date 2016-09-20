@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,21 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Bag with stuff (3 slots)
-bag[0] = noone;
-bag[1] = noone;
-bag[2] = noone;
-bag_size = 3;
-bag_slot = 0;
-bag_slot_last = 0;
-
-// Graphics
-square_h = 32;
-square_margin = 15;
-
-// Set depth to avoid lights affection on self
-if (instance_exists(obj_lightController))
-   depth = obj_lightController.depth - 1;
+            <string>application_surface_draw_enable(false);
+deltaT = 0;
+shader = 0;
 </string>
           </argument>
         </arguments>
@@ -62,14 +50,36 @@ if (instance_exists(obj_lightController))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Print bag content
-show_debug_message("[0]: " + string(bag[0]) + " [1]: " + string(bag[1]) + " [2]: " + string(bag[2]));
+            <string>if(deltaT &lt; 360.0){
+    deltaT = deltaT+ 0.05;
+}
+else
+    deltaT = 0;
+    
+    
+if(keyboard_check_released(vk_right)){
+    if(shader &lt; 7){
+        shader = shader + 1;
+    }
+    else{
+        shader = 0;
+    }
+    
+}
+if(keyboard_check_released(vk_left)){
+ if(shader &gt; 0){
+        shader = shader - 1;
+    }
+    else{
+        shader = 7;
+    }
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="77">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -86,27 +96,78 @@ show_debug_message("[0]: " + string(bag[0]) + " [1]: " + string(bag[1]) + " [2]:
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw inventory
-var last_x;
-
-for (i = 0; i &lt; bag_size; i++) {
-    var square_color;
-    
-    if (i == bag_slot) square_color = c_red;
-    else square_color = c_white;
-    
-    x1 = view_xview[0] + square_margin + (i * square_h);
-    y1 = view_yview[0] + view_hview[0] - square_margin - square_h;
-    x2 = x1 + square_h;
-    y2 = y1 - square_h;
-    
-    draw_set_color(square_color);
-    draw_rectangle(x1, y1, x2, y2, true);
-    
-    if (bag[i] != noone) draw_sprite(object_get_sprite(bag[i]), 0, x1, y2);
-    
-    if (i == (bag_size - 1)) last_x = x2;
+            <string>if(shader =0){
+    shader_set(ColourDistortion);
 }
+switch shader{
+    case 0:
+        shader_set(ColourDistortion);
+        break;
+    case 1:
+        shader_set(BlackAndWhite);
+        break;
+    case 2:
+        shader_set(InvertColours);
+        break;
+    case 3:
+        shader_set(Sepia);
+        break;
+    case 4:
+        shader_set(EdgeDetection);
+        break;
+    case 5:
+        shader_set(ColourDistortion);
+        break;
+    case 6:
+        shader_set(FishEye);
+        shader_set_uniform_f(shader_get_uniform(FishEye,"apertureAngle"), 220);
+        shader_set_uniform_f(shader_get_uniform(FishEye,"lensSize"), 1.0);    
+        break;
+    case 7:
+        shader_set(ColourDistortion);
+        shader_set_uniform_f(shader_get_uniform(OuterBlur,"maxBlurStrength"), 50.0);
+        shader_set_uniform_f(shader_get_uniform(OuterBlur,"resolution"), 1024);
+        shader_set_uniform_f(shader_get_uniform(OuterBlur,"radius"), 0.5);
+        shader_set_uniform_f(shader_get_uniform(OuterBlur,"dir"), 0.15);
+        break;
+}
+
+ //FishEye
+/*
+
+*/
+
+ //OuterBlur
+/*
+
+*/
+
+
+draw_surface(application_surface,0,0);
+shader_reset();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text(20,20, "Press left and right on keyboard to cycle shaders");
 </string>
           </argument>
         </arguments>

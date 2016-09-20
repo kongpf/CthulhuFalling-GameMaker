@@ -2,13 +2,13 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,50 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Spawn particle system
-p_system = part_system_create();
-
-particle1=part_type_create()
-part_type_shape(particle1,pt_shape_pixel);
-part_type_size(particle1,1,1,0,0);
-part_type_speed(particle1,3,6,0,0);
-part_type_direction(particle1,0,359,0,0);
-part_type_orientation(particle1,0,0,0,0,1);
-part_type_color1(particle1,16777215);
-part_type_alpha1(particle1,1);
-part_type_scale(particle1,1,1);
-part_type_gravity(particle1,0.30,270);
-part_type_life(particle1,20,20);
-part_type_blend(particle1,1);
-
-part_particles_create(p_system,x,y,particle1,15);
-
-// Set alarm to destroy this object
-alarm[0] = 60;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Destroy particle system
-instance_destroy();
+            <string>x=mouse_x;
+y=mouse_y;
 </string>
           </argument>
         </arguments>

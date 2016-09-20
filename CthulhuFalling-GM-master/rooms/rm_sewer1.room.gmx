@@ -685,7 +685,6 @@ audio_play_sound(mus_dungeon02, 10, true);</code>
     <instance objName="obj_ghostDirt" x="480" y="192" name="inst_A9ED586A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="864" y="192" name="inst_093F48EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="288" y="288" name="inst_D0B4F8EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fragGrenadePick" x="224" y="160" name="inst_B8DD2F99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="544" y="192" name="inst_391664EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="576" y="192" name="inst_0A26577C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="608" y="192" name="inst_C768B8AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1031,6 +1030,10 @@ audio_play_sound(mus_dungeon02, 10, true);</code>
     <instance objName="obj_dirt" x="192" y="0" name="inst_0CDEC8EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="224" y="0" name="inst_4F76B8C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_doorSewerObituary" x="960" y="1984" name="inst_B9E001CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sewerKeyPick" x="736" y="288" name="inst_DB9025E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_itemPocket" x="160" y="32" name="inst_0BC86F31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_itemPocket" x="192" y="32" name="inst_39F0D424" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_scissorsPick" x="800" y="288" name="inst_7643B69D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_groundTiles1" x="512" y="160" w="32" h="32" xo="165" yo="101" id="10003666" name="inst_8C02CA5D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

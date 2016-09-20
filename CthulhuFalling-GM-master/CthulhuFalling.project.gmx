@@ -283,6 +283,8 @@
     <extension index="2">extensions\Speech Bubble</extension>
     <extension index="3">extensions\Gamemaker Chiptune RPG Music</extension>
     <extension index="4">extensions\Color Coding Files</extension>
+    <extension index="5">extensions\Simple Fullscreen Shaders</extension>
+    <extension index="6">extensions\Vignette and Noise shader</extension>
   </NewExtensions>
   <sounds name="sound">
     <sounds name="Weapons">
@@ -318,6 +320,7 @@
       <sound>sound\snd_levelup</sound>
       <sound>sound\mus_town01</sound>
     </sounds>
+    <sound>sound\snd_charleston</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Main menu">
@@ -619,6 +622,16 @@
     <sprite>sprites\spr_jumpToObituary</sprite>
     <sprite>sprites\spr_hallDesk</sprite>
     <sprite>sprites\spr_zombie</sprite>
+    <sprites name="Items">
+      <sprites name="Sewer Key">
+        <sprite>sprites\spr_sewerKey</sprite>
+        <sprite>sprites\spr_sewerKeyPick</sprite>
+      </sprites>
+      <sprites name="Scissors">
+        <sprite>sprites\spr_scissors</sprite>
+        <sprite>sprites\spr_scissorsPick</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -1007,6 +1020,18 @@
       </shaders>
     </shaders>
     <shader type="GLSLES">shaders\shader34.shader</shader>
+    <shaders name="ColourManipulators">
+      <shader type="GLSLES">shaders\BlackAndWhite.shader</shader>
+      <shader type="GLSLES">shaders\InvertColours.shader</shader>
+      <shader type="GLSLES">shaders\ColourDistortion.shader</shader>
+      <shader type="GLSLES">shaders\Sepia.shader</shader>
+      <shader type="GLSLES">shaders\EdgeDetection.shader</shader>
+    </shaders>
+    <shaders name="LensManipulation">
+      <shader type="GLSLES">shaders\FishEye.shader</shader>
+      <shader type="GLSLES">shaders\OuterBlur.shader</shader>
+    </shaders>
+    <shader type="GLSLES">shaders\shd_vignette_noise.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\glr_font_debug</font>
@@ -1383,6 +1408,18 @@
       <object>objects\obj_cameraManager</object>
     </objects>
     <object>objects\obj_saveGame</object>
+    <objects name="Items">
+      <object>objects\obj_itemPocket</object>
+      <object>objects\obj_pocketItem</object>
+      <objects name="Sewer Key">
+        <object>objects\obj_sewerKeyPick</object>
+        <object>objects\obj_sewerKey</object>
+      </objects>
+      <objects name="Scissors">
+        <object>objects\obj_scissorsPick</object>
+        <object>objects\obj_scissors</object>
+      </objects>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_bigCthulhuAttacks</timeline>
