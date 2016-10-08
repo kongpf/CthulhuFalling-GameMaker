@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Variables
-open = true;
+open = false;
 </string>
           </argument>
         </arguments>
@@ -66,7 +66,18 @@ open = true;
             <string>if (place_meeting(x, y, obj_player) and keyboard_check_pressed(vk_enter)) {
    if (open) room_goto(rm_obituary1);
    else {
-        scr_text("Mh, sembra chiusa", 0.4, x, y, obj_player, noone);
+        if (obj_itemPocket.content == obj_sewerKey) {
+           // Open door, we have key!
+           scr_hint("Hai usato: chiave dell'obitorio");
+           
+           // Remove key from inventory
+           obj_itemPocket.content = noone;
+           
+           // Change room
+           room_goto(rm_obituary1);
+        } else {
+           scr_text("Mh, sembra chiusa", 0.4, x, y, obj_player, noone);
+        }
    }
 }
 </string>

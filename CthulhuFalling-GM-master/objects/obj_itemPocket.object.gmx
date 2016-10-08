@@ -95,7 +95,9 @@ draw_rectangle(x1, y1, x2, y2, true);
 
 // Draw sprite of item inside square
 if (slot_full) {
-   draw_sprite(object_get_sprite(content), 0, x1, y2);
+   var inst = instance_create(-10, -10, content);
+   draw_sprite(object_get_sprite(inst.real_item), 0, x1, y2);
+   with (inst) instance_destroy();
 }
 </string>
           </argument>

@@ -655,6 +655,7 @@
     <background>background\bg_obituaryWalls</background>
     <background>background\bg_obituaryWalls2</background>
     <background>background\bg_obituary</background>
+    <background>background\bg_hospitalWall</background>
   </backgrounds>
   <paths name="paths">
     <paths name="Big Cthulhu">
@@ -1127,11 +1128,20 @@
       </objects>
       <objects name="Sewer">
         <object>objects\obj_jumpToObituary</object>
+        <object>objects\obj_doorSewerObituary</object>
       </objects>
       <objects name="Mental Hospital">
         <object>objects\obj_doorObituaryMentalHospital</object>
-        <object>objects\obj_doorSewerObituary</object>
+        <object>objects\obj_doorHallWing1</object>
         <object>objects\obj_hallDesk</object>
+        <objects name="Wing 1">
+          <object>objects\obj_doorWing1Room1</object>
+          <object>objects\obj_doorWing1Room2</object>
+          <object>objects\obj_doorWing1Room3</object>
+          <object>objects\obj_doorRoom1Wing1</object>
+          <object>objects\obj_doorRoom2Wing1</object>
+          <object>objects\obj_doorRoom3Wing1</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Weapons">
@@ -1475,6 +1485,12 @@
     <rooms name="Mental Hospital">
       <room>rooms\rm_obituary1</room>
       <room>rooms\rm_HospitalHall</room>
+      <rooms name="Wing 1">
+        <room>rooms\rm_hospitalCorridor1</room>
+        <room>rooms\rm_room1</room>
+        <room>rooms\rm_room2</room>
+        <room>rooms\rm_room3</room>
+      </rooms>
     </rooms>
   </rooms>
   <help>
