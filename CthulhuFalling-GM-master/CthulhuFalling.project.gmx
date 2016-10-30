@@ -1487,9 +1487,9 @@
       <room>rooms\rm_HospitalHall</room>
       <rooms name="Wing 1">
         <room>rooms\rm_hospitalCorridor1</room>
-        <room>rooms\rm_room1</room>
-        <room>rooms\rm_room2</room>
-        <room>rooms\rm_room3</room>
+        <room>rooms\rm_wing1Room1</room>
+        <room>rooms\rm_wing1Room2</room>
+        <room>rooms\rm_wing1Room3</room>
       </rooms>
     </rooms>
   </rooms>

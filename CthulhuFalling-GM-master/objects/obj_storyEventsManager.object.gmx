@@ -47,10 +47,8 @@ first_dialog_started = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Level: Streets of Providence
-first_street_dialog_started = false;
-poe_appeared = false;
-grandma_dialog_started = false;
+            <string>/// Level: Howard's Livingroom
+poe_dialog_started = false;
 </string>
           </argument>
         </arguments>
@@ -71,8 +69,10 @@ grandma_dialog_started = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Level: Howard's Livingroom
-poe_dialog_started = false;
+            <string>/// Level: Streets of Providence
+first_street_dialog_started = false;
+poe_appeared = false;
+grandma_dialog_started = false;
 </string>
           </argument>
         </arguments>

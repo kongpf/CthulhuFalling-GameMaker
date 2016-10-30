@@ -64,7 +64,7 @@ open = true;
           <argument>
             <kind>1</kind>
             <string>if (place_meeting(x, y, obj_player) and keyboard_check_pressed(vk_enter)) {
-   if (open) room_goto(rm_room1);
+   if (open) room_goto(asset_get_index("rm_wing1Room1"));
    else {
         scr_text("Mh, sembra chiusa", 0.4, x, y, obj_player, noone);
    }

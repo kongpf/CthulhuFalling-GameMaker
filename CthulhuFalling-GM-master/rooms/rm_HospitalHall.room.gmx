@@ -93,6 +93,7 @@
     <instance objName="obj_dirt" x="384" y="96" name="inst_ECBBB572" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="384" y="128" name="inst_685B009F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="384" y="160" name="inst_AC823E9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_doorHallWing1" x="352" y="160" name="inst_A5246D4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_obituaryWalls2" x="0" y="96" w="32" h="32" xo="0" yo="0" id="10005691" name="inst_374E381B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

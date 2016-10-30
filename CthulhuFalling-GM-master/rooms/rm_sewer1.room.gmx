@@ -10,8 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>var spawn_x = 960;
-var spawn_y = 32;
+  <code>var spawn_x = 64;
+var spawn_y = 1760;
 
 if (not instance_exists(obj_player)) {
    instance_create(spawn_x, spawn_y, obj_player);
@@ -1032,7 +1032,6 @@ audio_play_sound(mus_dungeon02, 10, true);</code>
     <instance objName="obj_doorSewerObituary" x="960" y="1984" name="inst_B9E001CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerKeyPick" x="736" y="288" name="inst_DB9025E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_itemPocket" x="160" y="32" name="inst_0BC86F31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_itemPocket" x="192" y="32" name="inst_39F0D424" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_scissorsPick" x="800" y="288" name="inst_7643B69D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
