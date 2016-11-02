@@ -972,6 +972,9 @@
     <scripts name="Physics">
       <script>scripts\projectile_motion.gml</script>
     </scripts>
+    <scripts name="Audio">
+      <script>scripts\scr_play_song.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shaders name="Glare">
@@ -1429,6 +1432,9 @@
         <object>objects\obj_scissorsPick</object>
         <object>objects\obj_scissors</object>
       </objects>
+    </objects>
+    <objects name="Audio">
+      <object>objects\obj_audioManager</object>
     </objects>
   </objects>
   <timelines name="timelines">
