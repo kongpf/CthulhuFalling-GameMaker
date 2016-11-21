@@ -244,7 +244,8 @@ if (y &gt; room_height) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Logic
+            <string>///Input
+// Logic
 move = obj_controlsManager.player_left + obj_controlsManager.player_right;//key_left + key_right;
 hsp = move * movespeed;
 

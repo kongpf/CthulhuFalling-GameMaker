@@ -321,6 +321,9 @@
       <sound>sound\mus_town01</sound>
     </sounds>
     <sound>sound\snd_charleston</sound>
+    <sounds name="Misc">
+      <sound>sound\snd_page_turn</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Main menu">
@@ -333,6 +336,8 @@
     </sprites>
     <sprites name="HUD">
       <sprite>sprites\spr_life</sprite>
+      <sprite>sprites\spr_saveGame</sprite>
+      <sprite>sprites\spr_scroll</sprite>
     </sprites>
     <sprites name="Bonus">
       <sprite>sprites\spr_bonus</sprite>
@@ -356,6 +361,7 @@
       <sprite>sprites\spr_bossHeart</sprite>
       <sprite>sprites\spr_batSleep</sprite>
       <sprite>sprites\spr_jumpGreenGoo</sprite>
+      <sprite>sprites\spr_zombie</sprite>
     </sprites>
     <sprites name="Environment">
       <sprites name="Level 1">
@@ -376,6 +382,7 @@
         <sprite>sprites\spr_wall</sprite>
         <sprite>sprites\spr_door</sprite>
         <sprite>sprites\spr_bricks</sprite>
+        <sprite>sprites\spr_jumpToObituary</sprite>
       </sprites>
       <sprites name="Howard House">
         <sprite>sprites\spr_floor</sprite>
@@ -384,6 +391,9 @@
         <sprite>sprites\spr_bed</sprite>
         <sprite>sprites\spr_window</sprite>
         <sprite>sprites\spr_switch</sprite>
+      </sprites>
+      <sprites name="Mental Hospital">
+        <sprite>sprites\spr_hallDesk</sprite>
       </sprites>
     </sprites>
     <sprites name="Characters">
@@ -618,10 +628,6 @@
         </sprites>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_saveGame</sprite>
-    <sprite>sprites\spr_jumpToObituary</sprite>
-    <sprite>sprites\spr_hallDesk</sprite>
-    <sprite>sprites\spr_zombie</sprite>
     <sprites name="Items">
       <sprites name="Sewer Key">
         <sprite>sprites\spr_sewerKey</sprite>
@@ -968,6 +974,7 @@
       <script>scripts\scr_add_sentence.gml</script>
       <script>scripts\scr_stop_current_dialog.gml</script>
       <script>scripts\scr_hint.gml</script>
+      <script>scripts\scr_scroll.gml</script>
     </scripts>
     <scripts name="Physics">
       <script>scripts\projectile_motion.gml</script>
@@ -1406,6 +1413,7 @@
     </objects>
     <objects name="Items">
       <object>objects\obj_torch</object>
+      <object>objects\obj_scrollPick</object>
     </objects>
     <objects name="Menus">
       <object>objects\obj_menu</object>
@@ -1416,6 +1424,7 @@
       <object>objects\obj_textManager</object>
       <object>objects\obj_hintManager</object>
       <object>objects\obj_hint</object>
+      <object>objects\obj_scroll</object>
     </objects>
     <objects name="Camera">
       <object>objects\obj_cameraManager</object>
