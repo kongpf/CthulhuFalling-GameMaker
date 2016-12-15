@@ -123,7 +123,7 @@ if (instance_exists(obj_cat)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x, y, obj_player) and keyboard_check_pressed(vk_enter)) {
+            <string>if (place_meeting(x, y, obj_player) and obj_controlsManager.player_interact) {
    if (open) {
       // Alarm for the cat
       alarm[0] = 100;

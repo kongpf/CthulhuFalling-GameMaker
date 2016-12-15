@@ -78,6 +78,7 @@ audio_play_sound(mus_dungeon02, 10, true);</code>
     <instance objName="obj_lightController" x="64" y="32" name="inst_96115FFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cameraManager" x="32" y="32" name="inst_1B10584A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controlsManager" x="160" y="32" name="inst_915BAD50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spawnManager" x="192" y="32" name="inst_5453EA8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="992" y="0" name="inst_E91A0018" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="992" y="32" name="inst_61AA18D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="992" y="64" name="inst_0A356E46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

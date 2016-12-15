@@ -63,7 +63,7 @@ open = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x, y, obj_player) and keyboard_check_pressed(vk_enter)) {
+            <string>if (place_meeting(x, y, obj_player) and obj_controlsManager.player_interact) {
    if (open) room_goto(rm_obituary1);
    else {
         show_message("Item pocket: " + string(obj_itemPocket.content));

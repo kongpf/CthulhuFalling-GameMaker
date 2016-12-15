@@ -63,8 +63,16 @@ open = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x, y, obj_player) and keyboard_check_pressed(vk_enter)) {
-   if (open) room_goto(asset_get_index("rm_wing1Room1"));
+            <string>if (place_meeting(x, y, obj_player) and obj_controlsManager.player_interact) {
+   if (open) {
+      // Use spawn manager to handle spawn positions
+      obj_spawnManager.last_room = room;
+      obj_spawnManager.last_x = obj_player.x;
+      obj_spawnManager.last_y = obj_player.y;
+   
+      // Change room
+      room_goto(asset_get_index("rm_wing1Room1"));
+   }
    else {
         scr_text("Mh, sembra chiusa", 0.4, x, y, obj_player, noone);
    }

@@ -29,6 +29,9 @@
 message = "Message!";
 instance_deactivate_all(true);
 
+// Only activate controls manager to let user close this
+instance_activate_object(obj_controlsManager);
+
 // Insert newlines in message var
 message = scr_string_add_newlines(message, 30);
 
@@ -80,7 +83,7 @@ instance_activate_all();
           <argument>
             <kind>1</kind>
             <string>///Disappear if right mouse clicked
-if (keyboard_check_pressed(vk_enter)) {
+if (obj_controlsManager.player_interact) {
    instance_destroy();
 }
 </string>

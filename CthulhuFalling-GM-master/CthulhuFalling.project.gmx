@@ -1112,6 +1112,7 @@
         <object>objects\obj_ghostClimbItem</object>
         <object>objects\obj_jumpItemDestroyable</object>
         <object>objects\obj_interactionAllowed</object>
+        <object>objects\obj_spawnManager</object>
         <object>objects\obj_dirt</object>
         <object>objects\obj_dirtDestructible</object>
         <object>objects\obj_wall</object>
@@ -1415,7 +1416,7 @@
     <objects name="Particle Systems">
       <object>objects\obj_psBulletImpact</object>
     </objects>
-    <objects name="Items">
+    <objects name="InteractionItems">
       <object>objects\obj_torch</object>
       <object>objects\obj_scrollPick</object>
     </objects>
@@ -1434,7 +1435,7 @@
       <object>objects\obj_cameraManager</object>
     </objects>
     <object>objects\obj_saveGame</object>
-    <objects name="Items">
+    <objects name="BagItems">
       <object>objects\obj_itemPocket</object>
       <object>objects\obj_pocketItem</object>
       <objects name="Sewer Key">
@@ -1512,6 +1513,9 @@
       </rooms>
     </rooms>
   </rooms>
+  <constants number="1">
+    <constant name="DEFAULT_TRANSITION">21</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
