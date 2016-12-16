@@ -81,7 +81,7 @@ if (place_meeting(x, y, obj_player)) {
             <string>if (hint) {
    draw_set_halign(fa_center);
    draw_set_colour(c_white);
-   draw_text_transformed(view_wview[0] / 2, view_hview[0] - 70, "&lt;Enter&gt; per interagire", 1, 1, 0);
+   draw_text_transformed(view_wview[0] / 2, view_hview[0] - 70, "[F] Per Interagire", 1, 1, 0);
 }
 </string>
           </argument>

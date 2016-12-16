@@ -34,7 +34,7 @@ key_player_down = ord("S");
 key_player_right = ord("D");
 key_player_left = ord("A");
 key_player_shoot = mb_left;
-key_player_interact = mb_right;
+key_player_interact = ord("F");
 key_player_sprint = vk_shift;
 key_player_melee = ord("Q");
 key_player_close_dialog = vk_alt;
@@ -47,7 +47,7 @@ key_lovecraft_up = ord("W");
 key_lovecraft_down = ord("S");
 key_lovecraft_right = ord("D");
 key_lovecraft_left = ord("A");
-key_lovecraft_interact = mb_right;
+key_lovecraft_interact = ord("F");
 </string>
           </argument>
         </arguments>
@@ -77,7 +77,7 @@ player_down = keyboard_check(key_player_down);
 player_right = keyboard_check(key_player_right);
 player_left = keyboard_check(key_player_left);
 player_shoot = mouse_check_button_pressed(key_player_shoot);
-player_interact = mouse_check_button_released(key_player_interact);
+player_interact = keyboard_check_released(key_player_interact);
 player_sprint = keyboard_check_pressed(key_player_sprint);
 player_melee = keyboard_check_pressed(key_player_melee);
 player_close_dialog = keyboard_check_pressed(key_player_close_dialog);
@@ -121,7 +121,7 @@ player_down = keyboard_check(key_player_down);
 player_right = keyboard_check(key_player_right);
 player_left = -keyboard_check(key_player_left);
 player_shoot = mouse_check_button_pressed(key_player_shoot);
-player_interact = mouse_check_button_released(key_player_interact);
+player_interact = keyboard_check_released(key_player_interact);
 player_sprint = keyboard_check(key_player_sprint);
 player_melee = keyboard_check_pressed(key_player_melee);
 player_close_dialog = keyboard_check_pressed(key_player_close_dialog);
