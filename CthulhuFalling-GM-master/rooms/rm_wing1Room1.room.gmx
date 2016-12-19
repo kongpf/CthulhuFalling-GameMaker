@@ -10,14 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>if (obj_spawnManager.last_room == room) {
-   obj_player.x = obj_controlsManager.last_x;
-   obj_player.y = obj_controlsManager.last_y;
-} 
-else {
-     obj_player.x = 32;
-     obj_player.y = 96;
-}</code>
+  <code>obj_player.x = 32;
+obj_player.y = 96;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

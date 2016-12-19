@@ -63,7 +63,7 @@ if (instance_exists(obj_lightController))
           <argument>
             <kind>1</kind>
             <string>///Print bag content
-show_debug_message("[0]: " + string(bag[0]) + " [1]: " + string(bag[1]) + " [2]: " + string(bag[2]));
+//show_debug_message("[0]: " + string(bag[0]) + " [1]: " + string(bag[1]) + " [2]: " + string(bag[2]));
 </string>
           </argument>
         </arguments>

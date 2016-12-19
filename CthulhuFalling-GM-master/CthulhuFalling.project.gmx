@@ -986,6 +986,11 @@
       <script>scripts\scr_string_add_newlines.gml</script>
       <script>scripts\string_wordwrap.gml</script>
     </scripts>
+    <scripts name="Objects">
+      <scripts name="Environment">
+        <script>scripts\scr_spawnManager_update_list.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shaders name="Glare">
@@ -1104,6 +1109,7 @@
         <object>objects\obj_water</object>
       </objects>
       <objects name="Common">
+        <object>objects\obj_saveGame</object>
         <object>objects\obj_environmentItem</object>
         <object>objects\obj_destructibleEnvironmentItem</object>
         <object>objects\obj_ghostEnvironmentItem</object>
@@ -1434,7 +1440,6 @@
     <objects name="Camera">
       <object>objects\obj_cameraManager</object>
     </objects>
-    <object>objects\obj_saveGame</object>
     <objects name="BagItems">
       <object>objects\obj_itemPocket</object>
       <object>objects\obj_pocketItem</object>
