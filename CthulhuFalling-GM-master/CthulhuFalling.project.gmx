@@ -1154,6 +1154,7 @@
       <objects name="Mental Hospital">
         <object>objects\obj_doorObituaryMentalHospital</object>
         <object>objects\obj_doorHallWing1</object>
+        <object>objects\obj_doorRoofRoom3Wing1</object>
         <object>objects\obj_hallDesk</object>
         <objects name="Wing 1">
           <object>objects\obj_doorWing1Room1</object>
@@ -1162,6 +1163,7 @@
           <object>objects\obj_doorRoom1Wing1</object>
           <object>objects\obj_doorRoom2Wing1</object>
           <object>objects\obj_doorRoom3Wing1</object>
+          <object>objects\obj_doorRoom3Roof</object>
         </objects>
       </objects>
     </objects>
@@ -1421,6 +1423,8 @@
     </objects>
     <objects name="Particle Systems">
       <object>objects\obj_psBulletImpact</object>
+      <object>objects\obj_psNightStars</object>
+      <object>objects\obj_psRain</object>
     </objects>
     <objects name="InteractionItems">
       <object>objects\obj_torch</object>
@@ -1510,6 +1514,7 @@
     <rooms name="Mental Hospital">
       <room>rooms\rm_obituary1</room>
       <room>rooms\rm_HospitalHall</room>
+      <room>rooms\rm_HospitalRoof</room>
       <rooms name="Wing 1">
         <room>rooms\rm_hospitalCorridor1</room>
         <room>rooms\rm_wing1Room1</room>
