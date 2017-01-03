@@ -638,6 +638,9 @@
         <sprite>sprites\spr_scissorsPick</sprite>
       </sprites>
     </sprites>
+    <sprites name="Weather">
+      <sprite>sprites\spr_RainDrop</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -1061,15 +1064,6 @@
     <font>fonts\fnt_title</font>
   </fonts>
   <objects name="objects">
-    <objects name="Main menu">
-      <object>objects\obj_newgame</object>
-      <object>objects\obj_options</object>
-      <object>objects\obj_credits</object>
-      <object>objects\obj_exit</object>
-      <object>objects\obj_cursor</object>
-      <object>objects\obj_playAgain</object>
-      <object>objects\obj_exitManager</object>
-    </objects>
     <objects name="Bonus">
       <object>objects\obj_bonus</object>
       <object>objects\obj_bonusManager</object>
@@ -1122,7 +1116,6 @@
         <object>objects\obj_dirt</object>
         <object>objects\obj_dirtDestructible</object>
         <object>objects\obj_wall</object>
-        <object>objects\obj_door12</object>
         <object>objects\obj_ladder</object>
         <object>objects\obj_ghostLadder</object>
         <object>objects\obj_armorySign</object>
@@ -1459,6 +1452,11 @@
     <objects name="Audio">
       <object>objects\obj_audioManager</object>
     </objects>
+    <objects name="Weather">
+      <object>objects\obj_rainDrop</object>
+      <object>objects\obj_rainController</object>
+      <object>objects\obj_rainSplash</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_bigCthulhuAttacks</timeline>
@@ -1466,19 +1464,10 @@
   <rooms name="rooms">
     <rooms name="Menus">
       <room>rooms\rm_menu2</room>
-      <room>rooms\rm_menu</room>
-      <room>rooms\rm_credits</room>
     </rooms>
     <rooms name="Howard House">
       <room>rooms\rm_bedroom</room>
       <room>rooms\rm_livingroom</room>
-    </rooms>
-    <rooms name="Level 1">
-      <room>rooms\rm_level1</room>
-      <room>rooms\rm_level1Dungeon1</room>
-    </rooms>
-    <rooms name="Level 2">
-      <room>rooms\rm_level2</room>
     </rooms>
     <rooms name="Transitions">
       <room>rooms\rm_dead</room>
@@ -1502,7 +1491,6 @@
       <room>rooms\room_glr_shadowsprites</room>
       <room>rooms\room_glr_isometric</room>
     </rooms>
-    <room>rooms\demo_1</room>
     <rooms name="Streets of Providence">
       <room>rooms\rm_streets</room>
       <room>rooms\rm_outsideArmory</room>

@@ -10,10 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>if (not instance_exists(obj_rain))
-   instance_create(0, 0, obj_rain);
-
-if (instance_exists(obj_player)) {
+  <code>if (instance_exists(obj_player)) {
    obj_player.x = 32;
    obj_player.y = 64;
 } else {
@@ -182,6 +179,7 @@ if (instance_exists(obj_player)) {
     <instance objName="obj_floor" x="1184" y="384" name="inst_F1536518" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="1152" y="384" name="inst_11D8359B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="1152" y="416" name="inst_C51DBCB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainController" x="0" y="0" name="inst_E52D9E52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_groundTiles1" x="0" y="32" w="32" h="32" xo="101" yo="101" id="10003929" name="inst_9B52424D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

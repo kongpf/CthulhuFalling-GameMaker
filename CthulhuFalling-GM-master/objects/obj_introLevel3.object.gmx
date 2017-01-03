@@ -60,7 +60,7 @@ is_alarm_set = false;
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>rm_level1</room>
+            <room>rm_sewer1</room>
           </argument>
         </arguments>
       </action>
