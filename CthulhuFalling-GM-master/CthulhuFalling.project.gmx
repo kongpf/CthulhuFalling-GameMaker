@@ -402,6 +402,7 @@
         <sprite>sprites\spr_bricks4</sprite>
         <sprite>sprites\spr_arch</sprite>
         <sprite>sprites\spr_grid</sprite>
+        <sprite>sprites\spr_lamp</sprite>
       </sprites>
     </sprites>
     <sprites name="Characters">
@@ -1151,6 +1152,7 @@
       <objects name="Sewer">
         <object>objects\obj_jumpToObituary</object>
         <object>objects\obj_doorSewerObituary</object>
+        <object>objects\obj_brick1</object>
       </objects>
       <objects name="Mental Hospital">
         <object>objects\obj_doorObituaryMentalHospital</object>
