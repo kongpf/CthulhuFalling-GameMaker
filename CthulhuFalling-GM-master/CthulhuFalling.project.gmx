@@ -1151,6 +1151,7 @@
         <object>objects\obj_hallDesk</object>
         <objects name="Wing 1">
           <object>objects\obj_doorWing1Room1</object>
+          <object>objects\obj_doorWing1Hall</object>
           <object>objects\obj_doorWing1Room2</object>
           <object>objects\obj_doorWing1Room3</object>
           <object>objects\obj_doorRoom1Wing1</object>

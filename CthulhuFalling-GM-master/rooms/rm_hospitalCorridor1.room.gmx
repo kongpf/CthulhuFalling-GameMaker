@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>obj_player.x = 32;
+  <code>obj_player.x = 64;
 obj_player.y = 416;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
@@ -131,6 +131,7 @@ obj_player.y = 416;</code>
     <instance objName="obj_doorWing1Room1" x="128" y="416" name="inst_7E4BD14E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_doorWing1Room2" x="480" y="416" name="inst_FF428FB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_doorWing1Room3" x="832" y="416" name="inst_2A84E815" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_doorWing1Hall" x="32" y="416" name="inst_1F5682E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_hospitalWall" x="0" y="320" w="32" h="32" xo="0" yo="0" id="10005768" name="inst_1AB50763" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -42,7 +42,7 @@ var current_instance = noone;
 var current_speaker = noone;
 
 // Current script
-var current_script = noone;
+current_script = noone;
 </string>
           </argument>
         </arguments>
