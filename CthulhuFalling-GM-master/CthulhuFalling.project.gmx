@@ -395,6 +395,14 @@
       <sprites name="Mental Hospital">
         <sprite>sprites\spr_hallDesk</sprite>
       </sprites>
+      <sprites name="Sewer">
+        <sprite>sprites\spr_bricks1</sprite>
+        <sprite>sprites\spr_bricks2</sprite>
+        <sprite>sprites\spr_bricks3</sprite>
+        <sprite>sprites\spr_bricks4</sprite>
+        <sprite>sprites\spr_arch</sprite>
+        <sprite>sprites\spr_grid</sprite>
+      </sprites>
     </sprites>
     <sprites name="Characters">
       <sprites name="Player">
