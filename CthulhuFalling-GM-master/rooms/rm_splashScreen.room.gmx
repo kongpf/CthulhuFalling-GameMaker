@@ -53,7 +53,7 @@
   <instances>
     <instance objName="obj_splashScreen" x="0" y="0" name="inst_03D52A8A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fadeFromWhite" x="32" y="0" name="inst_2B5C40D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rain" x="64" y="0" name="inst_234123A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainController" x="64" y="0" name="inst_3768D975" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
