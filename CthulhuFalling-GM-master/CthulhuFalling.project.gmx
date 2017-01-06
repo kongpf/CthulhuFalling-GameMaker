@@ -404,6 +404,9 @@
         <sprite>sprites\spr_grid</sprite>
         <sprite>sprites\spr_lamp</sprite>
       </sprites>
+      <sprites name="Streets">
+        <sprite>sprites\spr_building1</sprite>
+      </sprites>
     </sprites>
     <sprites name="Characters">
       <sprites name="Player">
@@ -666,6 +669,7 @@
     </backgrounds>
     <backgrounds name="mine_tileset">
       <background>background\background</background>
+      <background>background\bg_concrete</background>
     </backgrounds>
     <background>background\bg_blueToneTiles</background>
     <background>background\background12</background>
@@ -674,6 +678,11 @@
     <background>background\bg_obituaryWalls2</background>
     <background>background\bg_obituary</background>
     <background>background\bg_hospitalWall</background>
+    <background>background\bg_building1</background>
+    <background>background\bg_building2</background>
+    <background>background\bg_building3</background>
+    <background>background\bg_building4</background>
+    <background>background\bg_building5</background>
   </backgrounds>
   <paths name="paths">
     <paths name="Big Cthulhu">
@@ -1522,8 +1531,9 @@
       </rooms>
     </rooms>
   </rooms>
-  <constants number="1">
+  <constants number="2">
     <constant name="DEFAULT_TRANSITION">21</constant>
+    <constant name="ENABLE_AUDIO">false</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

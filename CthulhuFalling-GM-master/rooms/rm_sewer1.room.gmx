@@ -34,7 +34,9 @@ obj_lightController.hour = 23;
 
 // Play level music
 audio_stop_all();
-audio_play_sound(mus_dungeon02, 10, true);</code>
+if (ENABLE_AUDIO) {
+   audio_play_sound(mus_dungeon02, 10, true);
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

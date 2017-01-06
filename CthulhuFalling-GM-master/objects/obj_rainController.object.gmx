@@ -60,7 +60,7 @@ repeat(5) // repeat for however many new raindrops we want to add
           <argument>
             <kind>1</kind>
             <string>///Make rain
-repeat(5) // repeat for however many new raindrops we want to add
+repeat(10) // repeat for however many new raindrops we want to add
 {
   // choose a random x position inside or to the right of the view (since raindrops move left)
   rainx = random_range(view_xview[0], view_xview[0] + 2 * view_wview[0]);

@@ -187,6 +187,9 @@ if (state == 0) {
    if (x != xstart and y != ystart) {
       mp_potential_step_object(xstart, ystart, sleep_speed, obj_environmentItem);
       sprite_index = spr_bat;
+      
+      // Flip sprite based on hive location
+      image_xscale = sign(x - xstart);
    } else {
       sprite_index = spr_batSleep;
       can_take_damage = false;

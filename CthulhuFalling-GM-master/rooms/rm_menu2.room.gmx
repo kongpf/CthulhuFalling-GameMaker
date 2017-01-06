@@ -6,12 +6,15 @@
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>30</speed>
+  <speed>60</speed>
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>audio_stop_all();
-audio_play_sound(mus_battle, 10, true);</code>
+
+if (ENABLE_AUDIO) {
+   audio_play_sound(mus_battle, 10, true);
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
