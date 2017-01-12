@@ -355,11 +355,11 @@
       <sprite>sprites\spr_rat</sprite>
       <sprite>sprites\spr_sewerBoss</sprite>
       <sprite>sprites\spr_bat</sprite>
+      <sprite>sprites\spr_batSleep</sprite>
       <sprite>sprites\spr_sewerBossRedGoo</sprite>
       <sprite>sprites\spr_sewerBossGreenGoo</sprite>
       <sprite>sprites\spr_sewerBossHeart</sprite>
       <sprite>sprites\spr_bossHeart</sprite>
-      <sprite>sprites\spr_batSleep</sprite>
       <sprite>sprites\spr_jumpGreenGoo</sprite>
       <sprite>sprites\spr_zombie</sprite>
     </sprites>
@@ -1531,9 +1531,10 @@
       </rooms>
     </rooms>
   </rooms>
-  <constants number="2">
+  <constants number="3">
     <constant name="DEFAULT_TRANSITION">21</constant>
     <constant name="ENABLE_AUDIO">false</constant>
+    <constant name="DEBUG">false</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

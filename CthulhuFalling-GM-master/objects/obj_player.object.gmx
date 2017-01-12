@@ -31,6 +31,10 @@ hsp = 0;
 vsp = 0;
 jumpspeed = 7;
 movespeed = 2;
+can_sprint = true;
+sprinting = false;
+sprint_steps = 70;
+set_sprint_alarm = true;
 movefactor = 0.2;
 hp = 100;
 facing = 1;
@@ -109,6 +113,60 @@ if (current_weapon != noone) {
 if (current_item != noone) {
    instance_create(x + 16, y + 16, current_item);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Player can sprint again
+can_sprint = true;
+set_sprint_alarm = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Stop player from going faster
+can_sprint = false;
+sprinting = false;
+movespeed = 2;
+
+// Set alarm to be able to sprint again
+alarm[3] = sprint_steps;
 </string>
           </argument>
         </arguments>
@@ -246,7 +304,7 @@ if (y &gt; room_height) {
             <kind>1</kind>
             <string>///Input
 // Logic
-move = obj_controlsManager.player_left + obj_controlsManager.player_right;//key_left + key_right;
+move = obj_controlsManager.player_left + obj_controlsManager.player_right; //key_left + key_right;
 hsp = move * movespeed;
 
 // Facing
@@ -262,8 +320,20 @@ if (-obj_controlsManager.player_left) {
 if (vsp &lt; 10) vsp += grav;
 
 // Check sprint
-if (obj_controlsManager.player_sprint) movespeed = 4;
-else movespeed = 2;
+if (obj_controlsManager.player_sprint) {
+   sprinting = true;
+}
+
+if (sprinting and can_sprint) { 
+   // Go faster
+   movespeed = 4;
+   
+   // Set alarm to stop going faster
+   if (set_sprint_alarm) {
+      alarm[2] = sprint_steps;
+      set_sprint_alarm = false;
+   }
+}
 
 // Check jump
 if (place_meeting(x, y + 1, obj_environmentItem)) {
@@ -866,6 +936,46 @@ if (current_bag_item != noone and instance_exists(current_bag_item)) {
    } else {
       draw_text(50, 50, current_bag_item.name);
    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>500</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring>draw_self();</codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw text for debug purposes
+if (DEBUG) {
+   draw_text(x, y, "Sprint: " + string(can_sprint));
 }
 </string>
           </argument>
