@@ -362,6 +362,7 @@
       <sprite>sprites\spr_bossHeart</sprite>
       <sprite>sprites\spr_jumpGreenGoo</sprite>
       <sprite>sprites\spr_zombie</sprite>
+      <sprite>sprites\spr_sewerBossEye</sprite>
     </sprites>
     <sprites name="Environment">
       <sprites name="Level 1">
@@ -1010,6 +1011,11 @@
     <scripts name="Objects">
       <scripts name="Environment">
         <script>scripts\scr_spawnManager_update_list.gml</script>
+      </scripts>
+      <scripts name="Enemy">
+        <scripts name="Sewer Boss">
+          <script>scripts\gradually_turn.gml</script>
+        </scripts>
       </scripts>
     </scripts>
   </scripts>
