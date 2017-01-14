@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// effects
+            <string>///Init
+// effects
 dec_value = 0;
 dec_factor = 0;
 sloppy = 10;
@@ -33,6 +34,33 @@ sloppy = 10;
 // Set depth
 if (instance_exists(obj_lightController))
    depth = obj_lightController.depth - 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Light
+sprite = spr_glr_light_mask_point;
+light = glr_light_create(sprite, 0, x, y, c_white, 0.6);
+glr_light_set_shadow_strength(light, 0.8);
+glr_light_set_static(light, false);
+glr_light_set_layer(light, 0);
+glr_light_set_active(light, false);
 </string>
           </argument>
         </arguments>
@@ -123,7 +151,8 @@ if (instance_exists(obj_lightController))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var x_to, y_to;
+            <string>///Set position
+var x_to, y_to;
 var dist;
 
 move_towards_point(mouse_x, mouse_y, 0);
@@ -138,6 +167,52 @@ y += (y_to - y) / sloppy;
 
 hsp = sprite_width;
 vsp = sprite_height;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Light position
+glr_light_set_position(light, x, y);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check for switch
+if (obj_controlsManager.player_flashlight) {
+   glr_light_toggle(light);
+}
 </string>
           </argument>
         </arguments>

@@ -52,11 +52,11 @@ hour = 22;
             <kind>1</kind>
             <string>///Set daytime colors
 glr_set_ambient_daytime_colors(
-    make_color_rgb(37, 7, 76),
-    make_color_rgb(255, 186, 153),
-    make_color_rgb(239, 233, 141),
-    make_color_rgb(245, 191, 87),
-    make_color_rgb(179, 76, 27)
+    make_color_rgb(19, 7, 58),
+    make_color_rgb(253, 180, 163),
+    make_color_rgb(253, 222, 163),
+    make_color_rgb(253, 192, 163),
+    make_color_rgb(136, 53, 36)
 );
 </string>
           </argument>

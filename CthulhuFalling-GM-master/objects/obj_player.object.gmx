@@ -42,6 +42,7 @@ active = true;
 walljump_enabled = true;
 can_take_damage = true;
 started_walking = false;
+flashlight = false;
 
 /*
 OLD INVENTORY SYSTEM
@@ -420,6 +421,11 @@ if (obj_controlsManager.player_melee) {
    }
 }
 
+// Flashlight
+if (obj_controlsManager.player_flashlight) {
+   flashlight = true;
+}
+
 // Horizontal collision
 if (place_meeting(x + hsp, y, obj_environmentItem)) {
 
@@ -571,7 +577,7 @@ if (room == rm_splashScreen) {
           <argument>
             <kind>1</kind>
             <string>///Pick up new bag item
-if (place_meeting(x, y, obj_bagItem) and mouse_check_button_pressed(mb_right)) {
+if (place_meeting(x, y, obj_bagItem) and obj_controlsManager.player_interact) {
       that_instance = instance_place(x, y, obj_bagItem);
       var first_free = -1;
       
@@ -755,7 +761,7 @@ if (new_bag_item != noone) {
    current_bag_item = new_bag_item;
    new_bag_item = noone;
    instance_create(x + 16, y - 16, current_bag_item);
-   
+   /*
    if (object_get_parent(current_bag_item) != obj_shootWeapon) {
       if (instance_exists(obj_crosshair)) with (obj_crosshair) instance_destroy();
    } else {
@@ -763,7 +769,7 @@ if (new_bag_item != noone) {
          instance_create(x + 32, y - 32, obj_crosshair);
       }
    }
-   
+   */
    // Set crosshair sloppy (from weapon)
    if (instance_exists(obj_crosshair) and object_get_parent(current_bag_item) == obj_shootWeapon) {
       obj_crosshair.sloppy = current_bag_item.sloppy;

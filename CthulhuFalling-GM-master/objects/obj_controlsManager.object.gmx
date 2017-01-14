@@ -34,11 +34,12 @@ key_player_down = ord("S");
 key_player_right = ord("D");
 key_player_left = ord("A");
 key_player_shoot = mb_left;
-key_player_interact = ord("F");
+key_player_interact = ord("E");
 key_player_sprint = vk_shift;
 key_player_melee = ord("Q");
 key_player_close_dialog = vk_alt;
 key_player_item_slot = ord("4");
+key_player_flashlight = ord("F");
 
 //Lovecraft
 key_lovecraft_jump = vk_space;
@@ -83,6 +84,7 @@ player_sprint_released = keyboard_check_released(key_player_sprint);
 player_melee = keyboard_check_pressed(key_player_melee);
 player_close_dialog = keyboard_check_pressed(key_player_close_dialog);
 player_item_slot = keyboard_check_pressed(key_player_item_slot);
+player_flashlight = keyboard_check_pressed(key_player_flashlight);
 
 //Lovecraft
 lovecraft_jump = keyboard_check_pressed(key_lovecraft_jump);
@@ -128,6 +130,7 @@ player_sprint_released = keyboard_check_released(key_player_sprint);
 player_melee = keyboard_check_pressed(key_player_melee);
 player_close_dialog = keyboard_check_pressed(key_player_close_dialog);
 player_item_slot = keyboard_check_pressed(key_player_item_slot);
+player_flashlight = keyboard_check_pressed(key_player_flashlight);
 
 lovecraft_jump = keyboard_check_pressed(key_lovecraft_jump);
 lovecraft_jump_held = keyboard_check(key_lovecraft_jump_held);
