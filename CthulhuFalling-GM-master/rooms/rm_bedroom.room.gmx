@@ -97,13 +97,13 @@
     <instance objName="obj_floor" x="672" y="448" name="inst_55F83735" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bed" x="640" y="480" name="inst_DC17945E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_doorBedroomLivingroom" x="224" y="448" name="inst_B1C9BE3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_chandelier" x="448" y="352" name="inst_51C36D12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_switch" x="576" y="448" name="inst_E1F06F07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_storyEventsManager" x="32" y="0" name="inst_FA84F912" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="608" y="448" name="inst_C3648CCE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cat" x="448" y="480" name="inst_FA95B880" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controlsManager" x="64" y="0" name="inst_C17D7A2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controlsManager" x="96" y="0" name="inst_403CB2D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_streetLight" x="448" y="352" name="inst_E645B4B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_groundTiles1" x="224" y="448" w="32" h="32" xo="165" yo="5" id="10004175" name="inst_56E4EA25" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

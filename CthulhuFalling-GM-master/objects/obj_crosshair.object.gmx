@@ -3,8 +3,8 @@
   <spriteName>spr_crosshair</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>50</depth>
-  <persistent>-1</persistent>
+  <depth>1</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -211,6 +211,7 @@ glr_light_set_position(light, x, y);
             <kind>1</kind>
             <string>///Check for switch
 if (obj_controlsManager.player_flashlight) {
+   audio_play_sound(snd_flashlight, 10, false);
    glr_light_toggle(light);
 }
 </string>

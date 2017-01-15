@@ -296,6 +296,7 @@
       <sound>sound\snd_meow</sound>
       <sound>sound\snd_woosh</sound>
       <sound>sound\snd_punch</sound>
+      <sound>sound\snd_flashlight</sound>
     </sounds>
     <sounds name="Ambient">
       <sound>sound\snd_footstepsConcrete</sound>
@@ -319,8 +320,8 @@
       <sound>sound\snd_item</sound>
       <sound>sound\snd_levelup</sound>
       <sound>sound\mus_town01</sound>
+      <sound>sound\snd_charleston</sound>
     </sounds>
-    <sound>sound\snd_charleston</sound>
     <sounds name="Misc">
       <sound>sound\snd_page_turn</sound>
     </sounds>
@@ -404,6 +405,7 @@
         <sprite>sprites\spr_arch</sprite>
         <sprite>sprites\spr_grid</sprite>
         <sprite>sprites\spr_lamp</sprite>
+        <sprite>sprites\spr_hole</sprite>
       </sprites>
       <sprites name="Streets">
         <sprite>sprites\spr_building1</sprite>
@@ -1018,6 +1020,10 @@
         </scripts>
       </scripts>
     </scripts>
+    <scripts name="Transitions">
+      <script>scripts\EaseOutQuad.gml</script>
+      <script>scripts\room_goto_ext.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shaders name="Glare">
@@ -1168,6 +1174,7 @@
         <object>objects\obj_jumpToObituary</object>
         <object>objects\obj_doorSewerObituary</object>
         <object>objects\obj_brick1</object>
+        <object>objects\obj_hole</object>
       </objects>
       <objects name="Mental Hospital">
         <object>objects\obj_doorObituaryMentalHospital</object>
@@ -1439,6 +1446,7 @@
       <object>objects\obj_splashScreen</object>
       <object>objects\obj_fadeToWhite</object>
       <object>objects\obj_fadeFromWhite</object>
+      <object>objects\obj_transitionSlide</object>
     </objects>
     <objects name="Particle Systems">
       <object>objects\obj_psBulletImpact</object>
@@ -1524,6 +1532,7 @@
     </rooms>
     <rooms name="Sewer">
       <room>rooms\rm_sewer1</room>
+      <room>rooms\rm_sewerDungeon1</room>
     </rooms>
     <rooms name="Mental Hospital">
       <room>rooms\rm_obituary1</room>
