@@ -656,6 +656,9 @@
     <sprites name="Weather">
       <sprite>sprites\spr_RainDrop</sprite>
     </sprites>
+    <sprites name="Effects">
+      <sprite>sprites\spr_blood</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mainmenu</background>
@@ -1024,6 +1027,9 @@
       <script>scripts\EaseOutQuad.gml</script>
       <script>scripts\room_goto_ext.gml</script>
     </scripts>
+    <scripts name="Effects">
+      <script>scripts\scr_blood.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shaders name="Glare">
@@ -1127,6 +1133,7 @@
       <object>objects\obj_sewerBossTentacleSpawn</object>
       <object>objects\obj_sewerBossTentacle</object>
       <object>objects\obj_zombie</object>
+      <object>objects\obj_cthulhuEye</object>
     </objects>
     <objects name="Environment">
       <objects name="Level 1">
@@ -1269,6 +1276,7 @@
       <object>objects\obj_sewerBossLight</object>
       <object>objects\obj_obituaryLight</object>
       <object>objects\obj_deskLamp</object>
+      <object>objects\obj_parentStaticLight</object>
     </objects>
     <objects name="Glare demo">
       <object>objects\obj_glare_controller</object>
@@ -1452,6 +1460,9 @@
       <object>objects\obj_psBulletImpact</object>
       <object>objects\obj_psNightStars</object>
       <object>objects\obj_psRain</object>
+      <object>objects\obj_psBlood</object>
+      <object>objects\obj_bloodCont</object>
+      <object>objects\obj_blood</object>
     </objects>
     <objects name="InteractionItems">
       <object>objects\obj_torch</object>

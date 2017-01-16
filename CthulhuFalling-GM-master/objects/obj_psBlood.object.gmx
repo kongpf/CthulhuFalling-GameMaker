@@ -25,7 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>blend_damage = false;
+            <string>p_sys = part_system_create();
+p_part = part_type_create();
+max_lifetime = 7;
+min_lifetime = 4;
+
+part_type_shape(p_part, pt_shape_disk);
+part_type_size(p_part, 0.10, 0.30, -0.01, 0);
+part_type_color1(p_part, 255);
+part_type_alpha2(p_part, 0.8, 0.2);
+part_type_speed(p_part, 1, 3, 0, 0);
+part_type_direction(p_part, 0, 359, 0, 0);
+part_type_gravity(p_part, 0.3, 270);
+part_type_blend(p_part, 1);
+part_type_life(p_part, min_lifetime, max_lifetime);
+
+p_emit = part_emitter_create(p_sys);
+
+alarm[0] = max_lifetime * 2;
 </string>
           </argument>
         </arguments>
@@ -34,25 +51,17 @@
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>203</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Turn blend to white (normal)
-image_blend = c_white;
-</string>
-          </argument>
-        </arguments>
       </action>
     </event>
     <event eventtype="3" enumb="0">
@@ -72,37 +81,12 @@ image_blend = c_white;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Blend red for half a second while damaged
-if (place_meeting(x, y, obj_dangerousObject)) {
-   /*var ind = instance_create(x, y, obj_enemyDamageIndicator);
-   ind.target = self;
-   ind.life = hp;*/
-   
-   // Create blood particle
-   scr_blood();
-   
-   image_blend = c_red;
-   alarm[0] = 3;
-}
+            <string>///Use particles
+part_emitter_region(p_sys, p_emit, x + 1, x, y + 1, y, 1, 1);
+part_emitter_burst(p_sys, p_emit, p_part, 20); 
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>500</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring>draw_self();</codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,31 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>blend_damage = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Turn blend to white (normal)
-image_blend = c_white;
+            <string>///Init
+direction = random(359);
+speed = random_range(10, 30);
+friction = random_range(speed / 20, speed / 40);
+shrink = random_range(0.2, 0.7);
+
 </string>
           </argument>
         </arguments>
@@ -72,17 +53,24 @@ image_blend = c_white;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Blend red for half a second while damaged
-if (place_meeting(x, y, obj_dangerousObject)) {
-   /*var ind = instance_create(x, y, obj_enemyDamageIndicator);
-   ind.target = self;
-   ind.life = hp;*/
-   
-   // Create blood particle
-   scr_blood();
-   
-   image_blend = c_red;
-   alarm[0] = 3;
+            <string>///Be alive!
+depth = object_get_depth(obj_environmentItem) + 1;
+
+image_xscale -= shrink;
+image_yscale = image_xscale;
+
+if (speed &gt; 0) {
+   image_alpha -= 0.1;
+}
+
+if (instance_exists(obj_bloodCont)) {
+   surface_set_target(obj_bloodCont.b_surf);
+   draw_sprite_ext(spr_blood, 0, x, y, image_xscale, image_yscale, 0, c_white, image_alpha);
+   surface_reset_target();
+}
+
+if (image_xscale &lt;= 0) {
+   instance_destroy();
 }
 </string>
           </argument>
@@ -92,17 +80,24 @@ if (place_meeting(x, y, obj_dangerousObject)) {
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>500</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
+        <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
         <functionname></functionname>
-        <codestring>draw_self();</codestring>
+        <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//null
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>

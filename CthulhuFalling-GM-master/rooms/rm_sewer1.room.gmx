@@ -1027,12 +1027,13 @@ if (ENABLE_AUDIO) {
     <instance objName="obj_dirt" x="160" y="0" name="inst_B997E181" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="192" y="0" name="inst_0CDEC8EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="224" y="0" name="inst_4F76B8C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_doorSewerObituary" x="960" y="1984" name="inst_B9E001CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_doorSewerObituary" x="959" y="1974" name="inst_B9E001CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sewerKeyPick" x="192" y="160" name="inst_DB9025E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_itemPocket" x="160" y="32" name="inst_0BC86F31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pistolPick" x="704" y="288" name="inst_2DFE6D1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirtDestructible" x="64" y="704" name="inst_85165B41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hole" x="128" y="800" name="inst_B31231BA" locked="0" code="" scaleX="0.333333343267441" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bloodCont" x="224" y="32" name="inst_8D82F2F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_groundTiles1" x="512" y="160" w="32" h="32" xo="165" yo="101" id="10003666" name="inst_8C02CA5D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
