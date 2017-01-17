@@ -26,7 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>///Init
-direction = random(359);
+dir = noone;
+
+if (dir != noone) {
+   direction = random_range(dir - 22, dir + 22);
+} else {
+   direction = random(359);
+}
+
 speed = random_range(10, 30);
 friction = random_range(speed / 20, speed / 40);
 shrink = random_range(0.2, 0.7);
@@ -60,7 +67,11 @@ image_xscale -= shrink;
 image_yscale = image_xscale;
 
 if (speed &gt; 0) {
-   image_alpha -= 0.1;
+   //image_alpha -= 0.1;
+}
+
+if (place_meeting(x, y, obj_environmentItem)) {
+   speed = 0;
 }
 
 if (instance_exists(obj_bloodCont)) {

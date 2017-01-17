@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Set alarm to disappear
+can_take_damage = true;
+
 alarm[0] = 30;
 </string>
           </argument>

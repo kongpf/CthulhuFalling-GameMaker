@@ -995,6 +995,7 @@
       </scripts>
       <script>scripts\scr_sprite_explode.gml</script>
       <script>scripts\scr_lovecraft_hint.gml</script>
+      <script>scripts\scr_player_reaction_dungeon_boss.gml</script>
     </scripts>
     <scripts name="Text">
       <script>scripts\scr_text.gml</script>

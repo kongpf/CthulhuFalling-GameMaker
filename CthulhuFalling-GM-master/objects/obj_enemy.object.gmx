@@ -79,7 +79,9 @@ if (place_meeting(x, y, obj_dangerousObject)) {
    ind.life = hp;*/
    
    // Create blood particle
-   scr_blood();
+   var b_dir;
+   b_dir = point_direction(x, y, obj_player.x, obj_player.y);
+   scr_blood(b_dir);
    
    image_blend = c_red;
    alarm[0] = 3;

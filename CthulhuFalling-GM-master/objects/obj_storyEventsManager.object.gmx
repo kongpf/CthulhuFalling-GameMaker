@@ -147,6 +147,28 @@ rm_sewers_lovecraft_hint = false;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Level: Sewers Dungeon 1
+rm_sewers_dungeon1_boss_triggered = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -393,6 +415,41 @@ if (room == rm_sewer1) {
         
         scr_text("E quella? Come diavolo#ci arrivo lassù?", 0.4, x, y, obj_player, scr_lovecraft_hint);
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Level: Sewers Dungeon 1
+if (room == rm_sewerDungeon1) {
+   if (instance_exists(obj_player)) {
+      if ((collision_circle(288, 416, 32, obj_player, false, true) != noone) and (not rm_sewers_dungeon1_boss_triggered)) {
+          rm_sewers_dungeon1_boss_triggered = true;
+      
+          // Boss appears
+          instance_create(512, 384, obj_sewerBoss);
+          effect_create_above(ef_smoke, obj_sewerBoss.x, obj_sewerBoss.y, 10, c_red);
+          
+          // Boss super intelligent speech
+          scr_text("Blllarglghghgglgl!", 0.3, obj_sewerBoss.x, obj_sewerBoss.y, obj_sewerBoss, scr_player_reaction_dungeon_boss);
+       }
+   }  
 }
 </string>
           </argument>

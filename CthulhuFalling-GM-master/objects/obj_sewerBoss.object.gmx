@@ -40,6 +40,13 @@
           <argument>
             <kind>1</kind>
             <string>///Variables
+
+/*
+
+Steam Achievement: The God of Patience!
+
+*/
+
 // Motion
 dir = -1;
 movespeed = 1;
@@ -47,9 +54,128 @@ fast_movespeed = 2;
 grav = 0.2;
 hsp = 0;
 vsp = 0;
-hp = 2000;
-attack_phase = 0;
+hp = 50000;
+attack_phase = 0; // 0 = invulnerable 1 = vulnerable
 can_take_damage = true;
+goos = 2;
+vulnerable = false;
+
+// Start
+// Alarm 0 is for goos
+alarm[3] = 800;
+
+// Alarm 1 is for vulnerability
+alarm[1] = 1500;
+
+// Alarm 4 is for teleport
+alarm[4] = 900;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Teleport
+var points = ds_list_create();
+
+for (i = 0; i &lt; room_width; i += 32) {
+    for (j = 0; j &lt; room_height; j += 32) {
+        if (
+           instance_place(i, j, obj_environmentItem) == noone
+           and 
+           instance_place(i, j + sprite_height, obj_environmentItem) == noone) {
+               // Free place! add to list
+               place[0] = i;
+               place[1] = j;
+               ds_list_add(points, place);
+        }
+    }
+}
+
+// Select random point and go there
+randomize();
+selected = points[|irandom(ds_list_size(points) - 1)]
+
+// Teleport
+effect_create_above(ef_cloud, x, y, 10, c_green);
+x = selected[0];
+y = selected[1];
+
+// Do this again next time
+alarm[4] = 900;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Launch goo
+if (attack_phase == 0) {
+   repeat (goos) instance_create(x, y, obj_jumpGreenGoo);
+   
+   // Increase goos
+   goos += ceil(goos / 3);
+   
+   alarm[3] = 100;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Not vulnerable
+vulnerable = false;
+image_blend = c_white;
+alarm[1] = 500;
 </string>
           </argument>
         </arguments>
@@ -72,11 +198,10 @@ can_take_damage = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Launch red goo
-if (attack_phase == 1) {
-   repeat (2) instance_create(x, y, obj_sewerBossRedGoo);
-   alarm[1] = 100;
-}
+            <string>///Vulnerable
+vulnerable = true;
+image_blend = c_blue;
+alarm[2] = 200;
 </string>
           </argument>
         </arguments>
@@ -85,28 +210,17 @@ if (attack_phase == 1) {
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>604</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Launch goo
-if (attack_phase == 0) {
-   repeat (3) instance_create(x, y, obj_sewerBossGreenGoo);
-   alarm[0] = 100;
-}
-</string>
-          </argument>
-        </arguments>
       </action>
     </event>
     <event eventtype="3" enumb="0">
@@ -181,15 +295,14 @@ y += vsp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Attack logic
-switch (attack_phase) {
-    case 0: {
-         alarm[0] = 100;
-    }
-    
-    case 1: {
-         alarm[1] = 100;
-    }
+            <string>///Check if when vulnerable there is no goo around
+if (instance_number(obj_jumpGreenGoo) == 0 and vulnerable) {
+   // Yay! player won the fight, so destroy the boss
+   // But last, a little surprise :)
+   repeat (5) instance_create(x, y, obj_jumpGreenGoo);
+   
+   // Die, finally
+   instance_destroy();
 }
 </string>
           </argument>
@@ -211,9 +324,11 @@ switch (attack_phase) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Change phase
-if (hp == 2000) attack_phase = 0;
-if (hp &lt; 2000) attack_phase = 1;
+            <string>///Check if player is mad enough to have killed him with the gun
+if (hp &lt;= 0) {
+   // You are crazy man!
+   instance_destroy();
+}
 </string>
           </argument>
         </arguments>
