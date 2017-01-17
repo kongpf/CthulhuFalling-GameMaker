@@ -165,6 +165,7 @@ rm_sewers_lovecraft_hint = false;
             <kind>1</kind>
             <string>///Level: Sewers Dungeon 1
 rm_sewers_dungeon1_boss_triggered = false;
+rm_sewers_dungeon1_lovecraft_appeared = false;
 </string>
           </argument>
         </arguments>
@@ -449,6 +450,21 @@ if (room == rm_sewerDungeon1) {
           // Boss super intelligent speech
           scr_text("Blllarglghghgglgl!", 0.3, obj_sewerBoss.x, obj_sewerBoss.y, obj_sewerBoss, scr_player_reaction_dungeon_boss);
        }
+   }
+   
+   if (instance_number(obj_sewerBoss) == 0 and rm_sewers_dungeon1_boss_triggered == true and rm_sewers_dungeon1_lovecraft_appeared == false) {
+      rm_sewers_dungeon1_lovecraft_appeared = true;
+      
+      if (instance_exists(obj_player)) {
+         instance_create(348, 416, obj_poeIntro);
+         scr_text("Oh no, quella#povera creatura...", 0.3, obj_poeIntro.x, obj_poeIntro.y, obj_poeIntro, noone);
+         scr_text("MA SEI PAZZO?#POTEVA UCCIDERMI!", 0.3, obj_player.x, obj_player.y, obj_player, noone);
+         scr_text("Ehm, cioè, volevo dire...#Bravo! Così si fa!", 0.3, obj_poeIntro.x, obj_poeIntro.y, obj_poeIntro, noone);
+         scr_text("Mah, sarà... comunque ora#dovrò uscire da questo#posto...", 0.3, obj_player.x, obj_player.y, obj_player, noone);
+         scr_text("Sai per caso come fare?#Sei tu che hai inventato tutto.", 0.3, obj_player.x, obj_player.y, obj_player, noone);
+         scr_text("Sì, ehm, certo! Dunque per#uscire di qui dovresti...#dovresti...", 0.3, obj_poeIntro.x, obj_poeIntro.y, obj_poeIntro, scr_poe_disappear);
+         scr_text("Ah, grazie tante! Ma guarda#un po' che maleducato...", 0.3, obj_player.x, obj_player.y, obj_player, noone);
+      }
    }  
 }
 </string>
