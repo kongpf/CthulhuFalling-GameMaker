@@ -212,7 +212,7 @@ if (instance_exists(obj_lovecraftPlay)) {
             <kind>1</kind>
             <string>///Check if howard picks up object
 if (place_meeting(x, y, obj_lovecraftPlay)) {
-   if (mouse_check_button_pressed(mb_right)) {
+   if (obj_controlsManager.player_interact) {
       follow_howard = not follow_howard;
       wave_motion = not wave_motion;
    }
@@ -281,7 +281,8 @@ if (obj_controlsManager.player_interact and place_meeting(x, y, obj_player)) {
    obj_itemPocket.content = object_index;
    
    // Play sound
-   audio_play_sound(snd_item, 10, false);
+   if (ENABLE_AUDIO)
+      audio_play_sound(snd_item, 10, false);
    
    // Remove instance to game
    instance_destroy();

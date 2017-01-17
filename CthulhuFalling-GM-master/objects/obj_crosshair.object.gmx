@@ -211,7 +211,8 @@ glr_light_set_position(light, x, y);
             <kind>1</kind>
             <string>///Check for switch
 if (obj_controlsManager.player_flashlight) {
-   audio_play_sound(snd_flashlight, 10, false);
+   if (ENABLE_AUDIO)
+      audio_play_sound(snd_flashlight, 10, false);
    glr_light_toggle(light);
 }
 </string>

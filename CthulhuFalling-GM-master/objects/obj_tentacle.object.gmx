@@ -106,7 +106,8 @@ if (place_meeting(x, y, obj_enemy)) {
         // Decrease enemy hp
         //hp -= damage;
    //}
-   audio_play_sound(snd_punch, 10, false);
+   if (ENABLE_AUDIO)
+      audio_play_sound(snd_punch, 10, false);
    target_enemy = instance_place(x, y, obj_enemy);
    target_enemy.hp -= damage;
 }

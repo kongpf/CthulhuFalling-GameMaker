@@ -404,7 +404,8 @@ if (mouse_wheel_down()) {
 
 // Melee
 if (obj_controlsManager.player_melee) {
-   audio_play_sound(snd_woosh, 10, false);
+   if (ENABLE_AUDIO)
+      audio_play_sound(snd_woosh, 10, false);
 
    if (mouse_x &gt; obj_player.x) {
       sprite_index = spr_meleeRight;
@@ -455,6 +456,7 @@ if (place_meeting(x, y + vsp, obj_environmentItem)) {
 y += vsp;
 
 // Play footsteps
+/*
 if (walking and place_meeting(x, y, obj_environmentItem) and not started_walking) {
    // Reset trigger
    started_walking = true;
@@ -465,6 +467,7 @@ if (walking and place_meeting(x, y, obj_environmentItem) and not started_walking
    // Start alarm 1
    alarm[1] = 60;   
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -745,7 +748,8 @@ if (keyboard_check_pressed(ord("3"))) {
             <string>///Check new bag item
 if (new_bag_item != noone) {
    // This means that the player picked up something
-   audio_play_sound(snd_reload, 10, false);
+   if (ENABLE_AUDIO)
+      audio_play_sound(snd_reload, 10, false);
    
    if (current_bag_item != noone) {
       if (instance_exists(current_bag_item)) {
@@ -799,7 +803,8 @@ if (new_bag_item != noone) {
 ///Check new bag item
 if (new_bag_item_switch != noone) {
    // This means that the player picked up something
-   audio_play_sound(snd_reload, 10, false);
+   if (ENABLE_AUDIO)
+      audio_play_sound(snd_reload, 10, false);
    
    // Remove current weapon instance if exists
    if (instance_exists(current_bag_item)) {

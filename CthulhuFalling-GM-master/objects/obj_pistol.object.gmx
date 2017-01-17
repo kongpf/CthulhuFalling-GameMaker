@@ -126,7 +126,10 @@ if (bullets &gt; 0) {
        if (key_shoot) {
           instance_create(x + shoot_x, y + shoot_y, obj_bullet);
           bullets--;
-          audio_play_sound(snd_pistolShoot, 10, false);
+          
+          if (ENABLE_AUDIO) {
+             audio_play_sound(snd_pistolShoot, 10, false);
+          }
        }
        if (key_shoot_auto and full_auto) {
           fire_count++;
@@ -134,7 +137,11 @@ if (bullets &gt; 0) {
           if (fire_count == fire_rate) {
              instance_create(x + shoot_x, y + shoot_y, obj_bullet);
              bullets--;
-             audio_play_sound(snd_pistolShoot, 10, false);
+             
+             if (ENABLE_AUDIO) {
+                audio_play_sound(snd_pistolShoot, 10, false);
+             }
+             
              fire_count = 0;
           }
        }
@@ -142,13 +149,17 @@ if (bullets &gt; 0) {
 } else {
   if (single_shot) {
      if (key_shoot) {
-        audio_play_sound(snd_dryFire, 10, false);
+        if (ENABLE_AUDIO) {
+           audio_play_sound(snd_dryFire, 10, false);
+        }
      }
      if (key_shoot_auto and full_auto) {
         fire_count++;
         
         if (fire_count == fire_rate) {
-           audio_play_sound(snd_dryFire, 10, false);
+           if (ENABLE_AUDIO) {
+              audio_play_sound(snd_dryFire, 10, false);
+           }
            fire_count = 0;
         }
      }

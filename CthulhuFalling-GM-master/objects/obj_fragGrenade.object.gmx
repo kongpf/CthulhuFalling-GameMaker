@@ -140,7 +140,8 @@ if (place_meeting(x, y, obj_environmentItem) or place_meeting(x, y, obj_dirtDest
    instance_create(x, y, obj_screenShake);
    
    // Sound
-   audio_play_sound(snd_fragExplosion, 10, false);
+   if (ENABLE_AUDIO)
+      audio_play_sound(snd_fragExplosion, 10, false);
    
    // Do damage
    var damaged = ds_list_create();

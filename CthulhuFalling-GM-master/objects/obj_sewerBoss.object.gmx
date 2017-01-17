@@ -60,9 +60,14 @@ can_take_damage = true;
 goos = 2;
 vulnerable = false;
 
+crect_w = 32;
+crect_h = 64;
+crect_x = 0;
+crect_y = 0;
+
 // Start
 // Alarm 0 is for goos
-alarm[3] = 800;
+alarm[3] = 1000;
 
 // Alarm 1 is for vulnerability
 alarm[1] = 1500;
@@ -92,30 +97,40 @@ alarm[4] = 900;
           <argument>
             <kind>1</kind>
             <string>///Teleport
+/*
 var points = ds_list_create();
 
 for (i = 0; i &lt; room_width; i += 32) {
     for (j = 0; j &lt; room_height; j += 32) {
-        if (
-           instance_place(i, j, obj_environmentItem) == noone
-           and 
-           instance_place(i, j + sprite_height, obj_environmentItem) == noone) {
-               // Free place! add to list
-               place[0] = i;
-               place[1] = j;
-               ds_list_add(points, place);
+        // Set rect coordinates
+        crect_x = i;
+        crect_y = j;
+        
+        if (collision_rectangle(crect_x, crect_y, crect_x + crect_w, crect_y + crect_h, obj_environmentItem, false, true) == noone) {
+            // Free place! add to list
+            place[0] = i;
+            place[1] = j;
+            ds_list_add(points, place);
         }
     }
 }
 
 // Select random point and go there
 randomize();
-selected = points[|irandom(ds_list_size(points) - 1)]
+selected = points[|irandom(ds_list_size(points) - 1)];
 
 // Teleport
 effect_create_above(ef_cloud, x, y, 10, c_green);
 x = selected[0];
 y = selected[1];
+*/
+do {
+   xx = irandom(room_width);
+   yy = irandom(room_height);
+} until (place_empty(xx, yy));
+
+x = xx;
+y = yy;
 
 // Do this again next time
 alarm[4] = 900;
@@ -148,7 +163,7 @@ if (attack_phase == 0) {
    // Increase goos
    goos += ceil(goos / 3);
    
-   alarm[3] = 100;
+   alarm[3] = 1000;
 }
 </string>
           </argument>
