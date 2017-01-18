@@ -54,7 +54,7 @@ fast_movespeed = 2;
 grav = 0.2;
 hsp = 0;
 vsp = 0;
-hp = 10; // TODO: Change this before release!
+hp = 50000;
 attack_phase = 0; // 0 = invulnerable 1 = vulnerable
 can_take_damage = true;
 goos = 2;

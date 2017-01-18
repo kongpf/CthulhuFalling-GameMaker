@@ -1483,6 +1483,7 @@
     </objects>
     <objects name="Camera">
       <object>objects\obj_cameraManager</object>
+      <object>objects\obj_displayManager</object>
     </objects>
     <objects name="BagItems">
       <object>objects\obj_itemPocket</object>
@@ -1509,6 +1510,7 @@
     <timeline>timelines\tml_bigCthulhuAttacks</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\rm_displayManager</room>
     <rooms name="Menus">
       <room>rooms\rm_menu2</room>
     </rooms>
