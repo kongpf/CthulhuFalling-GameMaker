@@ -97,33 +97,6 @@ alarm[4] = 900;
           <argument>
             <kind>1</kind>
             <string>///Teleport
-/*
-var points = ds_list_create();
-
-for (i = 0; i &lt; room_width; i += 32) {
-    for (j = 0; j &lt; room_height; j += 32) {
-        // Set rect coordinates
-        crect_x = i;
-        crect_y = j;
-        
-        if (collision_rectangle(crect_x, crect_y, crect_x + crect_w, crect_y + crect_h, obj_environmentItem, false, true) == noone) {
-            // Free place! add to list
-            place[0] = i;
-            place[1] = j;
-            ds_list_add(points, place);
-        }
-    }
-}
-
-// Select random point and go there
-randomize();
-selected = points[|irandom(ds_list_size(points) - 1)];
-
-// Teleport
-effect_create_above(ef_cloud, x, y, 10, c_green);
-x = selected[0];
-y = selected[1];
-*/
 do {
    xx = irandom(room_width);
    yy = irandom(room_height);
