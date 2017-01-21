@@ -84,9 +84,18 @@ y = yy + shift; //vertical wave motion
             <string>///Pick up when player collides
 if (place_meeting(x, y, obj_player)) {
    // Add life to player
-   lives++;
-   audio_play_sound(snd_levelup, 10, false);
-   instance_destroy();
+   if (lives &lt; 5) {
+      // Add life
+      lives++;
+      
+      // Play sound
+      if (ENABLE_AUDIO) {
+         audio_play_sound(snd_levelup, 10, false);
+      }
+      
+      // Destroy instance
+      instance_destroy();
+   }
 }
 </string>
           </argument>

@@ -30,12 +30,28 @@ hmotion = 6;
 dir = obj_player.facing;
 damage = 50;
 
+// Give the bullet some angle based on mouse distance (the higher the distance, the higher the angle)
+var dist_from_mouse = point_distance(x, y, mouse_x, mouse_y);
+var max_distance = 1000;
+var percent = dist_from_mouse / max_distance;
+var even_or_odd = irandom(1);
+var error;
+
+if (even_or_odd == 0) {
+   error = -1 * percent;
+} else {
+   error = percent;
+}
+
+// Extract point between error and -error
+var shoot_point = random_range(mouse_x - error, mouse_x + error);
+
 // Rotate sprite towards mouse click point
-image_angle = point_direction(x, y, mouse_x, mouse_y) - 180;
+image_angle = point_direction(x, y, shoot_point, mouse_y + error) - 180;
 
-move_towards_point(mouse_x , mouse_y, 18); 
+// Move
+move_towards_point(mouse_x + error, mouse_y + error, 18); 
 
-//direction = (direction + 180) % 360;
 </string>
           </argument>
         </arguments>
