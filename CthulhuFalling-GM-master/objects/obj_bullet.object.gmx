@@ -37,20 +37,22 @@ var percent = dist_from_mouse / max_distance;
 var even_or_odd = irandom(1);
 var error;
 
-if (even_or_odd == 0) {
-   error = -1 * percent;
-} else {
-   error = percent;
-}
+// Create square around crosshair
+var s_w = percent * 10;
+var s_h = percent * 10;
+var s_x = mouse_x - s_w / 2;
+var s_y = mouse_y - s_h / 2;
 
-// Extract point between error and -error
-var shoot_point = random_range(mouse_x - error, mouse_x + error);
+var point_x = random_range(s_x, s_x + s_w);
+var point_y = random_range(s_y, s_y + s_h);
+
+//show_message("Crosshair: (" + string(mouse_x) + ", " + string(mouse_y) + "), Point: (" + string(point_x) + ", " + string(point_y) + ")");
 
 // Rotate sprite towards mouse click point
-image_angle = point_direction(x, y, shoot_point, mouse_y + error) - 180;
+image_angle = point_direction(x, y, point_x, point_y) - 180;
 
 // Move
-move_towards_point(mouse_x + error, mouse_y + error, 18); 
+move_towards_point(point_x, point_y, 18); 
 
 </string>
           </argument>
