@@ -10,11 +10,14 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>if (instance_exists(obj_player)) {
-   obj_player.x = 32;
-   obj_player.y = 64;
+  <code>var spawn_x = 32;
+var spawn_y = 544;
+
+if (instance_exists(obj_player)) {
+   obj_player.x = spawn_x;
+   obj_player.y = spawn_y;
 } else {
-   instance_create(32, 64, obj_player);
+   instance_create(spawn_x, spawn_y, obj_player);
 }</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
