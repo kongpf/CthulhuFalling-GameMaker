@@ -341,7 +341,10 @@ if (place_meeting(x, y + 1, obj_environmentItem)) {
     vsp = obj_controlsManager.player_jump * -jumpspeed;
     
     if (-obj_controlsManager.player_left) {
-       sprite_index = spr_newPlayerRunningLeft;
+       if (obj_bag.bag[obj_bag.bag_slot] == noone)
+          sprite_index = spr_newPlayerRunningLeft;
+       else
+           sprite_index = spr_newPlayerRunningLeftW;   
        
        if (not obj_controlsManager.player_jump) {
           walking = true;
@@ -349,7 +352,10 @@ if (place_meeting(x, y + 1, obj_environmentItem)) {
           walking = false;
        }
     } else if (obj_controlsManager.player_right) {
-       sprite_index = spr_newPlayerRunningRight;
+       if (obj_bag.bag[obj_bag.bag_slot] == noone)
+          sprite_index = spr_newPlayerRunningRight;
+       else
+           sprite_index = spr_newPlayerRunningRightW;
        
        if (not obj_controlsManager.player_jump) {
           walking = true;
@@ -357,12 +363,19 @@ if (place_meeting(x, y + 1, obj_environmentItem)) {
           walking = false;
        }
     } else {
-       sprite_index = spr_newPlayerStanding;
+       if (obj_bag.bag[obj_bag.bag_slot] == noone)
+          sprite_index = spr_newPlayerStanding;
+       else
+           sprite_index = spr_newPlayerStandingW;
        
        walking = false;
     }
 } else {
-  sprite_index = spr_newPlayerStanding;
+  // Jump!
+  if (obj_bag.bag[obj_bag.bag_slot] == noone)
+     sprite_index = spr_newPlayerStanding;
+  else
+      sprite_index = spr_newPlayerStandingW;
 }
 
 if ((vsp &lt; 0) and (!obj_controlsManager.player_jump_held)) vsp = max(vsp, 0);

@@ -433,11 +433,15 @@
       <sprite>sprites\spr_customPoe</sprite>
       <sprite>sprites\spr_cat</sprite>
       <sprite>sprites\spr_grandmaStanding</sprite>
-      <sprites name="New Player">
+      <sprites name="New Player No Weapon">
         <sprite>sprites\spr_newPlayerStanding</sprite>
+        <sprite>sprites\spr_newPlayerStandingW</sprite>
         <sprite>sprites\spr_newPlayerRunningRight</sprite>
+        <sprite>sprites\spr_newPlayerRunningRightW</sprite>
         <sprite>sprites\spr_newPlayerRunningLeft</sprite>
+        <sprite>sprites\spr_newPlayerRunningLeftW</sprite>
         <sprite>sprites\spr_newPlayerPunchRight</sprite>
+        <sprite>sprites\spr_newPlayerPunchRightW</sprite>
         <sprite>sprites\spr_newPlayerPunchLeft</sprite>
       </sprites>
     </sprites>
